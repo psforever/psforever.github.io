@@ -1,0 +1,1277 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>ResourceSilo - PSF-LoginServer -  master - net.psforever.objects.serverobject.resourcesilo.ResourceSilo</title>
+          <meta name="description" content="ResourceSilo - PSF - LoginServer - master - net.psforever.objects.serverobject.resourcesilo.ResourceSilo" />
+          <meta name="keywords" content="ResourceSilo PSF LoginServer master net.psforever.objects.serverobject.resourcesilo.ResourceSilo" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'net.psforever.objects.serverobject.resourcesilo.ResourceSilo';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <a href="ResourceSilo$.html" title="See companion object"><img alt="Class/Object" src="../../../../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../../../../package.html" class="extype" name="net">net</a>.<a href="../../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../../package.html" class="extype" name="net.psforever.objects">objects</a>.<a href="../package.html" class="extype" name="net.psforever.objects.serverobject">serverobject</a>.<a href="package.html" class="extype" name="net.psforever.objects.serverobject.resourcesilo">resourcesilo</a></p>
+        <h1><a href="ResourceSilo$.html" title="See companion object">ResourceSilo</a></h1><h3><span class="morelinks"><div>
+            Related Docs:
+            <a href="ResourceSilo$.html" title="See companion object">object ResourceSilo</a>
+            | <a href="package.html" class="extype" name="net.psforever.objects.serverobject.resourcesilo">package resourcesilo</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ResourceSilo</span><span class="result"> extends <a href="../structures/Amenity.html" class="extype" name="net.psforever.objects.serverobject.structures.Amenity">Amenity</a></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/psforever/PSF-LoginServer/blob/master//common/src/main/scala/net/psforever/objects/serverobject/resourcesilo/ResourceSilo.scala" target="_blank">ResourceSilo.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="../structures/Amenity.html" class="extype" name="net.psforever.objects.serverobject.structures.Amenity">Amenity</a>, <a href="../PlanetSideServerObject.html" class="extype" name="net.psforever.objects.serverobject.PlanetSideServerObject">PlanetSideServerObject</a>, <a href="../../zones/ZoneAware.html" class="extype" name="net.psforever.objects.zones.ZoneAware">ZoneAware</a>, <a href="../affinity/FactionAffinity.html" class="extype" name="net.psforever.objects.serverobject.affinity.FactionAffinity">FactionAffinity</a>, <a href="../../PlanetSideGameObject.html" class="extype" name="net.psforever.objects.PlanetSideGameObject">PlanetSideGameObject</a>, <a href="../../entity/WorldEntity.html" class="extype" name="net.psforever.objects.entity.WorldEntity">WorldEntity</a>, <a href="../../entity/IdentifiableEntity.html" class="extype" name="net.psforever.objects.entity.IdentifiableEntity">IdentifiableEntity</a>, <a href="../../entity/Identifiable.html" class="extype" name="net.psforever.objects.entity.Identifiable">Identifiable</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo"><span>ResourceSilo</span></li><li class="in" name="net.psforever.objects.serverobject.structures.Amenity"><span>Amenity</span></li><li class="in" name="net.psforever.objects.serverobject.PlanetSideServerObject"><span>PlanetSideServerObject</span></li><li class="in" name="net.psforever.objects.zones.ZoneAware"><span>ZoneAware</span></li><li class="in" name="net.psforever.objects.serverobject.affinity.FactionAffinity"><span>FactionAffinity</span></li><li class="in" name="net.psforever.objects.PlanetSideGameObject"><span>PlanetSideGameObject</span></li><li class="in" name="net.psforever.objects.entity.WorldEntity"><span>WorldEntity</span></li><li class="in" name="net.psforever.objects.entity.IdentifiableEntity"><span>IdentifiableEntity</span></li><li class="in" name="net.psforever.objects.entity.Identifiable"><span>Identifiable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():net.psforever.objects.serverobject.resourcesilo.ResourceSilo"></a>
+      <a id="&lt;init&gt;:ResourceSilo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ResourceSilo</span><span class="params">()</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@&lt;init&gt;():net.psforever.objects.serverobject.resourcesilo.ResourceSilo" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@##():Int" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@+(other:String):String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(ResourceSilo,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@-&gt;[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.PlanetSideServerObject#Actor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Actor:akka.actor.ActorRef"></a>
+      <a id="Actor:ActorRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Actor</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Actor:akka.actor.ActorRef" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Retrieve a reference to the internal <code>Actor</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Retrieve a reference to the internal <code>Actor</code>.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the internal <code>ActorRef</code></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../PlanetSideServerObject.html" class="extype" name="net.psforever.objects.serverobject.PlanetSideServerObject">PlanetSideServerObject</a></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.PlanetSideServerObject#Actor_=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Actor_=(control:akka.actor.ActorRef):akka.actor.ActorRef"></a>
+      <a id="Actor_=(ActorRef):ActorRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: Actor_$eq" class="name">Actor_=</span><span class="params">(<span name="control">control: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>)</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Actor_=(control:akka.actor.ActorRef):akka.actor.ActorRef" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Assign an <code>Actor</code> to act for this server object.</p><div class="fullcomment"><div class="comment cmt"><p>Assign an <code>Actor</code> to act for this server object.
+This reference is only set once, that is, as long as the internal <code>ActorRef</code> directs to <code>Actor.noSender</code> (<code>null</code>).</p></div><dl class="paramcmts block"><dt class="param">control</dt><dd class="cmt"><p>the <code>Actor</code> whose functionality will govern this server object</p></dd><dt>returns</dt><dd class="cmt"><p>the current internal <code>ActorRef</code></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../PlanetSideServerObject.html" class="extype" name="net.psforever.objects.serverobject.PlanetSideServerObject">PlanetSideServerObject</a></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo#CapacitorDisplay" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CapacitorDisplay:Long"></a>
+      <a id="CapacitorDisplay:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">CapacitorDisplay</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@CapacitorDisplay:Long" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo#CapacitorDisplay_=" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CapacitorDisplay_=(value:Long):Long"></a>
+      <a id="CapacitorDisplay_=(Long):Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: CapacitorDisplay_$eq" class="name">CapacitorDisplay_=</span><span class="params">(<span name="value">value: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@CapacitorDisplay_=(value:Long):Long" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo#ChargeLevel" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ChargeLevel:Int"></a>
+      <a id="ChargeLevel:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ChargeLevel</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@ChargeLevel:Int" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo#ChargeLevel_=" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ChargeLevel_=(charge:Int):Int"></a>
+      <a id="ChargeLevel_=(Int):Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: ChargeLevel_$eq" class="name">ChargeLevel_=</span><span class="params">(<span name="charge">charge: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@ChargeLevel_=(charge:Int):Int" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.serverobject.structures.Amenity#Continent" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Continent:String"></a>
+      <a id="Continent:String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Continent</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Continent:String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../structures/Amenity.html" class="extype" name="net.psforever.objects.serverobject.structures.Amenity">Amenity</a> → <a href="../PlanetSideServerObject.html" class="extype" name="net.psforever.objects.serverobject.PlanetSideServerObject">PlanetSideServerObject</a> → <a href="../../zones/ZoneAware.html" class="extype" name="net.psforever.objects.zones.ZoneAware">ZoneAware</a></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.PlanetSideServerObject#Continent_=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Continent_=(zone:String):String"></a>
+      <a id="Continent_=(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: Continent_$eq" class="name">Continent_=</span><span class="params">(<span name="zone">zone: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Continent_=(zone:String):String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../PlanetSideServerObject.html" class="extype" name="net.psforever.objects.serverobject.PlanetSideServerObject">PlanetSideServerObject</a> → <a href="../../zones/ZoneAware.html" class="extype" name="net.psforever.objects.zones.ZoneAware">ZoneAware</a></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo#Definition" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Definition:net.psforever.objects.serverobject.resourcesilo.ResourceSiloDefinition"></a>
+      <a id="Definition:ResourceSiloDefinition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Definition</span><span class="result">: <a href="ResourceSiloDefinition.html" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSiloDefinition">ResourceSiloDefinition</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Definition:net.psforever.objects.serverobject.resourcesilo.ResourceSiloDefinition" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a> → <a href="../../PlanetSideGameObject.html" class="extype" name="net.psforever.objects.PlanetSideGameObject">PlanetSideGameObject</a></dd></dl></div>
+    </li><li name="net.psforever.objects.PlanetSideGameObject#Entity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Entity:net.psforever.objects.entity.WorldEntity"></a>
+      <a id="Entity:WorldEntity"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Entity</span><span class="result">: <a href="../../entity/WorldEntity.html" class="extype" name="net.psforever.objects.entity.WorldEntity">WorldEntity</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Entity:net.psforever.objects.entity.WorldEntity" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../PlanetSideGameObject.html" class="extype" name="net.psforever.objects.PlanetSideGameObject">PlanetSideGameObject</a></dd></dl></div>
+    </li><li name="net.psforever.objects.PlanetSideGameObject#Entity_=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Entity_=(newEntity:net.psforever.objects.entity.WorldEntity):Unit"></a>
+      <a id="Entity_=(WorldEntity):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: Entity_$eq" class="name">Entity_=</span><span class="params">(<span name="newEntity">newEntity: <a href="../../entity/WorldEntity.html" class="extype" name="net.psforever.objects.entity.WorldEntity">WorldEntity</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Entity_=(newEntity:net.psforever.objects.entity.WorldEntity):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../PlanetSideGameObject.html" class="extype" name="net.psforever.objects.PlanetSideGameObject">PlanetSideGameObject</a></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.structures.Amenity#Faction" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Faction:net.psforever.types.PlanetSideEmpire.Value"></a>
+      <a id="Faction:types.PlanetSideEmpire.Value"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Faction</span><span class="result">: <a href="../../../types/PlanetSideEmpire$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="net.psforever.types.PlanetSideEmpire.Value">types.PlanetSideEmpire.Value</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Faction:net.psforever.types.PlanetSideEmpire.Value" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../structures/Amenity.html" class="extype" name="net.psforever.objects.serverobject.structures.Amenity">Amenity</a> → <a href="../affinity/FactionAffinity.html" class="extype" name="net.psforever.objects.serverobject.affinity.FactionAffinity">FactionAffinity</a></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.affinity.FactionAffinity#Faction_=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Faction_=(fac:net.psforever.types.PlanetSideEmpire.Value):net.psforever.types.PlanetSideEmpire.Value"></a>
+      <a id="Faction_=(types.PlanetSideEmpire.Value):types.PlanetSideEmpire.Value"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: Faction_$eq" class="name">Faction_=</span><span class="params">(<span name="fac">fac: <a href="../../../types/PlanetSideEmpire$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="net.psforever.types.PlanetSideEmpire.Value">types.PlanetSideEmpire.Value</a></span>)</span><span class="result">: <a href="../../../types/PlanetSideEmpire$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="net.psforever.types.PlanetSideEmpire.Value">types.PlanetSideEmpire.Value</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Faction_=(fac:net.psforever.types.PlanetSideEmpire.Value):net.psforever.types.PlanetSideEmpire.Value" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../affinity/FactionAffinity.html" class="extype" name="net.psforever.objects.serverobject.affinity.FactionAffinity">FactionAffinity</a></dd></dl></div>
+    </li><li name="net.psforever.objects.entity.IdentifiableEntity#GUID" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GUID:net.psforever.packet.game.PlanetSideGUID"></a>
+      <a id="GUID:PlanetSideGUID"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">GUID</span><span class="result">: <a href="../../../packet/game/PlanetSideGUID.html" class="extype" name="net.psforever.packet.game.PlanetSideGUID">PlanetSideGUID</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@GUID:net.psforever.packet.game.PlanetSideGUID" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../entity/IdentifiableEntity.html" class="extype" name="net.psforever.objects.entity.IdentifiableEntity">IdentifiableEntity</a> → <a href="../../entity/Identifiable.html" class="extype" name="net.psforever.objects.entity.Identifiable">Identifiable</a></dd></dl></div>
+    </li><li name="net.psforever.objects.entity.IdentifiableEntity#GUID_=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GUID_=(guid:net.psforever.packet.game.PlanetSideGUID):net.psforever.packet.game.PlanetSideGUID"></a>
+      <a id="GUID_=(PlanetSideGUID):PlanetSideGUID"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: GUID_$eq" class="name">GUID_=</span><span class="params">(<span name="guid">guid: <a href="../../../packet/game/PlanetSideGUID.html" class="extype" name="net.psforever.packet.game.PlanetSideGUID">PlanetSideGUID</a></span>)</span><span class="result">: <a href="../../../packet/game/PlanetSideGUID.html" class="extype" name="net.psforever.packet.game.PlanetSideGUID">PlanetSideGUID</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@GUID_=(guid:net.psforever.packet.game.PlanetSideGUID):net.psforever.packet.game.PlanetSideGUID" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../entity/IdentifiableEntity.html" class="extype" name="net.psforever.objects.entity.IdentifiableEntity">IdentifiableEntity</a> → <a href="../../entity/Identifiable.html" class="extype" name="net.psforever.objects.entity.Identifiable">Identifiable</a></dd></dl></div>
+    </li><li name="net.psforever.objects.entity.IdentifiableEntity#HasGUID" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="HasGUID:Boolean"></a>
+      <a id="HasGUID:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">HasGUID</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@HasGUID:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../entity/IdentifiableEntity.html" class="extype" name="net.psforever.objects.entity.IdentifiableEntity">IdentifiableEntity</a></dd></dl></div>
+    </li><li name="net.psforever.objects.entity.IdentifiableEntity#Invalidate" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Invalidate():Unit"></a>
+      <a id="Invalidate():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Invalidate</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Invalidate():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../entity/IdentifiableEntity.html" class="extype" name="net.psforever.objects.entity.IdentifiableEntity">IdentifiableEntity</a></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.structures.Amenity#LocationOffset" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LocationOffset:net.psforever.types.Vector3"></a>
+      <a id="LocationOffset:Vector3"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LocationOffset</span><span class="result">: <a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@LocationOffset:net.psforever.types.Vector3" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../structures/Amenity.html" class="extype" name="net.psforever.objects.serverobject.structures.Amenity">Amenity</a></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.structures.Amenity#LocationOffset_=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LocationOffset_=(off:Option[net.psforever.types.Vector3]):net.psforever.types.Vector3"></a>
+      <a id="LocationOffset_=(Option[Vector3]):Vector3"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: LocationOffset_$eq" class="name">LocationOffset_=</span><span class="params">(<span name="off">off: <span class="extype" name="scala.Option">Option</span>[<a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a>]</span>)</span><span class="result">: <a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@LocationOffset_=(off:Option[net.psforever.types.Vector3]):net.psforever.types.Vector3" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../structures/Amenity.html" class="extype" name="net.psforever.objects.serverobject.structures.Amenity">Amenity</a></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.structures.Amenity#LocationOffset_=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LocationOffset_=(off:net.psforever.types.Vector3):net.psforever.types.Vector3"></a>
+      <a id="LocationOffset_=(Vector3):Vector3"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: LocationOffset_$eq" class="name">LocationOffset_=</span><span class="params">(<span name="off">off: <a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a></span>)</span><span class="result">: <a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@LocationOffset_=(off:net.psforever.types.Vector3):net.psforever.types.Vector3" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../structures/Amenity.html" class="extype" name="net.psforever.objects.serverobject.structures.Amenity">Amenity</a></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo#LowNtuWarningOn" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LowNtuWarningOn:Boolean"></a>
+      <a id="LowNtuWarningOn:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">LowNtuWarningOn</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@LowNtuWarningOn:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo#LowNtuWarningOn_=" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LowNtuWarningOn_=(enabled:Boolean):Boolean"></a>
+      <a id="LowNtuWarningOn_=(Boolean):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: LowNtuWarningOn_$eq" class="name">LowNtuWarningOn_=</span><span class="params">(<span name="enabled">enabled: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@LowNtuWarningOn_=(enabled:Boolean):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo#MaximumCharge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MaximumCharge:Int"></a>
+      <a id="MaximumCharge:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">MaximumCharge</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@MaximumCharge:Int" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.PlanetSideGameObject#Orientation" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Orientation:net.psforever.types.Vector3"></a>
+      <a id="Orientation:Vector3"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Orientation</span><span class="result">: <a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Orientation:net.psforever.types.Vector3" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../PlanetSideGameObject.html" class="extype" name="net.psforever.objects.PlanetSideGameObject">PlanetSideGameObject</a> → <a href="../../entity/WorldEntity.html" class="extype" name="net.psforever.objects.entity.WorldEntity">WorldEntity</a></dd></dl></div>
+    </li><li name="net.psforever.objects.PlanetSideGameObject#Orientation_=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Orientation_=(vec:net.psforever.types.Vector3):net.psforever.types.Vector3"></a>
+      <a id="Orientation_=(Vector3):Vector3"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: Orientation_$eq" class="name">Orientation_=</span><span class="params">(<span name="vec">vec: <a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a></span>)</span><span class="result">: <a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Orientation_=(vec:net.psforever.types.Vector3):net.psforever.types.Vector3" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../PlanetSideGameObject.html" class="extype" name="net.psforever.objects.PlanetSideGameObject">PlanetSideGameObject</a> → <a href="../../entity/WorldEntity.html" class="extype" name="net.psforever.objects.entity.WorldEntity">WorldEntity</a></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.structures.Amenity#Owner" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Owner:net.psforever.objects.serverobject.PlanetSideServerObject"></a>
+      <a id="Owner:PlanetSideServerObject"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Owner</span><span class="result">: <a href="../PlanetSideServerObject.html" class="extype" name="net.psforever.objects.serverobject.PlanetSideServerObject">PlanetSideServerObject</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Owner:net.psforever.objects.serverobject.PlanetSideServerObject" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Reference the object that is in direct association with (is superior to) this one.</p><div class="fullcomment"><div class="comment cmt"><p>Reference the object that is in direct association with (is superior to) this one.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>the object associated as this object's &quot;owner&quot;</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../structures/Amenity.html" class="extype" name="net.psforever.objects.serverobject.structures.Amenity">Amenity</a></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.structures.Amenity#Owner_=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Owner_=[T](obj:T)(implicitevidence$1:net.psforever.objects.serverobject.structures.Amenity.AmenityTarget[T]):net.psforever.objects.serverobject.PlanetSideServerObject"></a>
+      <a id="Owner_=[T](T)(AmenityTarget[T]):PlanetSideServerObject"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: Owner_$eq" class="name">Owner_=</span><span class="tparams">[<span name="T">T</span>]</span><span class="params">(<span name="obj">obj: <span class="extype" name="net.psforever.objects.serverobject.structures.Amenity.Owner_=.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="../structures/Amenity$$AmenityTarget.html" class="extype" name="net.psforever.objects.serverobject.structures.Amenity.AmenityTarget">AmenityTarget</a>[<span class="extype" name="net.psforever.objects.serverobject.structures.Amenity.Owner_=.T">T</span>]</span>)</span><span class="result">: <a href="../PlanetSideServerObject.html" class="extype" name="net.psforever.objects.serverobject.PlanetSideServerObject">PlanetSideServerObject</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Owner_=[T](obj:T)(implicitevidence$1:net.psforever.objects.serverobject.structures.Amenity.AmenityTarget[T]):net.psforever.objects.serverobject.PlanetSideServerObject" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Set an object to have a direct association with (be superior to) this one.</p><div class="fullcomment"><div class="comment cmt"><p>Set an object to have a direct association with (be superior to) this one.</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>a validation of the type of object that can be an owner</p></dd><dt class="param">obj</dt><dd class="cmt"><p>the object trying to become associated as this object's &quot;owner&quot;</p></dd><dt>returns</dt><dd class="cmt"><p>the object associated as this object's &quot;owner&quot;</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../structures/Amenity.html" class="extype" name="net.psforever.objects.serverobject.structures.Amenity">Amenity</a></dd><dt>See also</dt><dd><span class="cmt"><p><code>Amenity.AmenityTarget</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.PlanetSideGameObject#Position" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Position:net.psforever.types.Vector3"></a>
+      <a id="Position:Vector3"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Position</span><span class="result">: <a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Position:net.psforever.types.Vector3" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../PlanetSideGameObject.html" class="extype" name="net.psforever.objects.PlanetSideGameObject">PlanetSideGameObject</a> → <a href="../../entity/WorldEntity.html" class="extype" name="net.psforever.objects.entity.WorldEntity">WorldEntity</a></dd></dl></div>
+    </li><li name="net.psforever.objects.PlanetSideGameObject#Position_=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Position_=(vec:net.psforever.types.Vector3):net.psforever.types.Vector3"></a>
+      <a id="Position_=(Vector3):Vector3"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: Position_$eq" class="name">Position_=</span><span class="params">(<span name="vec">vec: <a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a></span>)</span><span class="result">: <a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Position_=(vec:net.psforever.types.Vector3):net.psforever.types.Vector3" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../PlanetSideGameObject.html" class="extype" name="net.psforever.objects.PlanetSideGameObject">PlanetSideGameObject</a> → <a href="../../entity/WorldEntity.html" class="extype" name="net.psforever.objects.entity.WorldEntity">WorldEntity</a></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo#Use" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Use(player:net.psforever.objects.Player,msg:net.psforever.packet.game.UseItemMessage):net.psforever.objects.serverobject.resourcesilo.ResourceSilo.Exchange"></a>
+      <a id="Use(Player,UseItemMessage):Exchange"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Use</span><span class="params">(<span name="player">player: <a href="../../Player.html" class="extype" name="net.psforever.objects.Player">Player</a></span>, <span name="msg">msg: <a href="../../../packet/game/UseItemMessage.html" class="extype" name="net.psforever.packet.game.UseItemMessage">UseItemMessage</a></span>)</span><span class="result">: <a href="ResourceSilo$$Exchange.html" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo.Exchange">Exchange</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Use(player:net.psforever.objects.Player,msg:net.psforever.packet.game.UseItemMessage):net.psforever.objects.serverobject.resourcesilo.ResourceSilo.Exchange" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.PlanetSideGameObject#Velocity" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Velocity:Option[net.psforever.types.Vector3]"></a>
+      <a id="Velocity:Option[Vector3]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Velocity</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Velocity:Option[net.psforever.types.Vector3]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../PlanetSideGameObject.html" class="extype" name="net.psforever.objects.PlanetSideGameObject">PlanetSideGameObject</a> → <a href="../../entity/WorldEntity.html" class="extype" name="net.psforever.objects.entity.WorldEntity">WorldEntity</a></dd></dl></div>
+    </li><li name="net.psforever.objects.PlanetSideGameObject#Velocity_=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Velocity_=(vec:Option[net.psforever.types.Vector3]):Option[net.psforever.types.Vector3]"></a>
+      <a id="Velocity_=(Option[Vector3]):Option[Vector3]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: Velocity_$eq" class="name">Velocity_=</span><span class="params">(<span name="vec">vec: <span class="extype" name="scala.Option">Option</span>[<a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Velocity_=(vec:Option[net.psforever.types.Vector3]):Option[net.psforever.types.Vector3]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../PlanetSideGameObject.html" class="extype" name="net.psforever.objects.PlanetSideGameObject">PlanetSideGameObject</a> → <a href="../../entity/WorldEntity.html" class="extype" name="net.psforever.objects.entity.WorldEntity">WorldEntity</a></dd></dl></div>
+    </li><li name="net.psforever.objects.entity.WorldEntity#Velocity_=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Velocity_=(vec:net.psforever.types.Vector3):Option[net.psforever.types.Vector3]"></a>
+      <a id="Velocity_=(Vector3):Option[Vector3]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: Velocity_$eq" class="name">Velocity_=</span><span class="params">(<span name="vec">vec: <a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a></span>)</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@Velocity_=(vec:net.psforever.types.Vector3):Option[net.psforever.types.Vector3]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../entity/WorldEntity.html" class="extype" name="net.psforever.objects.entity.WorldEntity">WorldEntity</a></dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@clone():Object" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((ResourceSilo)⇒Boolean,⇒Any):ResourceSilo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((ResourceSilo)⇒Boolean):ResourceSilo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@ensuring(cond:A=&gt;Boolean):A" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):ResourceSilo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):ResourceSilo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@ensuring(cond:Boolean):A" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@formatted(fmtstr:String):String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@toString():String" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(ResourceSilo,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.resourcesilo.ResourceSilo@→[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="net.psforever.objects.serverobject.structures.Amenity">
+              <h3>Inherited from <a href="../structures/Amenity.html" class="extype" name="net.psforever.objects.serverobject.structures.Amenity">Amenity</a></h3>
+            </div><div class="parent" name="net.psforever.objects.serverobject.PlanetSideServerObject">
+              <h3>Inherited from <a href="../PlanetSideServerObject.html" class="extype" name="net.psforever.objects.serverobject.PlanetSideServerObject">PlanetSideServerObject</a></h3>
+            </div><div class="parent" name="net.psforever.objects.zones.ZoneAware">
+              <h3>Inherited from <a href="../../zones/ZoneAware.html" class="extype" name="net.psforever.objects.zones.ZoneAware">ZoneAware</a></h3>
+            </div><div class="parent" name="net.psforever.objects.serverobject.affinity.FactionAffinity">
+              <h3>Inherited from <a href="../affinity/FactionAffinity.html" class="extype" name="net.psforever.objects.serverobject.affinity.FactionAffinity">FactionAffinity</a></h3>
+            </div><div class="parent" name="net.psforever.objects.PlanetSideGameObject">
+              <h3>Inherited from <a href="../../PlanetSideGameObject.html" class="extype" name="net.psforever.objects.PlanetSideGameObject">PlanetSideGameObject</a></h3>
+            </div><div class="parent" name="net.psforever.objects.entity.WorldEntity">
+              <h3>Inherited from <a href="../../entity/WorldEntity.html" class="extype" name="net.psforever.objects.entity.WorldEntity">WorldEntity</a></h3>
+            </div><div class="parent" name="net.psforever.objects.entity.IdentifiableEntity">
+              <h3>Inherited from <a href="../../entity/IdentifiableEntity.html" class="extype" name="net.psforever.objects.entity.IdentifiableEntity">IdentifiableEntity</a></h3>
+            </div><div class="parent" name="net.psforever.objects.entity.Identifiable">
+              <h3>Inherited from <a href="../../entity/Identifiable.html" class="extype" name="net.psforever.objects.entity.Identifiable">Identifiable</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="net.psforever.objects.serverobject.resourcesilo.ResourceSilo">ResourceSilo</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

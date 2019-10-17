@@ -1,0 +1,332 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>guid - PSF-LoginServer -  master - net.psforever.objects.guid</title>
+          <meta name="description" content="guid - PSF - LoginServer - master - net.psforever.objects.guid" />
+          <meta name="keywords" content="guid PSF LoginServer master net.psforever.objects.guid" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'net.psforever.objects.guid.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="net">net</a>.<a href="../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../package.html" class="extype" name="net.psforever.objects">objects</a></p>
+        <h1>guid</h1><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.guid.package" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">guid</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.guid.NumberPoolHub" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="NumberPoolHubextendsAnyRef"></a>
+      <a id="NumberPoolHub:NumberPoolHub"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NumberPoolHub.html"><span class="name">NumberPoolHub</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.guid.package@NumberPoolHubextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A master object that manages <code>NumberPool</code>s when they are applied to a single <code>NumberSource</code>.</p><div class="fullcomment"><div class="comment cmt"><p>A master object that manages <code>NumberPool</code>s when they are applied to a single <code>NumberSource</code>.
+It catalogs the numbers and ensures the pool contents are unique to each other.<br>
+<br>
+All globally unique numbers are sorted into user-defined groups called pools.
+Pools are intended to pre-allocate certain numbers to certain tasks.
+Two default pools also exist - &quot;generic,&quot; for all numbers not formally placed into a pool, and a hidden restricted pool.
+The former can accept a variety of numbers on the source not known at initialization time loaded into it.
+The latter can only be set by the <code>NumberSource</code> and can not be affected once this object is created.</p></div></div>
+    </li><li name="net.psforever.objects.guid.Task" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="TaskextendsAnyRef"></a>
+      <a id="Task:Task"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Task.html"><span class="name">Task</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.guid.package@TaskextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.guid.TaskResolver" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TaskResolverextendsActor"></a>
+      <a id="TaskResolver:TaskResolver"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TaskResolver.html"><span class="name">TaskResolver</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.guid.package@TaskResolverextendsActor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.objects.guid.AvailabilityPolicy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AvailabilityPolicy"></a>
+      <a id="AvailabilityPolicy:AvailabilityPolicy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AvailabilityPolicy$.html"><span class="name">AvailabilityPolicy</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.guid.package@AvailabilityPolicy" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The availability of individual GUIDs is maintained by the given policy.</p>
+    </li><li name="net.psforever.objects.guid.GUIDTask" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GUIDTask"></a>
+      <a id="GUIDTask:GUIDTask"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GUIDTask$.html"><span class="name">GUIDTask</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.guid.package@GUIDTask" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The basic compiled tasks for assigning (registering) and revoking (unregistering) globally unique identifiers.<br>
+<br>
+Almost all of these functions will be invoked from <code>WorldSessionActor</code>.</p><div class="fullcomment"><div class="comment cmt"><p>The basic compiled tasks for assigning (registering) and revoking (unregistering) globally unique identifiers.<br>
+<br>
+Almost all of these functions will be invoked from <code>WorldSessionActor</code>.
+Some of the &quot;unregistering&quot; functions will invoke on delayed <code>Service</code> operations,
+indicating behavior that is not user/observer dependent.
+The object's (current) <code>Zone</code> must also be knowable since the GUID systems are tied to individual zones.
+For simplicity, all functions have the same format where the hook into the GUID system is an <code>implicit</code> parameter.
+It will get passed from the more complicated functions down into the less complicated functions,
+until it has found the basic number assignment functionality.<br>
+<br>
+All functions produce a <code>TaskResolver.GiveTask</code> container object
+or a list of <code>TaskResolver.GiveTask</code> container objects that is expected to be used by a <code>TaskResolver</code> <code>Actor</code>.
+These &quot;task containers&quot; can also be unpackaged into their component tasks, sorted into other containers,
+and combined with other tasks to enact more complicated sequences of operations.
+Almost all tasks have an explicit registering and an unregistering activity defined for it.
+</p></div></div>
+    </li><li name="net.psforever.objects.guid.Task" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Task"></a>
+      <a id="Task:Task"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Task$.html"><span class="name">Task</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.guid.package@Task" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.guid.TaskResolver" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TaskResolver"></a>
+      <a id="TaskResolver:TaskResolver"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TaskResolver$.html"><span class="name">TaskResolver</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.guid.package@TaskResolver" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.guid.actor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="actor"></a>
+      <a id="actor:actor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="actor/package.html"><span class="name">actor</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.guid.package@actor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.guid.key" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="key"></a>
+      <a id="key:key"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="key/package.html"><span class="name">key</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.guid.package@key" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.guid.pool" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pool"></a>
+      <a id="pool:pool"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="pool/package.html"><span class="name">pool</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.guid.package@pool" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.guid.selector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="selector"></a>
+      <a id="selector:selector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="selector/package.html"><span class="name">selector</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.guid.package@selector" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.guid.source" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="source"></a>
+      <a id="source:source"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="source/package.html"><span class="name">source</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.guid.package@source" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

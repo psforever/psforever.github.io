@@ -1,0 +1,909 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>ZonePopulationUpdateMessage - PSF-LoginServer -  master - net.psforever.packet.game.ZonePopulationUpdateMessage</title>
+          <meta name="description" content="ZonePopulationUpdateMessage - PSF - LoginServer - master - net.psforever.packet.game.ZonePopulationUpdateMessage" />
+          <meta name="keywords" content="ZonePopulationUpdateMessage PSF LoginServer master net.psforever.packet.game.ZonePopulationUpdateMessage" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'net.psforever.packet.game.ZonePopulationUpdateMessage';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <a href="ZonePopulationUpdateMessage$.html" title="See companion object"><img alt="Class/Object" src="../../../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../../../package.html" class="extype" name="net">net</a>.<a href="../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../package.html" class="extype" name="net.psforever.packet">packet</a>.<a href="package.html" class="extype" name="net.psforever.packet.game">game</a></p>
+        <h1><a href="ZonePopulationUpdateMessage$.html" title="See companion object">ZonePopulationUpdateMessage</a></h1><h3><span class="morelinks"><div>
+            Related Docs:
+            <a href="ZonePopulationUpdateMessage$.html" title="See companion object">object ZonePopulationUpdateMessage</a>
+            | <a href="package.html" class="extype" name="net.psforever.packet.game">package game</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ZonePopulationUpdateMessage</span><span class="params">(<span name="zone_id">zone_id: <span class="extype" name="scala.Int">Int</span></span>, <span name="zone_queue">zone_queue: <span class="extype" name="scala.Long">Long</span></span>, <span name="tr_queue">tr_queue: <span class="extype" name="scala.Long">Long</span></span>, <span name="tr_pop">tr_pop: <span class="extype" name="scala.Long">Long</span></span>, <span name="nc_queue">nc_queue: <span class="extype" name="scala.Long">Long</span></span>, <span name="nc_pop">nc_pop: <span class="extype" name="scala.Long">Long</span></span>, <span name="vs_queue">vs_queue: <span class="extype" name="scala.Long">Long</span></span>, <span name="vs_pop">vs_pop: <span class="extype" name="scala.Long">Long</span></span>, <span name="bo_queue">bo_queue: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">0L</span></span>, <span name="bo_pop">bo_pop: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">0L</span></span>)</span><span class="result"> extends <a href="../PlanetSideGamePacket.html" class="extype" name="net.psforever.packet.PlanetSideGamePacket">PlanetSideGamePacket</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Report the raw numerical population for a zone (continent).<br>
+<br>
+Populations are displayed as percentages of the three main empires against each other.
+Populations specific to a zone will be displayed in the Incentives window for that zone.
+Populations in all zones will contribute to the Global Population window and the Incentives window for the server.
+The Black OPs population does not show up in the Incentives window for a zone but will be indirectly represented in the other two windows.
+This packet also shifts the flavor text for that zone.<br>
+<br>
+The size of zone's queue is the final upper population limit for that zone.
+Common values for the zone queue fields are 0 (locked) and 414 positions.
+When a continent can not accept any players at all, a lock icon will appear over its view pane in the Interstellar View.
+Setting the zone's queue to zero will also render this icon.<br>
+<br>
+The individual queue fields set the maximum empire occupancy for a zone that is represented in the zone Incentives text.
+Common values for the empire queue fields are 0 (locked population), 138 positions, and 500 positions.
+Zone Incentives text, however, will never report more than a &quot;100+&quot; vacancy.
+The actual limits are probably set based on server load.
+The latter queue value is typical for VR area zones.<br>
+<br>
+The value of the zone queue trumps the sum of all individual empire queues.
+Regardless of individual queues, once total zone population matches the zone queue size, all populations will lock.
+For normal zones, if the individual queues are not set properly, whole empires can even be locked out of a zone for this reason.
+In the worst case, other empires are allowed enough individual queue vacancy that they can occupy all the available slots.
+Sanctuary zones possess strange queue values that are occasionally zero'd.
+They do not have a lock icon and may not limit populations the same way as normal zones.
+</p></div><dl class="paramcmts block"><dt class="param">zone_id</dt><dd class="cmt"><p>the continent</p></dd><dt class="param">zone_queue</dt><dd class="cmt"><p>the maximum population of all three (four) empires that can join this zone</p></dd><dt class="param">tr_queue</dt><dd class="cmt"><p>the maximum number of TR players that can join this zone</p></dd><dt class="param">tr_pop</dt><dd class="cmt"><p>the current TR population in this zone</p></dd><dt class="param">nc_queue</dt><dd class="cmt"><p>the maximum number of NC players that can join this zone</p></dd><dt class="param">nc_pop</dt><dd class="cmt"><p>the current NC population in this zone</p></dd><dt class="param">vs_queue</dt><dd class="cmt"><p>the maximum number of VS players that can join this zone</p></dd><dt class="param">vs_pop</dt><dd class="cmt"><p>the VS population in this zone</p></dd><dt class="param">bo_queue</dt><dd class="cmt"><p>the maximum number of Black OPs players that can join this zone</p></dd><dt class="param">bo_pop</dt><dd class="cmt"><p>the current Black OPs population in this zone</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/psforever/PSF-LoginServer/blob/master//common/src/main/scala/net/psforever/packet/game/ZonePopulationUpdateMessage.scala" target="_blank">ZonePopulationUpdateMessage.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="../PlanetSideGamePacket.html" class="extype" name="net.psforever.packet.PlanetSideGamePacket">PlanetSideGamePacket</a>, <a href="../PlanetSidePacket.html" class="extype" name="net.psforever.packet.PlanetSidePacket">PlanetSidePacket</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="net.psforever.packet.game.ZonePopulationUpdateMessage"><span>ZonePopulationUpdateMessage</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="net.psforever.packet.PlanetSideGamePacket"><span>PlanetSideGamePacket</span></li><li class="in" name="net.psforever.packet.PlanetSidePacket"><span>PlanetSidePacket</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="net.psforever.packet.game.ZonePopulationUpdateMessage#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(zone_id:Int,zone_queue:Long,tr_queue:Long,tr_pop:Long,nc_queue:Long,nc_pop:Long,vs_queue:Long,vs_pop:Long,bo_queue:Long,bo_pop:Long):net.psforever.packet.game.ZonePopulationUpdateMessage"></a>
+      <a id="&lt;init&gt;:ZonePopulationUpdateMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ZonePopulationUpdateMessage</span><span class="params">(<span name="zone_id">zone_id: <span class="extype" name="scala.Int">Int</span></span>, <span name="zone_queue">zone_queue: <span class="extype" name="scala.Long">Long</span></span>, <span name="tr_queue">tr_queue: <span class="extype" name="scala.Long">Long</span></span>, <span name="tr_pop">tr_pop: <span class="extype" name="scala.Long">Long</span></span>, <span name="nc_queue">nc_queue: <span class="extype" name="scala.Long">Long</span></span>, <span name="nc_pop">nc_pop: <span class="extype" name="scala.Long">Long</span></span>, <span name="vs_queue">vs_queue: <span class="extype" name="scala.Long">Long</span></span>, <span name="vs_pop">vs_pop: <span class="extype" name="scala.Long">Long</span></span>, <span name="bo_queue">bo_queue: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">0L</span></span>, <span name="bo_pop">bo_pop: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">0L</span></span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@&lt;init&gt;(zone_id:Int,zone_queue:Long,tr_queue:Long,tr_pop:Long,nc_queue:Long,nc_pop:Long,vs_queue:Long,vs_pop:Long,bo_queue:Long,bo_pop:Long):net.psforever.packet.game.ZonePopulationUpdateMessage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">zone_id</dt><dd class="cmt"><p>the continent</p></dd><dt class="param">zone_queue</dt><dd class="cmt"><p>the maximum population of all three (four) empires that can join this zone</p></dd><dt class="param">tr_queue</dt><dd class="cmt"><p>the maximum number of TR players that can join this zone</p></dd><dt class="param">tr_pop</dt><dd class="cmt"><p>the current TR population in this zone</p></dd><dt class="param">nc_queue</dt><dd class="cmt"><p>the maximum number of NC players that can join this zone</p></dd><dt class="param">nc_pop</dt><dd class="cmt"><p>the current NC population in this zone</p></dd><dt class="param">vs_queue</dt><dd class="cmt"><p>the maximum number of VS players that can join this zone</p></dd><dt class="param">vs_pop</dt><dd class="cmt"><p>the VS population in this zone</p></dd><dt class="param">bo_queue</dt><dd class="cmt"><p>the maximum number of Black OPs players that can join this zone</p></dd><dt class="param">bo_pop</dt><dd class="cmt"><p>the current Black OPs population in this zone</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.packet.game.ZonePopulationUpdateMessage.Packet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Packet=net.psforever.packet.game.ZonePopulationUpdateMessage"></a>
+      <a id="Packet:Packet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Packet</span><span class="result"> = <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@Packet=net.psforever.packet.game.ZonePopulationUpdateMessage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@##():Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@+(other:String):String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(ZonePopulationUpdateMessage,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@-&gt;[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="net.psforever.packet.game.ZonePopulationUpdateMessage#bo_pop" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="bo_pop:Long"></a>
+      <a id="bo_pop:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bo_pop</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@bo_pop:Long" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the current Black OPs population in this zone</p>
+    </li><li name="net.psforever.packet.game.ZonePopulationUpdateMessage#bo_queue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="bo_queue:Long"></a>
+      <a id="bo_queue:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bo_queue</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@bo_queue:Long" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the maximum number of Black OPs players that can join this zone</p>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@clone():Object" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="net.psforever.packet.game.ZonePopulationUpdateMessage#encode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="encode:scodec.Attempt[scodec.bits.BitVector]"></a>
+      <a id="encode:Attempt[BitVector]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">encode</span><span class="result">: <span class="extype" name="scodec.Attempt">Attempt</span>[<span class="extype" name="scodec.bits.BitVector">BitVector</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@encode:scodec.Attempt[scodec.bits.BitVector]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a> → <a href="../PlanetSidePacket.html" class="extype" name="net.psforever.packet.PlanetSidePacket">PlanetSidePacket</a></dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((ZonePopulationUpdateMessage)⇒Boolean,⇒Any):ZonePopulationUpdateMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((ZonePopulationUpdateMessage)⇒Boolean):ZonePopulationUpdateMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@ensuring(cond:A=&gt;Boolean):A" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):ZonePopulationUpdateMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):ZonePopulationUpdateMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@ensuring(cond:Boolean):A" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@formatted(fmtstr:String):String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="net.psforever.packet.game.ZonePopulationUpdateMessage#nc_pop" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nc_pop:Long"></a>
+      <a id="nc_pop:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nc_pop</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@nc_pop:Long" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the current NC population in this zone</p>
+    </li><li name="net.psforever.packet.game.ZonePopulationUpdateMessage#nc_queue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="nc_queue:Long"></a>
+      <a id="nc_queue:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">nc_queue</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@nc_queue:Long" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the maximum number of NC players that can join this zone</p>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="net.psforever.packet.game.ZonePopulationUpdateMessage#opcode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="opcode:net.psforever.packet.GamePacketOpcode.Value"></a>
+      <a id="opcode:GamePacketOpcode.Value"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">opcode</span><span class="result">: <a href="../GamePacketOpcode$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="net.psforever.packet.GamePacketOpcode.Value">GamePacketOpcode.Value</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@opcode:net.psforever.packet.GamePacketOpcode.Value" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a> → <a href="../PlanetSideGamePacket.html" class="extype" name="net.psforever.packet.PlanetSideGamePacket">PlanetSideGamePacket</a> → <a href="../PlanetSidePacket.html" class="extype" name="net.psforever.packet.PlanetSidePacket">PlanetSidePacket</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="net.psforever.packet.game.ZonePopulationUpdateMessage#tr_pop" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tr_pop:Long"></a>
+      <a id="tr_pop:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tr_pop</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@tr_pop:Long" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the current TR population in this zone</p>
+    </li><li name="net.psforever.packet.game.ZonePopulationUpdateMessage#tr_queue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="tr_queue:Long"></a>
+      <a id="tr_queue:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">tr_queue</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@tr_queue:Long" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the maximum number of TR players that can join this zone</p>
+    </li><li name="net.psforever.packet.game.ZonePopulationUpdateMessage#vs_pop" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="vs_pop:Long"></a>
+      <a id="vs_pop:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">vs_pop</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@vs_pop:Long" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the VS population in this zone</p>
+    </li><li name="net.psforever.packet.game.ZonePopulationUpdateMessage#vs_queue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="vs_queue:Long"></a>
+      <a id="vs_queue:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">vs_queue</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@vs_queue:Long" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the maximum number of VS players that can join this zone</p>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="net.psforever.packet.game.ZonePopulationUpdateMessage#zone_id" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="zone_id:Int"></a>
+      <a id="zone_id:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zone_id</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@zone_id:Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the continent</p>
+    </li><li name="net.psforever.packet.game.ZonePopulationUpdateMessage#zone_queue" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="zone_queue:Long"></a>
+      <a id="zone_queue:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zone_queue</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@zone_queue:Long" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the maximum population of all three (four) empires that can join this zone</p>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(ZonePopulationUpdateMessage,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.ZonePopulationUpdateMessage@→[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="net.psforever.packet.PlanetSideGamePacket">
+              <h3>Inherited from <a href="../PlanetSideGamePacket.html" class="extype" name="net.psforever.packet.PlanetSideGamePacket">PlanetSideGamePacket</a></h3>
+            </div><div class="parent" name="net.psforever.packet.PlanetSidePacket">
+              <h3>Inherited from <a href="../PlanetSidePacket.html" class="extype" name="net.psforever.packet.PlanetSidePacket">PlanetSidePacket</a></h3>
+            </div><div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

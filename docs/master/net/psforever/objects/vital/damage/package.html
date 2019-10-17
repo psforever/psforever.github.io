@@ -1,0 +1,183 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>damage - PSF-LoginServer -  master - net.psforever.objects.vital.damage</title>
+          <meta name="description" content="damage - PSF - LoginServer - master - net.psforever.objects.vital.damage" />
+          <meta name="keywords" content="damage PSF LoginServer master net.psforever.objects.vital.damage" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'net.psforever.objects.vital.damage.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../package.html" class="extype" name="net">net</a>.<a href="../../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../../package.html" class="extype" name="net.psforever.objects">objects</a>.<a href="../package.html" class="extype" name="net.psforever.objects.vital">vital</a></p>
+        <h1>damage</h1><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.vital.damage.package" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">damage</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.vital.damage.DamageCalculations" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DamageCalculationsextendsProjectileCalculations"></a>
+      <a id="DamageCalculations:DamageCalculations"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DamageCalculations.html"><span class="name">DamageCalculations</span></a><span class="result"> extends <a href="../projectile/ProjectileCalculations.html" class="extype" name="net.psforever.objects.vital.projectile.ProjectileCalculations">ProjectileCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.vital.damage.package@DamageCalculationsextendsProjectileCalculations" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The base class for function literal description related to calculating damage information.<br>
+<br>
+Implementing functionality of the children is the product of three user-defined processes
+and information for the calculation is extracted from the to-be-provided weapon discharge information.</p><div class="fullcomment"><div class="comment cmt"><p>The base class for function literal description related to calculating damage information.<br>
+<br>
+Implementing functionality of the children is the product of three user-defined processes
+and information for the calculation is extracted from the to-be-provided weapon discharge information.
+The specific functions passed into this object typically operate simultaneously normally
+and are related to the target and the kind of interaction the weapon discharge had with the target.</p></div></div>
+    </li><li name="net.psforever.objects.vital.damage.DamageProfile" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DamageProfileextendsAnyRef"></a>
+      <a id="DamageProfile:DamageProfile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DamageProfile.html"><span class="name">DamageProfile</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.vital.damage.package@DamageProfileextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The different values for five common types of damage that can be dealt, based on target and application.</p><div class="fullcomment"><div class="comment cmt"><p>The different values for five common types of damage that can be dealt, based on target and application.
+In the same way, the five damage modifiers that are applied to the same kind of damage.
+</p></div></div>
+    </li><li name="net.psforever.objects.vital.damage.DamageSelection" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DamageSelectionextendsAnyRef"></a>
+      <a id="DamageSelection:DamageSelection"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DamageSelection.html"><span class="name">DamageSelection</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.vital.damage.package@DamageSelectionextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Maintain information about three primary forms of damage calculation
+and a means to test which calculation is valid in a given situation.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.objects.vital.damage.DamageCalculations" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DamageCalculations"></a>
+      <a id="DamageCalculations:DamageCalculations"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DamageCalculations$.html"><span class="name">DamageCalculations</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.vital.damage.package@DamageCalculations" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

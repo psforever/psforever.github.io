@@ -1,0 +1,181 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>locks - PSF-LoginServer -  master - net.psforever.objects.serverobject.locks</title>
+          <meta name="description" content="locks - PSF - LoginServer - master - net.psforever.objects.serverobject.locks" />
+          <meta name="keywords" content="locks PSF LoginServer master net.psforever.objects.serverobject.locks" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'net.psforever.objects.serverobject.locks.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../package.html" class="extype" name="net">net</a>.<a href="../../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../../package.html" class="extype" name="net.psforever.objects">objects</a>.<a href="../package.html" class="extype" name="net.psforever.objects.serverobject">serverobject</a></p>
+        <h1>locks</h1><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.locks.package" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">locks</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.serverobject.locks.IFFLock" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IFFLockextendsAmenitywithHackable"></a>
+      <a id="IFFLock:IFFLock"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IFFLock.html"><span class="name">IFFLock</span></a><span class="result"> extends <a href="../structures/Amenity.html" class="extype" name="net.psforever.objects.serverobject.structures.Amenity">Amenity</a> with <a href="../hackable/Hackable.html" class="extype" name="net.psforever.objects.serverobject.hackable.Hackable">Hackable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.locks.package@IFFLockextendsAmenitywithHackable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A structure-owned server object that is a &quot;door lock.&quot;<br>
+<br>
+The &quot;door lock&quot; exerts an &quot;identify friend or foe&quot; field that detects the faction affiliation of a target player.</p><div class="fullcomment"><div class="comment cmt"><p>A structure-owned server object that is a &quot;door lock.&quot;<br>
+<br>
+The &quot;door lock&quot; exerts an &quot;identify friend or foe&quot; field that detects the faction affiliation of a target player.
+It also indirectly inherits faction affiliation from the structure to which it is connected
+or it can be &quot;hacked&quot; whereupon the person exploiting it leaves their &quot;faction&quot; as the aforementioned affiliated faction.
+The <code>IFFLock</code> is ideally associated with a server map object - a <code>Door</code> - to which it acts as a gatekeeper.</p></div></div>
+    </li><li name="net.psforever.objects.serverobject.locks.IFFLockControl" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IFFLockControlextendsActorwithFactionAffinityBehavior.CheckwithHackableBehavior.GenericHackable"></a>
+      <a id="IFFLockControl:IFFLockControl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IFFLockControl.html"><span class="name">IFFLockControl</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span> with <a href="../affinity/FactionAffinityBehavior$$Check.html" class="extype" name="net.psforever.objects.serverobject.affinity.FactionAffinityBehavior.Check">Check</a> with <a href="../hackable/HackableBehavior$$GenericHackable.html" class="extype" name="net.psforever.objects.serverobject.hackable.HackableBehavior.GenericHackable">GenericHackable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.locks.package@IFFLockControlextendsActorwithFactionAffinityBehavior.CheckwithHackableBehavior.GenericHackable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Actor</code> that handles messages being dispatched to a specific <code>IFFLock</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Actor</code> that handles messages being dispatched to a specific <code>IFFLock</code>.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>CommonMessages</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.locks.IFFLockDefinition" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IFFLockDefinitionextendsObjectDefinition"></a>
+      <a id="IFFLockDefinition:IFFLockDefinition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IFFLockDefinition.html"><span class="name">IFFLockDefinition</span></a><span class="result"> extends <a href="../../definition/ObjectDefinition.html" class="extype" name="net.psforever.objects.definition.ObjectDefinition">ObjectDefinition</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.locks.package@IFFLockDefinitionextendsObjectDefinition" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The definition for any <code>IFFLock</code>.</p><div class="fullcomment"><div class="comment cmt"><p>The definition for any <code>IFFLock</code>.
+Object Id 451 is a generic external lock.
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.objects.serverobject.locks.IFFLock" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IFFLock"></a>
+      <a id="IFFLock:IFFLock"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="IFFLock$.html"><span class="name">IFFLock</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.locks.package@IFFLock" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

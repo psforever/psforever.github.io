@@ -1,0 +1,391 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>process - PSF-LoginServer -  master - net.psforever.objects.serverobject.pad.process</title>
+          <meta name="description" content="process - PSF - LoginServer - master - net.psforever.objects.serverobject.pad.process" />
+          <meta name="keywords" content="process PSF LoginServer master net.psforever.objects.serverobject.pad.process" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../../index.html';
+            var hash = 'net.psforever.objects.serverobject.pad.process.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../../package.html" class="extype" name="net">net</a>.<a href="../../../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../../../package.html" class="extype" name="net.psforever.objects">objects</a>.<a href="../../package.html" class="extype" name="net.psforever.objects.serverobject">serverobject</a>.<a href="../package.html" class="extype" name="net.psforever.objects.serverobject.pad">pad</a></p>
+        <h1>process</h1><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.package" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">process</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlBase" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="VehicleSpawnControlBaseextendsActor"></a>
+      <a id="VehicleSpawnControlBase:VehicleSpawnControlBase"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleSpawnControlBase.html"><span class="name">VehicleSpawnControlBase</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.package@VehicleSpawnControlBaseextendsActor" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Base for all <code>VehicleSpawnControl</code>-related <code>Actor</code> classes.</p><div class="fullcomment"><div class="comment cmt"><p>Base for all <code>VehicleSpawnControl</code>-related <code>Actor</code> classes.
+Provide a common convention for the logging system's name.
+Additional functionality that recovers the <code>Zone</code> of the owned amenity <code>VehicleSpawnPad</code>.</p></div></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlConcealPlayer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VehicleSpawnControlConcealPlayerextendsVehicleSpawnControlBase"></a>
+      <a id="VehicleSpawnControlConcealPlayer:VehicleSpawnControlConcealPlayer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleSpawnControlConcealPlayer.html"><span class="name">VehicleSpawnControlConcealPlayer</span></a><span class="result"> extends <a href="VehicleSpawnControlBase.html" class="extype" name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlBase">VehicleSpawnControlBase</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.package@VehicleSpawnControlConcealPlayerextendsVehicleSpawnControlBase" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.
+The basic <code>VehicleSpawnControl</code> is the root of a simple tree of &quot;spawn control&quot; objects that chain to each other.
+Each object performs on (or more than one related) actions upon the vehicle order that was submitted.<br>
+<br>
+This object is the first link in the process chain that spawns the ordered vehicle.
+It is devoted to causing the prospective driver to become hidden during the first part of the process
+with the goal of appearing to be &quot;teleported&quot; into the driver seat.
+It has failure cases should the driver be in an incorrect state.</p></div></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlDriverControl" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VehicleSpawnControlDriverControlextendsVehicleSpawnControlBase"></a>
+      <a id="VehicleSpawnControlDriverControl:VehicleSpawnControlDriverControl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleSpawnControlDriverControl.html"><span class="name">VehicleSpawnControlDriverControl</span></a><span class="result"> extends <a href="VehicleSpawnControlBase.html" class="extype" name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlBase">VehicleSpawnControlBase</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.package@VehicleSpawnControlDriverControlextendsVehicleSpawnControlBase" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.
+The basic <code>VehicleSpawnControl</code> is the root of a simple tree of &quot;spawn control&quot; objects that chain to each other.
+Each object performs on (or more than one related) actions upon the vehicle order that was submitted.<br>
+<br>
+A certain amount of time after the server has asserted control over a newly-spawned vehicle,
+control of that vehicle is given over to the driver.
+It has failure cases should the driver be in an incorrect state.</p></div></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlFinalClearance" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VehicleSpawnControlFinalClearanceextendsVehicleSpawnControlBase"></a>
+      <a id="VehicleSpawnControlFinalClearance:VehicleSpawnControlFinalClearance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleSpawnControlFinalClearance.html"><span class="name">VehicleSpawnControlFinalClearance</span></a><span class="result"> extends <a href="VehicleSpawnControlBase.html" class="extype" name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlBase">VehicleSpawnControlBase</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.package@VehicleSpawnControlFinalClearanceextendsVehicleSpawnControlBase" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.
+The basic <code>VehicleSpawnControl</code> is the root of a simple tree of &quot;spawn control&quot; objects that chain to each other.
+Each object performs on (or more than one related) actions upon the vehicle order that was submitted.<br>
+<br>
+There is nothing left to do
+except make certain that the vehicle has moved far enough away from the spawn pad
+to not block the next order that may  be queued.
+A long call is made to the root of this <code>Actor</code> object chain to start work on any subsequent vehicle order.</p></div></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlGuided" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VehicleSpawnControlGuidedextendsVehicleSpawnControlBase"></a>
+      <a id="VehicleSpawnControlGuided:VehicleSpawnControlGuided"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleSpawnControlGuided.html"><span class="name">VehicleSpawnControlGuided</span></a><span class="result"> extends <a href="VehicleSpawnControlBase.html" class="extype" name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlBase">VehicleSpawnControlBase</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.package@VehicleSpawnControlGuidedextendsVehicleSpawnControlBase" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.
+The basic <code>VehicleSpawnControl</code> is the root of a simple tree of &quot;spawn control&quot; objects that chain to each other.
+Each object performs on (or more than one related) actions upon the vehicle order that was submitted.<br>
+<br>
+After the vehicle has been released from the spawn pad lifting platform,
+it enters into an auto-drive mode that has at least two stages.
+An undefined number of stages cane be included, however.
+This can lead the newly-spawned vehicle through a rough pre-defined path.<br>
+<br>
+Throughout this process, the conditions of <code>ServerVehicleOverrideMsg</code> are still in effect.</p></div></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlLoadVehicle" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VehicleSpawnControlLoadVehicleextendsVehicleSpawnControlBase"></a>
+      <a id="VehicleSpawnControlLoadVehicle:VehicleSpawnControlLoadVehicle"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleSpawnControlLoadVehicle.html"><span class="name">VehicleSpawnControlLoadVehicle</span></a><span class="result"> extends <a href="VehicleSpawnControlBase.html" class="extype" name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlBase">VehicleSpawnControlBase</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.package@VehicleSpawnControlLoadVehicleextendsVehicleSpawnControlBase" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.
+The basic <code>VehicleSpawnControl</code> is the root of a simple tree of &quot;spawn control&quot; objects that chain to each other.
+Each object performs on (or more than one related) actions upon the vehicle order that was submitted.<br>
+<br>
+This object introduces the vehicle into the game environment.
+The vehicle must be added to the <code>Continent</code>, loaded onto other players' clients, and given an initial timed deconstruction event.
+For actual details on this process, please refer to the external source represented by <code>Continent.VehicleEvents</code>.
+It has failure cases should the driver be in an incorrect state.</p></div></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlRailJack" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VehicleSpawnControlRailJackextendsVehicleSpawnControlBase"></a>
+      <a id="VehicleSpawnControlRailJack:VehicleSpawnControlRailJack"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleSpawnControlRailJack.html"><span class="name">VehicleSpawnControlRailJack</span></a><span class="result"> extends <a href="VehicleSpawnControlBase.html" class="extype" name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlBase">VehicleSpawnControlBase</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.package@VehicleSpawnControlRailJackextendsVehicleSpawnControlBase" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.
+The basic <code>VehicleSpawnControl</code> is the root of a simple tree of &quot;spawn control&quot; objects that chain to each other.
+Each object performs on (or more than one related) actions upon the vehicle order that was submitted.<br>
+<br>
+When the vehicle is added into the environment, it is attached to the spawn pad platform.
+On cue, the trapdoor of the platform will open, and the vehicle will be raised up into plain sight on a group of rails.
+These actions are actually integrated into previous stages and into later stages of the process.
+The primary objective to be completed is a specific place to start a frequent message to the other customers.
+It has failure cases should the driver be in an incorrect state.</p></div></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlSeatDriver" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VehicleSpawnControlSeatDriverextendsVehicleSpawnControlBase"></a>
+      <a id="VehicleSpawnControlSeatDriver:VehicleSpawnControlSeatDriver"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleSpawnControlSeatDriver.html"><span class="name">VehicleSpawnControlSeatDriver</span></a><span class="result"> extends <a href="VehicleSpawnControlBase.html" class="extype" name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlBase">VehicleSpawnControlBase</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.package@VehicleSpawnControlSeatDriverextendsVehicleSpawnControlBase" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.
+The basic <code>VehicleSpawnControl</code> is the root of a simple tree of &quot;spawn control&quot; objects that chain to each other.
+Each object performs on (or more than one related) actions upon the vehicle order that was submitted.<br>
+<br>
+This object forces the prospective driver to take the driver seat.
+Multiple separate but sequentially significant steps occur within the scope of this object.
+First, this step waits for the vehicle to be completely ready to accept the driver.
+Second, this step triggers the player to actually be moved into the driver seat.
+Finally, this step waits until the driver is properly in the driver seat.
+It has failure cases should the driver or the vehicle be in an incorrect state.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>ZonePopulationActor</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlServerVehicleOverride" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VehicleSpawnControlServerVehicleOverrideextendsVehicleSpawnControlBase"></a>
+      <a id="VehicleSpawnControlServerVehicleOverride:VehicleSpawnControlServerVehicleOverride"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleSpawnControlServerVehicleOverride.html"><span class="name">VehicleSpawnControlServerVehicleOverride</span></a><span class="result"> extends <a href="VehicleSpawnControlBase.html" class="extype" name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlBase">VehicleSpawnControlBase</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.package@VehicleSpawnControlServerVehicleOverrideextendsVehicleSpawnControlBase" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Actor</code> that handles vehicle spawning orders for a <code>VehicleSpawnPad</code>.
+The basic <code>VehicleSpawnControl</code> is the root of a simple tree of &quot;spawn control&quot; objects that chain to each other.
+Each object performs on (or more than one related) actions upon the vehicle order that was submitted.<br>
+<br>
+This object asserts automated control over the vehicle's motion after it has been released from its lifting platform.
+Normally, the vehicle drives forward for a bit under its own power.
+After a certain amount of time, control of the vehicle is given over to the driver.
+It has failure cases should the driver be in an incorrect state.</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AutoDriveControls"></a>
+      <a id="AutoDriveControls:AutoDriveControls"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$.html"><span class="name">AutoDriveControls</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.package@AutoDriveControls" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Instructions to be processed by <code>VehicleSpawnControlGuided</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Instructions to be processed by <code>VehicleSpawnControlGuided</code>.
+These instructions coordinate basic vehicle manipulations such as driving, turning, and stopping.
+If defined, they will operate on a newly formed vehicle after it is released from its spawn pad lifting platform
+and after it has been issued at least one <code>ServerVehicleOverrideMsg</code> packet.
+</p></div></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlFinalClearance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VehicleSpawnControlFinalClearance"></a>
+      <a id="VehicleSpawnControlFinalClearance:VehicleSpawnControlFinalClearance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleSpawnControlFinalClearance$.html"><span class="name">VehicleSpawnControlFinalClearance</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.package@VehicleSpawnControlFinalClearance" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlGuided" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VehicleSpawnControlGuided"></a>
+      <a id="VehicleSpawnControlGuided:VehicleSpawnControlGuided"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleSpawnControlGuided$.html"><span class="name">VehicleSpawnControlGuided</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.package@VehicleSpawnControlGuided" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.serverobject.pad.process.VehicleSpawnControlSeatDriver" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VehicleSpawnControlSeatDriver"></a>
+      <a id="VehicleSpawnControlSeatDriver:VehicleSpawnControlSeatDriver"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleSpawnControlSeatDriver$.html"><span class="name">VehicleSpawnControlSeatDriver</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.package@VehicleSpawnControlSeatDriver" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>services - PSF-LoginServer -  master - services</title>
+          <meta name="description" content="services - PSF - LoginServer - master - services" />
+          <meta name="keywords" content="services PSF LoginServer master services" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../lib/template.js"></script>
+      <script type="text/javascript" src="../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../index.html';
+            var hash = 'services.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../lib/package_big.png" />
+        
+        <h1>services</h1><span class="permalink">
+      <a href="../index.html#services.package" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">services</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="services.GenericEventBus" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GenericEventBus[A&lt;:services.GenericEventBusMsg]extendsActorEventBuswithSubchannelClassification"></a>
+      <a id="GenericEventBus[A&lt;:GenericEventBusMsg]:GenericEventBus[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GenericEventBus.html"><span class="name">GenericEventBus</span></a><span class="tparams">[<span name="A">A &lt;: <a href="GenericEventBusMsg.html" class="extype" name="services.GenericEventBusMsg">GenericEventBusMsg</a></span>]</span><span class="result"> extends <span class="extype" name="akka.event.ActorEventBus">ActorEventBus</span> with <span class="extype" name="akka.event.SubchannelClassification">SubchannelClassification</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#services.package@GenericEventBus[A&lt;:services.GenericEventBusMsg]extendsActorEventBuswithSubchannelClassification" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.GenericEventBusMsg" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="GenericEventBusMsgextendsAnyRef"></a>
+      <a id="GenericEventBusMsg:GenericEventBusMsg"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="GenericEventBusMsg.html"><span class="name">GenericEventBusMsg</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#services.package@GenericEventBusMsgextendsAnyRef" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.RemoverActor" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="RemoverActorextendsSupportActor[services.RemoverActor.Entry]"></a>
+      <a id="RemoverActor:RemoverActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RemoverActor.html"><span class="name">RemoverActor</span></a><span class="result"> extends <a href="support/SupportActor.html" class="extype" name="services.support.SupportActor">SupportActor</a>[<a href="RemoverActor$$Entry.html" class="extype" name="services.RemoverActor.Entry">Entry</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#services.package@RemoverActorextendsSupportActor[services.RemoverActor.Entry]" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The base class for a type of &quot;destruction <code>Actor</code>&quot; intended to be used for delaying object cleanup activity.</p><div class="fullcomment"><div class="comment cmt"><p>The base class for a type of &quot;destruction <code>Actor</code>&quot; intended to be used for delaying object cleanup activity.
+Objects submitted to this process should be registered to a global unique identified system for a given region
+as is specified in their submission.<br>
+<br>
+Two waiting lists are used to pool the objects being removed.
+The first list is a basic pooling list that precludes any proper removal actions
+and is almost expressly for delaying the process.
+Previously-submitted tasks can be removed from this list so long as a matching object can be found.
+Tasks in this list can also be expedited into the second list without having to consider delays.
+After being migrated to the secondary list, the object is considered beyond the point of no return.
+Followup activity will lead to its inevitable unregistering and removal.<br>
+<br>
+Functions have been provided for <code>override</code> in order to interject the appropriate cleanup operations.
+The activity itself is typically removing the object in question from a certain list,
+dismissing it with a mass distribution of <code>ObjectDeleteMessage</code> packets,
+and finally unregistering it.
+Some types of object have (de-)implementation variations which should be made explicit through the overrides.
+</p></div></div>
+    </li><li name="services.ServiceManager" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ServiceManagerextendsActor"></a>
+      <a id="ServiceManager:ServiceManager"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ServiceManager.html"><span class="name">ServiceManager</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#services.package@ServiceManagerextendsActor" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="services.RemoverActor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RemoverActor"></a>
+      <a id="RemoverActor:RemoverActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="RemoverActor$.html"><span class="name">RemoverActor</span></a><span class="result"> extends <a href="support/SupportActorCaseConversions.html" class="extype" name="services.support.SupportActorCaseConversions">SupportActorCaseConversions</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#services.package@RemoverActor" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.Service" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Service"></a>
+      <a id="Service:Service"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Service$.html"><span class="name">Service</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#services.package@Service" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.ServiceManager" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ServiceManager"></a>
+      <a id="ServiceManager:ServiceManager"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ServiceManager$.html"><span class="name">ServiceManager</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#services.package@ServiceManager" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.avatar" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="avatar"></a>
+      <a id="avatar:avatar"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="avatar/package.html"><span class="name">avatar</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#services.package@avatar" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.galaxy" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="galaxy"></a>
+      <a id="galaxy:galaxy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="galaxy/package.html"><span class="name">galaxy</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#services.package@galaxy" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.local" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="local"></a>
+      <a id="local:local"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="local/package.html"><span class="name">local</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#services.package@local" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.support" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="support"></a>
+      <a id="support:support"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="support/package.html"><span class="name">support</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#services.package@support" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.vehicle" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="vehicle"></a>
+      <a id="vehicle:vehicle"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="vehicle/package.html"><span class="name">vehicle</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#services.package@vehicle" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

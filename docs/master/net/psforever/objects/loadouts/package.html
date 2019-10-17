@@ -1,0 +1,223 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>loadouts - PSF-LoginServer -  master - net.psforever.objects.loadouts</title>
+          <meta name="description" content="loadouts - PSF - LoginServer - master - net.psforever.objects.loadouts" />
+          <meta name="keywords" content="loadouts PSF LoginServer master net.psforever.objects.loadouts" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'net.psforever.objects.loadouts.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="net">net</a>.<a href="../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../package.html" class="extype" name="net.psforever.objects">objects</a></p>
+        <h1>loadouts</h1><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.loadouts.package" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">loadouts</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.loadouts.InfantryLoadout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InfantryLoadoutextendsLoadoutwithProductwithSerializable"></a>
+      <a id="InfantryLoadout:InfantryLoadout"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="InfantryLoadout.html"><span class="name">InfantryLoadout</span></a><span class="params">(<span name="label">label: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="visible_slots">visible_slots: <span class="extype" name="scala.List">List</span>[<a href="Loadout$$SimplifiedEntry.html" class="extype" name="net.psforever.objects.loadouts.Loadout.SimplifiedEntry">SimplifiedEntry</a>]</span>, <span name="inventory">inventory: <span class="extype" name="scala.List">List</span>[<a href="Loadout$$SimplifiedEntry.html" class="extype" name="net.psforever.objects.loadouts.Loadout.SimplifiedEntry">SimplifiedEntry</a>]</span>, <span name="exosuit">exosuit: <a href="../../types/ExoSuitType$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="net.psforever.types.ExoSuitType.Value">types.ExoSuitType.Value</a></span>, <span name="subtype">subtype: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="Loadout.html" class="extype" name="net.psforever.objects.loadouts.Loadout">Loadout</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.loadouts.package@InfantryLoadoutextendsLoadoutwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A blueprint of a player's uniform, their holster items, and their inventory items, saved in a specific state.</p><div class="fullcomment"><div class="comment cmt"><p>A blueprint of a player's uniform, their holster items, and their inventory items, saved in a specific state.
+This previous state can be restored on any given player template
+by reconstructing the items (if permitted) and re-assigning the uniform (if available).<br>
+<br>
+The fifth tab on an <code>order_terminal</code> window is occupied by the list of &quot;Favorite&quot; <code>Loadout</code> blueprints.
+The ten-long list is initialized with <code>FavoritesMessage</code> packets assigned to the &quot;Infantry&quot; list.
+Specific entries are added or removed using <code>FavoritesRequest</code> packets,
+re-established using other conventional game packets.</p></div><dl class="paramcmts block"><dt class="param">label</dt><dd class="cmt"><p>the name by which this inventory will be known when displayed in a Favorites list;
+             field gets inherited</p></dd><dt class="param">visible_slots</dt><dd class="cmt"><p>simplified representation of the <code>Equipment</code> that can see &quot;seen&quot; on the target;
+                     field gets inherited</p></dd><dt class="param">inventory</dt><dd class="cmt"><p>simplified representation of the <code>Equipment</code> in the target's inventory or trunk;
+                 field gets inherited</p></dd><dt class="param">exosuit</dt><dd class="cmt"><p>the exo-suit in which the avatar will be dressed;
+               may be restricted</p></dd><dt class="param">subtype</dt><dd class="cmt"><p>the mechanized assault exo-suit specialization number that indicates whether the MAX performs:
+               anti-infantry (1), anti-vehicular (2), or anti-air work (3);
+               the default value is 0</p></dd></dl></div>
+    </li><li name="net.psforever.objects.loadouts.Loadout" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="LoadoutextendsAnyRef"></a>
+      <a id="Loadout:Loadout"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Loadout.html"><span class="name">Loadout</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.loadouts.package@LoadoutextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The base of all specific kinds of blueprint containers.</p><div class="fullcomment"><div class="comment cmt"><p>The base of all specific kinds of blueprint containers.
+This previous state can be restored on any appropriate template from which the loadout was copied
+by reconstructing the items (if permitted).
+The three fields are the name assigned to the loadout,
+the visible items that are created (which obey different rules depending on the source),
+and the concealed items that are created and added to the source's <code>Inventory</code>.<br>
+For example, the <code>visible_slots</code> on a <code>Player</code>-borne loadout will transform into the form <code>Array[EquipmentSlot]</code>;
+<code>Vehicle</code>-originating loadouts transform into the form <code>Map[Int, Equipment]</code>.
+<br>
+The lists of user-specific loadouts are initialized with <code>FavoritesMessage</code> packets.
+Specific entries are loaded or removed using <code>FavoritesRequest</code> packets.</p></div></div>
+    </li><li name="net.psforever.objects.loadouts.VehicleLoadout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VehicleLoadoutextendsLoadoutwithProductwithSerializable"></a>
+      <a id="VehicleLoadout:VehicleLoadout"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleLoadout.html"><span class="name">VehicleLoadout</span></a><span class="params">(<span name="label">label: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="visible_slots">visible_slots: <span class="extype" name="scala.List">List</span>[<a href="Loadout$$SimplifiedEntry.html" class="extype" name="net.psforever.objects.loadouts.Loadout.SimplifiedEntry">SimplifiedEntry</a>]</span>, <span name="inventory">inventory: <span class="extype" name="scala.List">List</span>[<a href="Loadout$$SimplifiedEntry.html" class="extype" name="net.psforever.objects.loadouts.Loadout.SimplifiedEntry">SimplifiedEntry</a>]</span>, <span name="vehicle_definition">vehicle_definition: <a href="../definition/VehicleDefinition.html" class="extype" name="net.psforever.objects.definition.VehicleDefinition">VehicleDefinition</a></span>)</span><span class="result"> extends <a href="Loadout.html" class="extype" name="net.psforever.objects.loadouts.Loadout">Loadout</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.loadouts.package@VehicleLoadoutextendsLoadoutwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A blueprint of a vehicle's mounted weapons and its inventory items, saved in a specific state.</p><div class="fullcomment"><div class="comment cmt"><p>A blueprint of a vehicle's mounted weapons and its inventory items, saved in a specific state.
+This previous state can be restored on an apporpriate vehicle template
+by reconstructing the items (if permitted).
+Mismatched vehicles may produce no loadout or an imperfect loadout depending on specifications.<br>
+<br>
+The second tab on an <code>repair_silo</code> window is occupied by the list of &quot;Favorite&quot; <code>Loadout</code> blueprints.
+The five-long list is initialized with <code>FavoritesMessage</code> packets assigned to the &quot;Vehicle&quot; list.
+Specific entries are added or removed using <code>FavoritesRequest</code> packets,
+re-established using other conventional game packets.</p></div><dl class="paramcmts block"><dt class="param">label</dt><dd class="cmt"><p>the name by which this inventory will be known when displayed in a Favorites list;
+             field gets inherited</p></dd><dt class="param">visible_slots</dt><dd class="cmt"><p>simplified representation of the <code>Equipment</code> that can see &quot;seen&quot; on the target;
+             field gets inherited</p></dd><dt class="param">inventory</dt><dd class="cmt"><p>simplified representation of the <code>Equipment</code> in the target's inventory or trunk;
+             field gets inherited</p></dd><dt class="param">vehicle_definition</dt><dd class="cmt"><p>the original type of vehicle whose state is being populated</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.objects.loadouts.InfantryLoadout" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InfantryLoadout"></a>
+      <a id="InfantryLoadout:InfantryLoadout"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="InfantryLoadout$.html"><span class="name">InfantryLoadout</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.loadouts.package@InfantryLoadout" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.loadouts.Loadout" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Loadout"></a>
+      <a id="Loadout:Loadout"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Loadout$.html"><span class="name">Loadout</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.loadouts.package@Loadout" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

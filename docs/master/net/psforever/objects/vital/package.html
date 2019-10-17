@@ -1,0 +1,1173 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>vital - PSF-LoginServer -  master - net.psforever.objects.vital</title>
+          <meta name="description" content="vital - PSF - LoginServer - master - net.psforever.objects.vital" />
+          <meta name="keywords" content="vital PSF LoginServer master net.psforever.objects.vital" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'net.psforever.objects.vital.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="net">net</a>.<a href="../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../package.html" class="extype" name="net.psforever.objects">objects</a></p>
+        <h1>vital</h1><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">vital</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.vital.DamageFromProjectile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DamageFromProjectileextendsDamagingActivitywithProductwithSerializable"></a>
+      <a id="DamageFromProjectile:DamageFromProjectile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="DamageFromProjectile.html"><span class="name">DamageFromProjectile</span></a><span class="params">(<span name="data">data: <a href="../ballistics/ResolvedProjectile.html" class="extype" name="net.psforever.objects.ballistics.ResolvedProjectile">ResolvedProjectile</a></span>)</span><span class="result"> extends <a href="DamagingActivity.html" class="extype" name="net.psforever.objects.vital.DamagingActivity">DamagingActivity</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@DamageFromProjectileextendsDamagingActivitywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.DamageResistanceModel" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="DamageResistanceModelextendsAnyRef"></a>
+      <a id="DamageResistanceModel:DamageResistanceModel"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="DamageResistanceModel.html"><span class="name">DamageResistanceModel</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@DamageResistanceModelextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The functionality that is necessary for interaction of a vital game object with the rest of the game world.<br>
+<br>
+A vital object can be hurt or damaged or healed or repaired (HDHR).</p><div class="fullcomment"><div class="comment cmt"><p>The functionality that is necessary for interaction of a vital game object with the rest of the game world.<br>
+<br>
+A vital object can be hurt or damaged or healed or repaired (HDHR).
+The actual implementation of how that works is left to the specific object and its interfaces, however.
+The more involved values that are applied to the vital object are calculated by a series of functions
+that contribute different values, e.g., the value for being damaged.
+&quot;Being damaged&quot; is also not the same for all valid targets:
+some targets don't utilize the same kinds of values in the same way as another,
+and some targets utilize a different assortment of values than either of the first two examples.
+The damage model is a common interface for producing those values
+and reconciling those values with a valid target object
+without much fuss.<br>
+<br>
+By default, nothing should do anything of substance.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>Vitality</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.vital.DamagingActivity" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="DamagingActivityextendsVitalsActivity"></a>
+      <a id="DamagingActivity:DamagingActivity"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DamagingActivity.html"><span class="name">DamagingActivity</span></a><span class="result"> extends <a href="VitalsActivity.html" class="extype" name="net.psforever.objects.vital.VitalsActivity">VitalsActivity</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@DamagingActivityextendsVitalsActivity" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.HealFromExoSuitChange" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HealFromExoSuitChangeextendsHealingActivitywithProductwithSerializable"></a>
+      <a id="HealFromExoSuitChange:HealFromExoSuitChange"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="HealFromExoSuitChange.html"><span class="name">HealFromExoSuitChange</span></a><span class="params">(<span name="target">target: <a href="../ballistics/PlayerSource.html" class="extype" name="net.psforever.objects.ballistics.PlayerSource">PlayerSource</a></span>, <span name="exosuit">exosuit: <a href="../../types/ExoSuitType$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="net.psforever.types.ExoSuitType.Value">types.ExoSuitType.Value</a></span>)</span><span class="result"> extends <a href="HealingActivity.html" class="extype" name="net.psforever.objects.vital.HealingActivity">HealingActivity</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@HealFromExoSuitChangeextendsHealingActivitywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.HealFromImplant" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HealFromImplantextendsHealingActivitywithProductwithSerializable"></a>
+      <a id="HealFromImplant:HealFromImplant"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="HealFromImplant.html"><span class="name">HealFromImplant</span></a><span class="params">(<span name="target">target: <a href="../ballistics/PlayerSource.html" class="extype" name="net.psforever.objects.ballistics.PlayerSource">PlayerSource</a></span>, <span name="amount">amount: <span class="extype" name="scala.Int">Int</span></span>, <span name="implant">implant: <a href="../../types/ImplantType$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="net.psforever.types.ImplantType.Value">types.ImplantType.Value</a></span>)</span><span class="result"> extends <a href="HealingActivity.html" class="extype" name="net.psforever.objects.vital.HealingActivity">HealingActivity</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@HealFromImplantextendsHealingActivitywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.HealFromKit" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HealFromKitextendsHealingActivitywithProductwithSerializable"></a>
+      <a id="HealFromKit:HealFromKit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="HealFromKit.html"><span class="name">HealFromKit</span></a><span class="params">(<span name="target">target: <a href="../ballistics/PlayerSource.html" class="extype" name="net.psforever.objects.ballistics.PlayerSource">PlayerSource</a></span>, <span name="amount">amount: <span class="extype" name="scala.Int">Int</span></span>, <span name="kit_def">kit_def: <a href="../definition/KitDefinition.html" class="extype" name="net.psforever.objects.definition.KitDefinition">KitDefinition</a></span>)</span><span class="result"> extends <a href="HealingActivity.html" class="extype" name="net.psforever.objects.vital.HealingActivity">HealingActivity</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@HealFromKitextendsHealingActivitywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.HealFromTerm" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="HealFromTermextendsHealingActivitywithProductwithSerializable"></a>
+      <a id="HealFromTerm:HealFromTerm"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="HealFromTerm.html"><span class="name">HealFromTerm</span></a><span class="params">(<span name="target">target: <a href="../ballistics/PlayerSource.html" class="extype" name="net.psforever.objects.ballistics.PlayerSource">PlayerSource</a></span>, <span name="health">health: <span class="extype" name="scala.Int">Int</span></span>, <span name="armor">armor: <span class="extype" name="scala.Int">Int</span></span>, <span name="term_def">term_def: <a href="../serverobject/terminals/TerminalDefinition.html" class="extype" name="net.psforever.objects.serverobject.terminals.TerminalDefinition">TerminalDefinition</a></span>)</span><span class="result"> extends <a href="HealingActivity.html" class="extype" name="net.psforever.objects.vital.HealingActivity">HealingActivity</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@HealFromTermextendsHealingActivitywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.HealingActivity" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="HealingActivityextendsVitalsActivity"></a>
+      <a id="HealingActivity:HealingActivity"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="HealingActivity.html"><span class="name">HealingActivity</span></a><span class="result"> extends <a href="VitalsActivity.html" class="extype" name="net.psforever.objects.vital.VitalsActivity">VitalsActivity</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@HealingActivityextendsVitalsActivity" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.NoDamageBase" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="NoDamageBaseextendsDamageCalculations"></a>
+      <a id="NoDamageBase:NoDamageBase"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NoDamageBase.html"><span class="name">NoDamageBase</span></a><span class="result"> extends <a href="damage/DamageCalculations.html" class="extype" name="net.psforever.objects.vital.damage.DamageCalculations">DamageCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@NoDamageBaseextendsDamageCalculations" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A protected super class for calculating &quot;no damage.&quot;
+Used for <code>NoDamage</code> but also for the base of <code>*LashDamage</code> calculation objects
+to maintain the polymorphic identity of <code>DamageCalculations</code>.</p><div class="fullcomment"><div class="comment cmt"><p>A protected super class for calculating &quot;no damage.&quot;
+Used for <code>NoDamage</code> but also for the base of <code>*LashDamage</code> calculation objects
+to maintain the polymorphic identity of <code>DamageCalculations</code>.
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="net.psforever.objects.vital.PlayerSuicide" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PlayerSuicideextendsDamagingActivitywithProductwithSerializable"></a>
+      <a id="PlayerSuicide:PlayerSuicide"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="PlayerSuicide.html"><span class="name">PlayerSuicide</span></a><span class="params">(<span name="target">target: <a href="../ballistics/PlayerSource.html" class="extype" name="net.psforever.objects.ballistics.PlayerSource">PlayerSource</a></span>)</span><span class="result"> extends <a href="DamagingActivity.html" class="extype" name="net.psforever.objects.vital.DamagingActivity">DamagingActivity</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@PlayerSuicideextendsDamagingActivitywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.RepairFromTerm" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RepairFromTermextendsHealingActivitywithProductwithSerializable"></a>
+      <a id="RepairFromTerm:RepairFromTerm"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="RepairFromTerm.html"><span class="name">RepairFromTerm</span></a><span class="params">(<span name="target">target: <a href="../ballistics/VehicleSource.html" class="extype" name="net.psforever.objects.ballistics.VehicleSource">VehicleSource</a></span>, <span name="amount">amount: <span class="extype" name="scala.Int">Int</span></span>, <span name="term_def">term_def: <a href="../serverobject/terminals/TerminalDefinition.html" class="extype" name="net.psforever.objects.serverobject.terminals.TerminalDefinition">TerminalDefinition</a></span>)</span><span class="result"> extends <a href="HealingActivity.html" class="extype" name="net.psforever.objects.vital.HealingActivity">HealingActivity</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@RepairFromTermextendsHealingActivitywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.StandardDamageProfile" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="StandardDamageProfileextendsDamageProfile"></a>
+      <a id="StandardDamageProfile:StandardDamageProfile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="StandardDamageProfile.html"><span class="name">StandardDamageProfile</span></a><span class="result"> extends <a href="damage/DamageProfile.html" class="extype" name="net.psforever.objects.vital.damage.DamageProfile">DamageProfile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@StandardDamageProfileextendsDamageProfile" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.StandardResistanceProfile" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="StandardResistanceProfileextendsResistanceProfile"></a>
+      <a id="StandardResistanceProfile:StandardResistanceProfile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="StandardResistanceProfile.html"><span class="name">StandardResistanceProfile</span></a><span class="result"> extends <a href="resistance/ResistanceProfile.html" class="extype" name="net.psforever.objects.vital.resistance.ResistanceProfile">ResistanceProfile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@StandardResistanceProfileextendsResistanceProfile" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The different values for four common methods of modifying incoming damage.</p><div class="fullcomment"><div class="comment cmt"><p>The different values for four common methods of modifying incoming damage.
+Two of the four resistances are directly paired with forms of incoming damage.
+This is for defining pure accessor functions,
+based on the assumption that the implementing object's <code>Definition</code> is the primary <code>ResistanceProfile</code>.
+</p></div></div>
+    </li><li name="net.psforever.objects.vital.VehicleShieldCharge" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VehicleShieldChargeextendsHealingActivitywithProductwithSerializable"></a>
+      <a id="VehicleShieldCharge:VehicleShieldCharge"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleShieldCharge.html"><span class="name">VehicleShieldCharge</span></a><span class="params">(<span name="target">target: <a href="../ballistics/VehicleSource.html" class="extype" name="net.psforever.objects.ballistics.VehicleSource">VehicleSource</a></span>, <span name="amount">amount: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="HealingActivity.html" class="extype" name="net.psforever.objects.vital.HealingActivity">HealingActivity</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@VehicleShieldChargeextendsHealingActivitywithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.Vitality" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="VitalityextendsAnyRef"></a>
+      <a id="Vitality:Vitality"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Vitality.html"><span class="name">Vitality</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@VitalityextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A vital object can be hurt or damaged or healed or repaired (HDHR).</p><div class="fullcomment"><div class="comment cmt"><p>A vital object can be hurt or damaged or healed or repaired (HDHR).
+The amount of HDHR is controlled by the damage model of this vital object reacting to stimulus.
+A history of the previous changes in vital statistics of the underlying object is recorded
+in reverse chronological order.
+The damage model is also provided.
+</p></div></div>
+    </li><li name="net.psforever.objects.vital.VitalsActivity" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="VitalsActivityextendsAnyRef"></a>
+      <a id="VitalsActivity:VitalsActivity"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="VitalsActivity.html"><span class="name">VitalsActivity</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@VitalsActivityextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.objects.vital.AircraftHitDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AircraftHitDamage"></a>
+      <a id="AircraftHitDamage:AircraftHitDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AircraftHitDamage$.html"><span class="name">AircraftHitDamage</span></a><span class="result"> extends <a href="damage/DamageCalculations.html" class="extype" name="net.psforever.objects.vital.damage.DamageCalculations">DamageCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@AircraftHitDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.AircraftLashDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AircraftLashDamage"></a>
+      <a id="AircraftLashDamage:AircraftLashDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AircraftLashDamage$.html"><span class="name">AircraftLashDamage</span></a><span class="result"> extends <a href="damage/DamageCalculations.html" class="extype" name="net.psforever.objects.vital.damage.DamageCalculations">DamageCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@AircraftLashDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.AircraftSplashDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AircraftSplashDamage"></a>
+      <a id="AircraftSplashDamage:AircraftSplashDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AircraftSplashDamage$.html"><span class="name">AircraftSplashDamage</span></a><span class="result"> extends <a href="damage/DamageCalculations.html" class="extype" name="net.psforever.objects.vital.damage.DamageCalculations">DamageCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@AircraftSplashDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.ComplexDeployableResolutions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ComplexDeployableResolutions"></a>
+      <a id="ComplexDeployableResolutions:ComplexDeployableResolutions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ComplexDeployableResolutions$.html"><span class="name">ComplexDeployableResolutions</span></a><span class="result"> extends <a href="resolution/DamageResistCalculations.html" class="extype" name="net.psforever.objects.vital.resolution.DamageResistCalculations">DamageResistCalculations</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@ComplexDeployableResolutions" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.DamageType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DamageType"></a>
+      <a id="DamageType:DamageType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DamageType$.html"><span class="name">DamageType</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@DamageType" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Enumeration</code> of the damage type.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Enumeration</code> of the damage type.
+These types are not necessarily representative of the kind of projectile being used;
+for example, the bolt driver's <code>bolt</code> is considered &quot;splash.&quot;
+</p></div></div>
+    </li><li name="net.psforever.objects.vital.InfantryAggravatedResistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InfantryAggravatedResistance"></a>
+      <a id="InfantryAggravatedResistance:InfantryAggravatedResistance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="InfantryAggravatedResistance$.html"><span class="name">InfantryAggravatedResistance</span></a><span class="result"> extends <a href="resistance/ResistanceCalculations.html" class="extype" name="net.psforever.objects.vital.resistance.ResistanceCalculations">ResistanceCalculations</a>[<a href="../ballistics/PlayerSource.html" class="extype" name="net.psforever.objects.ballistics.PlayerSource">PlayerSource</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@InfantryAggravatedResistance" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.InfantryHitDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InfantryHitDamage"></a>
+      <a id="InfantryHitDamage:InfantryHitDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="InfantryHitDamage$.html"><span class="name">InfantryHitDamage</span></a><span class="result"> extends <a href="damage/DamageCalculations.html" class="extype" name="net.psforever.objects.vital.damage.DamageCalculations">DamageCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@InfantryHitDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.InfantryHitResistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InfantryHitResistance"></a>
+      <a id="InfantryHitResistance:InfantryHitResistance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="InfantryHitResistance$.html"><span class="name">InfantryHitResistance</span></a><span class="result"> extends <a href="resistance/ResistanceCalculations.html" class="extype" name="net.psforever.objects.vital.resistance.ResistanceCalculations">ResistanceCalculations</a>[<a href="../ballistics/PlayerSource.html" class="extype" name="net.psforever.objects.ballistics.PlayerSource">PlayerSource</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@InfantryHitResistance" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.InfantryLashDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InfantryLashDamage"></a>
+      <a id="InfantryLashDamage:InfantryLashDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="InfantryLashDamage$.html"><span class="name">InfantryLashDamage</span></a><span class="result"> extends <a href="damage/DamageCalculations.html" class="extype" name="net.psforever.objects.vital.damage.DamageCalculations">DamageCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@InfantryLashDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.InfantryLashResistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InfantryLashResistance"></a>
+      <a id="InfantryLashResistance:InfantryLashResistance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="InfantryLashResistance$.html"><span class="name">InfantryLashResistance</span></a><span class="result"> extends <a href="resistance/ResistanceCalculations.html" class="extype" name="net.psforever.objects.vital.resistance.ResistanceCalculations">ResistanceCalculations</a>[<a href="../ballistics/PlayerSource.html" class="extype" name="net.psforever.objects.ballistics.PlayerSource">PlayerSource</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@InfantryLashResistance" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.InfantryResolutions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InfantryResolutions"></a>
+      <a id="InfantryResolutions:InfantryResolutions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="InfantryResolutions$.html"><span class="name">InfantryResolutions</span></a><span class="result"> extends <a href="resolution/DamageResistCalculations.html" class="extype" name="net.psforever.objects.vital.resolution.DamageResistCalculations">DamageResistCalculations</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@InfantryResolutions" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.InfantrySplashDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InfantrySplashDamage"></a>
+      <a id="InfantrySplashDamage:InfantrySplashDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="InfantrySplashDamage$.html"><span class="name">InfantrySplashDamage</span></a><span class="result"> extends <a href="damage/DamageCalculations.html" class="extype" name="net.psforever.objects.vital.damage.DamageCalculations">DamageCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@InfantrySplashDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.InfantrySplashDamageDirect" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InfantrySplashDamageDirect"></a>
+      <a id="InfantrySplashDamageDirect:InfantrySplashDamageDirect"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="InfantrySplashDamageDirect$.html"><span class="name">InfantrySplashDamageDirect</span></a><span class="result"> extends <a href="damage/DamageCalculations.html" class="extype" name="net.psforever.objects.vital.damage.DamageCalculations">DamageCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@InfantrySplashDamageDirect" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.InfantrySplashResistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InfantrySplashResistance"></a>
+      <a id="InfantrySplashResistance:InfantrySplashResistance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="InfantrySplashResistance$.html"><span class="name">InfantrySplashResistance</span></a><span class="result"> extends <a href="resistance/ResistanceCalculations.html" class="extype" name="net.psforever.objects.vital.resistance.ResistanceCalculations">ResistanceCalculations</a>[<a href="../ballistics/PlayerSource.html" class="extype" name="net.psforever.objects.ballistics.PlayerSource">PlayerSource</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@InfantrySplashResistance" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.MaxHitDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MaxHitDamage"></a>
+      <a id="MaxHitDamage:MaxHitDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MaxHitDamage$.html"><span class="name">MaxHitDamage</span></a><span class="result"> extends <a href="damage/DamageCalculations.html" class="extype" name="net.psforever.objects.vital.damage.DamageCalculations">DamageCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@MaxHitDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.MaxLashDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MaxLashDamage"></a>
+      <a id="MaxLashDamage:MaxLashDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MaxLashDamage$.html"><span class="name">MaxLashDamage</span></a><span class="result"> extends <a href="damage/DamageCalculations.html" class="extype" name="net.psforever.objects.vital.damage.DamageCalculations">DamageCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@MaxLashDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.MaxResolutions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MaxResolutions"></a>
+      <a id="MaxResolutions:MaxResolutions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MaxResolutions$.html"><span class="name">MaxResolutions</span></a><span class="result"> extends <a href="resolution/DamageResistCalculations.html" class="extype" name="net.psforever.objects.vital.resolution.DamageResistCalculations">DamageResistCalculations</a>[(<span class="extype" name="scala.Int">Int</span>, <span class="extype" name="scala.Int">Int</span>)]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@MaxResolutions" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.MaxSplashDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MaxSplashDamage"></a>
+      <a id="MaxSplashDamage:MaxSplashDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MaxSplashDamage$.html"><span class="name">MaxSplashDamage</span></a><span class="result"> extends <a href="damage/DamageCalculations.html" class="extype" name="net.psforever.objects.vital.damage.DamageCalculations">DamageCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@MaxSplashDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.NoDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NoDamage"></a>
+      <a id="NoDamage:NoDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NoDamage$.html"><span class="name">NoDamage</span></a><span class="result"> extends <a href="NoDamageBase.html" class="extype" name="net.psforever.objects.vital.NoDamageBase">NoDamageBase</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@NoDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.NoDamageSelection" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NoDamageSelection"></a>
+      <a id="NoDamageSelection:NoDamageSelection"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NoDamageSelection$.html"><span class="name">NoDamageSelection</span></a><span class="result"> extends <a href="damage/DamageSelection.html" class="extype" name="net.psforever.objects.vital.damage.DamageSelection">DamageSelection</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@NoDamageSelection" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.NoResistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NoResistance"></a>
+      <a id="NoResistance:NoResistance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NoResistance$.html"><span class="name">NoResistance</span></a><span class="result"> extends <a href="resistance/ResistanceCalculations.html" class="extype" name="net.psforever.objects.vital.resistance.ResistanceCalculations">ResistanceCalculations</a>[<a href="../ballistics/SourceEntry.html" class="extype" name="net.psforever.objects.ballistics.SourceEntry">SourceEntry</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@NoResistance" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.NoResistanceSelection" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NoResistanceSelection"></a>
+      <a id="NoResistanceSelection:NoResistanceSelection"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NoResistanceSelection$.html"><span class="name">NoResistanceSelection</span></a><span class="result"> extends <a href="resistance/ResistanceSelection.html" class="extype" name="net.psforever.objects.vital.resistance.ResistanceSelection">ResistanceSelection</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@NoResistanceSelection" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.NoResolutions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NoResolutions"></a>
+      <a id="NoResolutions:NoResolutions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NoResolutions$.html"><span class="name">NoResolutions</span></a><span class="result"> extends <a href="resolution/DamageResistCalculations.html" class="extype" name="net.psforever.objects.vital.resolution.DamageResistCalculations">DamageResistCalculations</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@NoResolutions" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.SimpleResolutions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SimpleResolutions"></a>
+      <a id="SimpleResolutions:SimpleResolutions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SimpleResolutions$.html"><span class="name">SimpleResolutions</span></a><span class="result"> extends <a href="resolution/DamageResistCalculations.html" class="extype" name="net.psforever.objects.vital.resolution.DamageResistCalculations">DamageResistCalculations</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@SimpleResolutions" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.StandardAircraftDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StandardAircraftDamage"></a>
+      <a id="StandardAircraftDamage:StandardAircraftDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StandardAircraftDamage$.html"><span class="name">StandardAircraftDamage</span></a><span class="result"> extends <a href="damage/DamageSelection.html" class="extype" name="net.psforever.objects.vital.damage.DamageSelection">DamageSelection</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@StandardAircraftDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.StandardDeployableDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StandardDeployableDamage"></a>
+      <a id="StandardDeployableDamage:StandardDeployableDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StandardDeployableDamage$.html"><span class="name">StandardDeployableDamage</span></a><span class="result"> extends <a href="damage/DamageSelection.html" class="extype" name="net.psforever.objects.vital.damage.DamageSelection">DamageSelection</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@StandardDeployableDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.StandardInfantryDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StandardInfantryDamage"></a>
+      <a id="StandardInfantryDamage:StandardInfantryDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StandardInfantryDamage$.html"><span class="name">StandardInfantryDamage</span></a><span class="result"> extends <a href="damage/DamageSelection.html" class="extype" name="net.psforever.objects.vital.damage.DamageSelection">DamageSelection</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@StandardInfantryDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.StandardInfantryResistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StandardInfantryResistance"></a>
+      <a id="StandardInfantryResistance:StandardInfantryResistance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StandardInfantryResistance$.html"><span class="name">StandardInfantryResistance</span></a><span class="result"> extends <a href="resistance/ResistanceSelection.html" class="extype" name="net.psforever.objects.vital.resistance.ResistanceSelection">ResistanceSelection</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@StandardInfantryResistance" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.StandardMaxDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StandardMaxDamage"></a>
+      <a id="StandardMaxDamage:StandardMaxDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StandardMaxDamage$.html"><span class="name">StandardMaxDamage</span></a><span class="result"> extends <a href="damage/DamageSelection.html" class="extype" name="net.psforever.objects.vital.damage.DamageSelection">DamageSelection</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@StandardMaxDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.StandardResolutions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StandardResolutions"></a>
+      <a id="StandardResolutions:StandardResolutions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StandardResolutions$.html"><span class="name">StandardResolutions</span></a><span class="result"> extends <a href="resolution/ResolutionSelection.html" class="extype" name="net.psforever.objects.vital.resolution.ResolutionSelection">ResolutionSelection</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@StandardResolutions" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.StandardVehicleDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StandardVehicleDamage"></a>
+      <a id="StandardVehicleDamage:StandardVehicleDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StandardVehicleDamage$.html"><span class="name">StandardVehicleDamage</span></a><span class="result"> extends <a href="damage/DamageSelection.html" class="extype" name="net.psforever.objects.vital.damage.DamageSelection">DamageSelection</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@StandardVehicleDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.StandardVehicleResistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StandardVehicleResistance"></a>
+      <a id="StandardVehicleResistance:StandardVehicleResistance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StandardVehicleResistance$.html"><span class="name">StandardVehicleResistance</span></a><span class="result"> extends <a href="resistance/ResistanceSelection.html" class="extype" name="net.psforever.objects.vital.resistance.ResistanceSelection">ResistanceSelection</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@StandardVehicleResistance" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.VehicleAggravatedResistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VehicleAggravatedResistance"></a>
+      <a id="VehicleAggravatedResistance:VehicleAggravatedResistance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleAggravatedResistance$.html"><span class="name">VehicleAggravatedResistance</span></a><span class="result"> extends <a href="resistance/ResistanceCalculations.html" class="extype" name="net.psforever.objects.vital.resistance.ResistanceCalculations">ResistanceCalculations</a>[<a href="../ballistics/VehicleSource.html" class="extype" name="net.psforever.objects.ballistics.VehicleSource">VehicleSource</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@VehicleAggravatedResistance" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.VehicleHitDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VehicleHitDamage"></a>
+      <a id="VehicleHitDamage:VehicleHitDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleHitDamage$.html"><span class="name">VehicleHitDamage</span></a><span class="result"> extends <a href="damage/DamageCalculations.html" class="extype" name="net.psforever.objects.vital.damage.DamageCalculations">DamageCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@VehicleHitDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.VehicleHitResistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VehicleHitResistance"></a>
+      <a id="VehicleHitResistance:VehicleHitResistance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleHitResistance$.html"><span class="name">VehicleHitResistance</span></a><span class="result"> extends <a href="resistance/ResistanceCalculations.html" class="extype" name="net.psforever.objects.vital.resistance.ResistanceCalculations">ResistanceCalculations</a>[<a href="../ballistics/VehicleSource.html" class="extype" name="net.psforever.objects.ballistics.VehicleSource">VehicleSource</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@VehicleHitResistance" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.VehicleLashDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VehicleLashDamage"></a>
+      <a id="VehicleLashDamage:VehicleLashDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleLashDamage$.html"><span class="name">VehicleLashDamage</span></a><span class="result"> extends <a href="damage/DamageCalculations.html" class="extype" name="net.psforever.objects.vital.damage.DamageCalculations">DamageCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@VehicleLashDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.VehicleLashResistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VehicleLashResistance"></a>
+      <a id="VehicleLashResistance:VehicleLashResistance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleLashResistance$.html"><span class="name">VehicleLashResistance</span></a><span class="result"> extends <a href="resistance/ResistanceCalculations.html" class="extype" name="net.psforever.objects.vital.resistance.ResistanceCalculations">ResistanceCalculations</a>[<a href="../ballistics/VehicleSource.html" class="extype" name="net.psforever.objects.ballistics.VehicleSource">VehicleSource</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@VehicleLashResistance" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.VehicleResolutions" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VehicleResolutions"></a>
+      <a id="VehicleResolutions:VehicleResolutions"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleResolutions$.html"><span class="name">VehicleResolutions</span></a><span class="result"> extends <a href="resolution/DamageResistCalculations.html" class="extype" name="net.psforever.objects.vital.resolution.DamageResistCalculations">DamageResistCalculations</a>[<span class="extype" name="scala.Int">Int</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@VehicleResolutions" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.VehicleSplashDamage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VehicleSplashDamage"></a>
+      <a id="VehicleSplashDamage:VehicleSplashDamage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleSplashDamage$.html"><span class="name">VehicleSplashDamage</span></a><span class="result"> extends <a href="damage/DamageCalculations.html" class="extype" name="net.psforever.objects.vital.damage.DamageCalculations">DamageCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@VehicleSplashDamage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.VehicleSplashResistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VehicleSplashResistance"></a>
+      <a id="VehicleSplashResistance:VehicleSplashResistance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="VehicleSplashResistance$.html"><span class="name">VehicleSplashResistance</span></a><span class="result"> extends <a href="resistance/ResistanceCalculations.html" class="extype" name="net.psforever.objects.vital.resistance.ResistanceCalculations">ResistanceCalculations</a>[<a href="../ballistics/VehicleSource.html" class="extype" name="net.psforever.objects.ballistics.VehicleSource">VehicleSource</a>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@VehicleSplashResistance" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.Vitality" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Vitality"></a>
+      <a id="Vitality:Vitality"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Vitality$.html"><span class="name">Vitality</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@Vitality" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.damage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="damage"></a>
+      <a id="damage:damage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="damage/package.html"><span class="name">damage</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@damage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.projectile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="projectile"></a>
+      <a id="projectile:projectile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="projectile/package.html"><span class="name">projectile</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@projectile" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.resistance" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="resistance"></a>
+      <a id="resistance:resistance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="resistance/package.html"><span class="name">resistance</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@resistance" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.vital.resolution" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="resolution"></a>
+      <a id="resolution:resolution"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="resolution/package.html"><span class="name">resolution</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.vital.package@resolution" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

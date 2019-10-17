@@ -1,0 +1,189 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>avatar - PSF-LoginServer -  master - net.psforever.objects.avatar</title>
+          <meta name="description" content="avatar - PSF - LoginServer - master - net.psforever.objects.avatar" />
+          <meta name="keywords" content="avatar PSF LoginServer master net.psforever.objects.avatar" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'net.psforever.objects.avatar.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="net">net</a>.<a href="../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../package.html" class="extype" name="net.psforever.objects">objects</a></p>
+        <h1>avatar</h1><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.avatar.package" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">avatar</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.avatar.DeployableToolbox" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DeployableToolboxextendsAnyRef"></a>
+      <a id="DeployableToolbox:DeployableToolbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DeployableToolbox.html"><span class="name">DeployableToolbox</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.avatar.package@DeployableToolboxextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A class that keeps track - &quot;manages&quot; - deployables that are owned by the avatar.<br>
+<br>
+Deployables belong to the Engineering certification line of certifications.</p><div class="fullcomment"><div class="comment cmt"><p>A class that keeps track - &quot;manages&quot; - deployables that are owned by the avatar.<br>
+<br>
+Deployables belong to the Engineering certification line of certifications.
+<code>CombatEngineering</code> and above certifications include permissions for different types of deployables,
+and one unique type of deployable is available through the <code>GroundSupport</code>
+and one that also requires <code>AdvancedHacking</code>.
+(They are collectively called &quot;ce&quot; for that reason.)
+Not only does the level of certification change the maximum number of deployables that can be managed by type
+but it also influences the maximum number of deployables that can be managed by category.
+Individual deployables are counted by type and category individually in special data structures
+to avoid having to probe the primary list of deployable references whenever a question of quantity is asked.
+As deployables are added and removed, and tracked certifications are added and removed,
+these structures are updated to reflect proper count.
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.objects.avatar.Avatars" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Avatars"></a>
+      <a id="Avatars:Avatars"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Avatars$.html"><span class="name">Avatars</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.avatar.package@Avatars" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Enumeration</code> of all the avatar types in the game, paired with their object id as the <code>Value</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Enumeration</code> of all the avatar types in the game, paired with their object id as the <code>Value</code>.
+#121 is the most important.
+</p></div></div>
+    </li><li name="net.psforever.objects.avatar.Certification" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Certification"></a>
+      <a id="Certification:Certification"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Certification$.html"><span class="name">Certification</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.avatar.package@Certification" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.avatar.DeployableToolbox" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DeployableToolbox"></a>
+      <a id="DeployableToolbox:DeployableToolbox"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DeployableToolbox$.html"><span class="name">DeployableToolbox</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.avatar.package@DeployableToolbox" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

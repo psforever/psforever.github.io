@@ -1,0 +1,257 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>selector - PSF-LoginServer -  master - net.psforever.objects.guid.selector</title>
+          <meta name="description" content="selector - PSF - LoginServer - master - net.psforever.objects.guid.selector" />
+          <meta name="keywords" content="selector PSF LoginServer master net.psforever.objects.guid.selector" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'net.psforever.objects.guid.selector.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../package.html" class="extype" name="net">net</a>.<a href="../../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../../package.html" class="extype" name="net.psforever.objects">objects</a>.<a href="../package.html" class="extype" name="net.psforever.objects.guid">guid</a></p>
+        <h1>selector</h1><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.selector.package" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">selector</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.guid.selector.NumberSelector" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="NumberSelectorextendsAnyRef"></a>
+      <a id="NumberSelector:NumberSelector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NumberSelector.html"><span class="name">NumberSelector</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.selector.package@NumberSelectorextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The base class for all different sorts of number selection policies.<br>
+<br>
+The <code>Array</code>s called out as method parameters is always an <code>Array</code> of indexes for some other list.</p><div class="fullcomment"><div class="comment cmt"><p>The base class for all different sorts of number selection policies.<br>
+<br>
+The <code>Array</code>s called out as method parameters is always an <code>Array</code> of indexes for some other list.
+The indices in the <code>Array</code> are always the complete range of 0 to <code>n</code> numbers.
+It is recommended to initialize the <code>Array</code> with the rule <code>array(number) = number</code>.
+When they need to be flagged as &quot;invalid&quot; in some way, use some consistent system of negative numbers.
+(Recommendation: unless doing something fancy, just use -1.)
+</p></div></div>
+    </li><li name="net.psforever.objects.guid.selector.OpportunisticSelector" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="OpportunisticSelectorextendsNumberSelector"></a>
+      <a id="OpportunisticSelector:OpportunisticSelector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="OpportunisticSelector.html"><span class="name">OpportunisticSelector</span></a><span class="result"> extends <a href="NumberSelector.html" class="extype" name="net.psforever.objects.guid.selector.NumberSelector">NumberSelector</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.selector.package@OpportunisticSelectorextendsNumberSelector" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Get whichever number is next available.</p><div class="fullcomment"><div class="comment cmt"><p>Get whichever number is next available.
+It is similar to <code>StrictInOrderSelector</code> but it does not stop if it runs into an unavailable number.
+It attempts to get each number in its listed incrementally from a starting index.
+The search wraps back around to the zero index to the same start index if necessary.
+</p></div></div>
+    </li><li name="net.psforever.objects.guid.selector.RandomSelector" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RandomSelectorextendsNumberSelector"></a>
+      <a id="RandomSelector:RandomSelector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RandomSelector.html"><span class="name">RandomSelector</span></a><span class="result"> extends <a href="NumberSelector.html" class="extype" name="net.psforever.objects.guid.selector.NumberSelector">NumberSelector</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.selector.package@RandomSelectorextendsNumberSelector" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Get a pseudorandom number from a pool of numbers.</p><div class="fullcomment"><div class="comment cmt"><p>Get a pseudorandom number from a pool of numbers.
+The contained logic is similar to <code>RandomSequenceSelector</code>.
+It is not reliant of a shrinking pool that composes into some sequence of all the numbers, however;
+the numbers are re-introduced to the selection as long as the pool is used.
+This allows for the sequence to contain repeat numbers far before ever visiting all of the numbers once.<br>
+<br>
+During the selection process:<br>
+The index is the position from where the selection begins, and the end of the <code>Array</code> is where the selection ends.
+Once a position between those two indices is selected, that number is extracted.
+The number at the start position is swapped into the position where the selection number was extracted.
+The start position is then set to an invalid number, and the start index is advanced.
+Repeat next request.<br>
+<br>
+During the return process:<br>
+The returned number is added to the input <code>Array</code> at the position just before the current selection position.
+The selection index is then reversedback to re-include the returned number.
+The normal return index is not used in this algorithm.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>RandomSequenceSelector</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.guid.selector.RandomSequenceSelector" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RandomSequenceSelectorextendsNumberSelector"></a>
+      <a id="RandomSequenceSelector:RandomSequenceSelector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="RandomSequenceSelector.html"><span class="name">RandomSequenceSelector</span></a><span class="result"> extends <a href="NumberSelector.html" class="extype" name="net.psforever.objects.guid.selector.NumberSelector">NumberSelector</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.selector.package@RandomSequenceSelectorextendsNumberSelector" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Get a pseudorandom number from a pool of numbers.</p><div class="fullcomment"><div class="comment cmt"><p>Get a pseudorandom number from a pool of numbers.
+The output of this class, operating on an <code>Array</code> of <code>Int</code> values is contained to some sequence of all the numbers.
+Only after every number is selected once, may any number repeat.
+The pseudorandomness of any sequence of numbers is not only provided by an internal system <code>Random</code> but by the order or returned numbers.
+Consequentially, as any single sequence nears completion, the numbers remaining become more and more predictable.<br>
+<br>
+During the selection process:<br>
+The index is the position from where the selection begins, and the end of the <code>Array</code> is where the selection ends.
+Once a position between those two indices is selected, that number is extracted.
+The number at the start position is swapped into the position where the selection number was extracted.
+The start position is then set to an invalid number, and the start index is advanced.
+Repeat next request.<br>
+<br>
+The return index trails behind the selection index as far as the order of the array is concerned at first.
+After some time, the selection index moves to the starting position of the array again and then the order is reversed.
+Until the return index wraps around to the beginning of the array too, it is considered the valid selection end position.<br>
+<br>
+During the return process:<br>
+As the <code>Array</code> empties out from the first to the last index, the return process starts at the first index again.
+When a number is &quot;returned,&quot; it is placed back into the input <code>Array</code> at the earliest available index.
+The return index is advanced.
+Neither the selection index nor the return index may pass each other,
+except when one reaches the end of the <code>Array</code> and wraps back around to that start.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>RandomSelector</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.guid.selector.SpecificSelector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SpecificSelectorextendsNumberSelector"></a>
+      <a id="SpecificSelector:SpecificSelector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SpecificSelector.html"><span class="name">SpecificSelector</span></a><span class="result"> extends <a href="NumberSelector.html" class="extype" name="net.psforever.objects.guid.selector.NumberSelector">NumberSelector</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.selector.package@SpecificSelectorextendsNumberSelector" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Get a specific number from a pool of numbers.</p>
+    </li><li name="net.psforever.objects.guid.selector.StrictInOrderSelector" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="StrictInOrderSelectorextendsNumberSelector"></a>
+      <a id="StrictInOrderSelector:StrictInOrderSelector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="StrictInOrderSelector.html"><span class="name">StrictInOrderSelector</span></a><span class="result"> extends <a href="NumberSelector.html" class="extype" name="net.psforever.objects.guid.selector.NumberSelector">NumberSelector</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.selector.package@StrictInOrderSelectorextendsNumberSelector" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Get the next number in this pool incrementally.</p><div class="fullcomment"><div class="comment cmt"><p>Get the next number in this pool incrementally.
+Starting at index 0, for example, select each subsequent number as it is available.
+Do not progress if a number is not available when requested.
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

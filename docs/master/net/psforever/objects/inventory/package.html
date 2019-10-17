@@ -1,0 +1,285 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>inventory - PSF-LoginServer -  master - net.psforever.objects.inventory</title>
+          <meta name="description" content="inventory - PSF - LoginServer - master - net.psforever.objects.inventory" />
+          <meta name="keywords" content="inventory PSF LoginServer master net.psforever.objects.inventory" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'net.psforever.objects.inventory.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="net">net</a>.<a href="../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../package.html" class="extype" name="net.psforever.objects">objects</a></p>
+        <h1>inventory</h1><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.inventory.package" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inventory</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.inventory.Container" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ContainerextendsAnyRef"></a>
+      <a id="Container:Container"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Container.html"><span class="name">Container</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.inventory.package@ContainerextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">This object is capable of storing (&quot;stowing&quot;) <code>Equipment</code> within itself.<br>
+<br>
+The following objects are considered item containers:
+players (their own inventory),
+players (their corpse's loot),
+vehicles (their trunk), and
+lockers (contents of the player's fifth slot).</p>
+    </li><li name="net.psforever.objects.inventory.GridInventory" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GridInventoryextendsContainer"></a>
+      <a id="GridInventory:GridInventory"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GridInventory.html"><span class="name">GridInventory</span></a><span class="result"> extends <a href="Container.html" class="extype" name="net.psforever.objects.inventory.Container">Container</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.inventory.package@GridInventoryextendsContainer" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An inventory are used to stow <code>Equipment</code> when it does not exist visually in the game world.<br>
+<br>
+Visually, an inventory is understood as a rectangular region divided into cellular units.</p><div class="fullcomment"><div class="comment cmt"><p>An inventory are used to stow <code>Equipment</code> when it does not exist visually in the game world.<br>
+<br>
+Visually, an inventory is understood as a rectangular region divided into cellular units.
+The <code>Equipment</code> that is placed into the inventory can also be represented as smaller rectangles, also composed of cells.
+The same number of cells of the item must overlap with the same number of cells of the inventory.
+No two items may have cells that overlap.
+This &quot;grid&quot; maintains a spatial distinction between items when they get stowed.<br>
+<br>
+It is not necessary to actually have a structural representation of the &quot;grid.&quot;
+Adhering to such a data structure does speed up the actions upon the inventory and its contents in certain cases (where noted).
+The <code>HashMap</code> of items is used for quick object lookup.
+Use of the <code>HashMap</code> only is hitherto referred as &quot;using the inventory as a <code>List</code>.&quot;
+The <code>Array</code> of spatial GUIDs is used for quick collision lookup.
+Use of the <code>Array</code> only is hitherto referred as &quot;using the inventory as a grid.&quot;
+</p></div></div>
+    </li><li name="net.psforever.objects.inventory.InventoryEquipmentSlot" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InventoryEquipmentSlotextendsOffhandEquipmentSlot"></a>
+      <a id="InventoryEquipmentSlot:InventoryEquipmentSlot"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="InventoryEquipmentSlot.html"><span class="name">InventoryEquipmentSlot</span></a><span class="result"> extends <a href="../OffhandEquipmentSlot.html" class="extype" name="net.psforever.objects.OffhandEquipmentSlot">OffhandEquipmentSlot</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.inventory.package@InventoryEquipmentSlotextendsOffhandEquipmentSlot" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A slot-like interface for a specific grid position in an inventory.</p><div class="fullcomment"><div class="comment cmt"><p>A slot-like interface for a specific grid position in an inventory.
+The size is typically bound to anything that can be stowed which encompasses most all <code>Equipment</code>.
+The capacity of this <code>EquipmentSlot</code> is essentially treated as 1x1.
+Upon insertions, however, the capacity temporarily is treated as the size of the item being inserted (unless <code>None</code>).
+This allows a proper check for insertion collision.<br>
+<br>
+Rather than operating on a fixed-size slot, this &quot;slot&quot; represents an inventory region that either includes <code>slot</code> or starts at <code>slot</code>.
+When determining the contents of the inventory at <code>slot</code>, only that singular cell is checked.
+When removing an item from <code>slot</code>, the item in inventory only has to be positioned in such a way that overlaps with <code>slot</code>.
+When adding an item to <code>slot</code>, <code>slot</code> is treated as the upper left corner (the initial point) of a larger capacity region.<br>
+<br>
+The following diagrams demonstrate the coordinate association:<br>
+<code>&nbsp;&nbsp;&nbsp; - - - - - &nbsp;&nbsp;&nbsp; - - - - - &nbsp;&nbsp;&nbsp; - - - - -</code><br>
+<code>&nbsp;&nbsp;&nbsp; - - - - - &nbsp;&nbsp;&nbsp; - r r x - &nbsp;&nbsp;&nbsp; - - - - -</code><br>
+<code>&nbsp;&nbsp;&nbsp; - - s - - &nbsp;&nbsp;&nbsp; - r r x - &nbsp;&nbsp;&nbsp; - - i i -</code><br>
+<code>&nbsp;&nbsp;&nbsp; - - - - - &nbsp;&nbsp;&nbsp; - x x x - &nbsp;&nbsp;&nbsp; - - i i -</code><br>
+<code>&nbsp;&nbsp;&nbsp; - - - - - &nbsp;&nbsp;&nbsp; - - - - - &nbsp;&nbsp;&nbsp; - - - - -</code><br>
+... where 's' is the 1x1 slot,
+'r' is the corner of any 2x2 item that can be removed ('x' is a potential affected edge),
+and 'i' is the region checked for a 2x2 insertion into <code>slot</code>.
+</p></div></div>
+    </li><li name="net.psforever.objects.inventory.InventoryItem" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InventoryItemextendsAnyRef"></a>
+      <a id="InventoryItem:InventoryItem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="InventoryItem.html"><span class="name">InventoryItem</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.inventory.package@InventoryItemextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Represent the image placard that is used to visually and spatially manipulate an item placed into the grid-like inventory.</p><div class="fullcomment"><div class="comment cmt"><p>Represent the image placard that is used to visually and spatially manipulate an item placed into the grid-like inventory.
+The unofficial term for this placard (the size of the placard) is a &quot;tile.&quot;
+The size of the tile is usually fixed but the origin point of the tile can be changed.</p></div></div>
+    </li><li name="net.psforever.objects.inventory.InventoryTile" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InventoryTileextendsAnyRef"></a>
+      <a id="InventoryTile:InventoryTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="InventoryTile.html"><span class="name">InventoryTile</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.inventory.package@InventoryTileextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A &quot;tile&quot; represents the size of the icon placard that is used by <code>Equipment</code> when placed into an inventory or visible slot.</p><div class="fullcomment"><div class="comment cmt"><p>A &quot;tile&quot; represents the size of the icon placard that is used by <code>Equipment</code> when placed into an inventory or visible slot.
+It is also used by some <code>ObjectDefinition</code>s to pass information about the size of an inventory itself.</p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><span class="extype" name="IllegalArgumentException"><code>IllegalArgumentException</code></span> if either the width or the height are less than zero</p></span></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.objects.inventory.GridInventory" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GridInventory"></a>
+      <a id="GridInventory:GridInventory"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GridInventory$.html"><span class="name">GridInventory</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.inventory.package@GridInventory" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.inventory.InventoryItem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InventoryItem"></a>
+      <a id="InventoryItem:InventoryItem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="InventoryItem$.html"><span class="name">InventoryItem</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.inventory.package@InventoryItem" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.inventory.InventoryTile" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InventoryTile"></a>
+      <a id="InventoryTile:InventoryTile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="InventoryTile$.html"><span class="name">InventoryTile</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.inventory.package@InventoryTile" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

@@ -1,0 +1,734 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>Marshallable - PSF-LoginServer -  master - net.psforever.packet.Marshallable</title>
+          <meta name="description" content="Marshallable - PSF - LoginServer - master - net.psforever.packet.Marshallable" />
+          <meta name="keywords" content="Marshallable PSF LoginServer master net.psforever.packet.Marshallable" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'net.psforever.packet.Marshallable';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <img alt="Trait" src="../../../lib/trait_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="net">net</a>.<a href="../package.html" class="extype" name="net.psforever">psforever</a>.<a href="package.html" class="extype" name="net.psforever.packet">packet</a></p>
+        <h1>Marshallable</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="net.psforever.packet">package packet</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Marshallable</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Used by companion objects to create encoders and decoders</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/psforever/PSF-LoginServer/blob/master//common/src/main/scala/net/psforever/packet/PSPacket.scala" target="_blank">PSPacket.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">Known Subclasses</span>
+            <div class="subClasses hiddenContent"><a href="game/ActionCancelMessage$.html" class="extype" name="net.psforever.packet.game.ActionCancelMessage">ActionCancelMessage</a>, <a href="game/ActionProgressMessage$.html" class="extype" name="net.psforever.packet.game.ActionProgressMessage">ActionProgressMessage</a>, <a href="game/ActionResultMessage$.html" class="extype" name="net.psforever.packet.game.ActionResultMessage">ActionResultMessage</a>, <a href="game/objectcreate/AegisShieldGeneratorData$.html" class="extype" name="net.psforever.packet.game.objectcreate.AegisShieldGeneratorData">AegisShieldGeneratorData</a>, <a href="game/ArmorChangedMessage$.html" class="extype" name="net.psforever.packet.game.ArmorChangedMessage">ArmorChangedMessage</a>, <a href="game/AvatarDeadStateMessage$.html" class="extype" name="net.psforever.packet.game.AvatarDeadStateMessage">AvatarDeadStateMessage</a>, <a href="game/AvatarFirstTimeEventMessage$.html" class="extype" name="net.psforever.packet.game.AvatarFirstTimeEventMessage">AvatarFirstTimeEventMessage</a>, <a href="game/AvatarGrenadeStateMessage$.html" class="extype" name="net.psforever.packet.game.AvatarGrenadeStateMessage">AvatarGrenadeStateMessage</a>, <a href="game/AvatarImplantMessage$.html" class="extype" name="net.psforever.packet.game.AvatarImplantMessage">AvatarImplantMessage</a>, <a href="game/AvatarJumpMessage$.html" class="extype" name="net.psforever.packet.game.AvatarJumpMessage">AvatarJumpMessage</a>, <a href="game/AvatarSearchCriteriaMessage$.html" class="extype" name="net.psforever.packet.game.AvatarSearchCriteriaMessage">AvatarSearchCriteriaMessage</a>, <a href="game/AvatarStatisticsMessage$.html" class="extype" name="net.psforever.packet.game.AvatarStatisticsMessage">AvatarStatisticsMessage</a>, <a href="game/AvatarVehicleTimerMessage$.html" class="extype" name="net.psforever.packet.game.AvatarVehicleTimerMessage">AvatarVehicleTimerMessage</a>, <a href="game/BattleExperienceMessage$.html" class="extype" name="net.psforever.packet.game.BattleExperienceMessage">BattleExperienceMessage</a>, <a href="game/BattleplanMessage$.html" class="extype" name="net.psforever.packet.game.BattleplanMessage">BattleplanMessage</a>, <a href="game/BeginZoningMessage$.html" class="extype" name="net.psforever.packet.game.BeginZoningMessage">BeginZoningMessage</a>, <a href="game/BindPlayerMessage$.html" class="extype" name="net.psforever.packet.game.BindPlayerMessage">BindPlayerMessage</a>, <a href="game/BroadcastWarpgateUpdateMessage$.html" class="extype" name="net.psforever.packet.game.BroadcastWarpgateUpdateMessage">BroadcastWarpgateUpdateMessage</a>, <a href="game/BugReportMessage$.html" class="extype" name="net.psforever.packet.game.BugReportMessage">BugReportMessage</a>, <a href="game/BuildingInfoUpdateMessage$.html" class="extype" name="net.psforever.packet.game.BuildingInfoUpdateMessage">BuildingInfoUpdateMessage</a>, <a href="game/objectcreate/CaptureFlagData$.html" class="extype" name="net.psforever.packet.game.objectcreate.CaptureFlagData">CaptureFlagData</a>, <a href="game/CargoMountPointStatusMessage$.html" class="extype" name="net.psforever.packet.game.CargoMountPointStatusMessage">CargoMountPointStatusMessage</a>, <a href="game/ChangeAmmoMessage$.html" class="extype" name="net.psforever.packet.game.ChangeAmmoMessage">ChangeAmmoMessage</a>, <a href="game/ChangeFireModeMessage$.html" class="extype" name="net.psforever.packet.game.ChangeFireModeMessage">ChangeFireModeMessage</a>, <a href="game/ChangeFireStateMessage_Start$.html" class="extype" name="net.psforever.packet.game.ChangeFireStateMessage_Start">ChangeFireStateMessage_Start</a>, <a href="game/ChangeFireStateMessage_Stop$.html" class="extype" name="net.psforever.packet.game.ChangeFireStateMessage_Stop">ChangeFireStateMessage_Stop</a>, <a href="game/ChangeShortcutBankMessage$.html" class="extype" name="net.psforever.packet.game.ChangeShortcutBankMessage">ChangeShortcutBankMessage</a>, <a href="game/objectcreate/CharacterAppearanceData$.html" class="extype" name="net.psforever.packet.game.objectcreate.CharacterAppearanceData">CharacterAppearanceData</a>, <a href="game/CharacterCreateRequestMessage$.html" class="extype" name="net.psforever.packet.game.CharacterCreateRequestMessage">CharacterCreateRequestMessage</a>, <a href="game/objectcreate/CharacterData$.html" class="extype" name="net.psforever.packet.game.objectcreate.CharacterData">CharacterData</a>, <a href="game/CharacterInfoMessage$.html" class="extype" name="net.psforever.packet.game.CharacterInfoMessage">CharacterInfoMessage</a>, <a href="game/CharacterNoRecordMessage$.html" class="extype" name="net.psforever.packet.game.CharacterNoRecordMessage">CharacterNoRecordMessage</a>, <a href="game/CharacterRequestMessage$.html" class="extype" name="net.psforever.packet.game.CharacterRequestMessage">CharacterRequestMessage</a>, <a href="game/ChatMsg$.html" class="extype" name="net.psforever.packet.game.ChatMsg">ChatMsg</a>, <a href="game/ChildObjectStateMessage$.html" class="extype" name="net.psforever.packet.game.ChildObjectStateMessage">ChildObjectStateMessage</a>, <a href="crypto/ClientChallengeXchg$.html" class="extype" name="net.psforever.packet.crypto.ClientChallengeXchg">ClientChallengeXchg</a>, <a href="crypto/ClientFinished$.html" class="extype" name="net.psforever.packet.crypto.ClientFinished">ClientFinished</a>, <a href="control/ClientStart$.html" class="extype" name="net.psforever.packet.control.ClientStart">ClientStart</a>, <a href="game/objectcreate/CommonFieldData$.html" class="extype" name="net.psforever.packet.game.objectcreate.CommonFieldData">CommonFieldData</a>, <a href="game/objectcreate/CommonFieldDataWithPlacement$.html" class="extype" name="net.psforever.packet.game.objectcreate.CommonFieldDataWithPlacement">CommonFieldDataWithPlacement</a>, <a href="game/ConnectToWorldMessage$.html" class="extype" name="net.psforever.packet.game.ConnectToWorldMessage">ConnectToWorldMessage</a>, <a href="game/ConnectToWorldRequestMessage$.html" class="extype" name="net.psforever.packet.game.ConnectToWorldRequestMessage">ConnectToWorldRequestMessage</a>, <a href="control/ConnectionClose$.html" class="extype" name="net.psforever.packet.control.ConnectionClose">ConnectionClose</a>, <a href="game/ContinentalLockUpdateMessage$.html" class="extype" name="net.psforever.packet.game.ContinentalLockUpdateMessage">ContinentalLockUpdateMessage</a>, <a href="control/ControlSync$.html" class="extype" name="net.psforever.packet.control.ControlSync">ControlSync</a>, <a href="control/ControlSyncResp$.html" class="extype" name="net.psforever.packet.control.ControlSyncResp">ControlSyncResp</a>, <a href="game/CreateShortcutMessage$.html" class="extype" name="net.psforever.packet.game.CreateShortcutMessage">CreateShortcutMessage</a>, <a href="game/DamageWithPositionMessage$.html" class="extype" name="net.psforever.packet.game.DamageWithPositionMessage">DamageWithPositionMessage</a>, <a href="game/DelayedPathMountMsg$.html" class="extype" name="net.psforever.packet.game.DelayedPathMountMsg">DelayedPathMountMsg</a>, <a href="game/DensityLevelUpdateMessage$.html" class="extype" name="net.psforever.packet.game.DensityLevelUpdateMessage">DensityLevelUpdateMessage</a>, <a href="game/DeployObjectMessage$.html" class="extype" name="net.psforever.packet.game.DeployObjectMessage">DeployObjectMessage</a>, <a href="game/DeployRequestMessage$.html" class="extype" name="net.psforever.packet.game.DeployRequestMessage">DeployRequestMessage</a>, <a href="game/DeployableObjectsInfoMessage$.html" class="extype" name="net.psforever.packet.game.DeployableObjectsInfoMessage">DeployableObjectsInfoMessage</a>, <a href="game/DestroyDisplayMessage$.html" class="extype" name="net.psforever.packet.game.DestroyDisplayMessage">DestroyDisplayMessage</a>, <a href="game/DestroyMessage$.html" class="extype" name="net.psforever.packet.game.DestroyMessage">DestroyMessage</a>, <a href="game/objectcreate/DestroyedVehicleData$.html" class="extype" name="net.psforever.packet.game.objectcreate.DestroyedVehicleData">DestroyedVehicleData</a>, <a href="game/objectcreate/DetailedAmmoBoxData$.html" class="extype" name="net.psforever.packet.game.objectcreate.DetailedAmmoBoxData">DetailedAmmoBoxData</a>, <a href="game/objectcreate/DetailedCharacterData$.html" class="extype" name="net.psforever.packet.game.objectcreate.DetailedCharacterData">DetailedCharacterData</a>, <a href="game/objectcreate/DetailedCommandDetonaterData$.html" class="extype" name="net.psforever.packet.game.objectcreate.DetailedCommandDetonaterData">DetailedCommandDetonaterData</a>, <a href="game/objectcreate/DetailedConstructionToolData$.html" class="extype" name="net.psforever.packet.game.objectcreate.DetailedConstructionToolData">DetailedConstructionToolData</a>, <a href="game/objectcreate/DetailedLockerContainerData$.html" class="extype" name="net.psforever.packet.game.objectcreate.DetailedLockerContainerData">DetailedLockerContainerData</a>, <a href="game/objectcreate/DetailedPlayerData$.html" class="extype" name="net.psforever.packet.game.objectcreate.DetailedPlayerData">DetailedPlayerData</a>, <a href="game/objectcreate/DetailedREKData$.html" class="extype" name="net.psforever.packet.game.objectcreate.DetailedREKData">DetailedREKData</a>, <a href="game/objectcreate/DetailedWeaponData$.html" class="extype" name="net.psforever.packet.game.objectcreate.DetailedWeaponData">DetailedWeaponData</a>, <a href="game/DisconnectMessage$.html" class="extype" name="net.psforever.packet.game.DisconnectMessage">DisconnectMessage</a>, <a href="game/DismountBuildingMsg$.html" class="extype" name="net.psforever.packet.game.DismountBuildingMsg">DismountBuildingMsg</a>, <a href="game/DismountVehicleCargoMsg$.html" class="extype" name="net.psforever.packet.game.DismountVehicleCargoMsg">DismountVehicleCargoMsg</a>, <a href="game/DismountVehicleMsg$.html" class="extype" name="net.psforever.packet.game.DismountVehicleMsg">DismountVehicleMsg</a>, <a href="game/DisplayedAwardMessage$.html" class="extype" name="net.psforever.packet.game.DisplayedAwardMessage">DisplayedAwardMessage</a>, <a href="game/DropItemMessage$.html" class="extype" name="net.psforever.packet.game.DropItemMessage">DropItemMessage</a>, <a href="game/objectcreate/DroppodData$.html" class="extype" name="net.psforever.packet.game.objectcreate.DroppodData">DroppodData</a>, <a href="game/EmoteMsg$.html" class="extype" name="net.psforever.packet.game.EmoteMsg">EmoteMsg</a>, <a href="game/ExperienceAddedMessage$.html" class="extype" name="net.psforever.packet.game.ExperienceAddedMessage">ExperienceAddedMessage</a>, <a href="game/FacilityBenefitShieldChargeRequestMessage$.html" class="extype" name="net.psforever.packet.game.FacilityBenefitShieldChargeRequestMessage">FacilityBenefitShieldChargeRequestMessage</a>, <a href="game/FavoritesMessage$.html" class="extype" name="net.psforever.packet.game.FavoritesMessage">FavoritesMessage</a>, <a href="game/FavoritesRequest$.html" class="extype" name="net.psforever.packet.game.FavoritesRequest">FavoritesRequest</a>, <a href="game/FireHintMessage$.html" class="extype" name="net.psforever.packet.game.FireHintMessage">FireHintMessage</a>, <a href="game/Friend$.html" class="extype" name="net.psforever.packet.game.Friend">Friend</a>, <a href="game/FriendsRequest$.html" class="extype" name="net.psforever.packet.game.FriendsRequest">FriendsRequest</a>, <a href="game/FriendsResponse$.html" class="extype" name="net.psforever.packet.game.FriendsResponse">FriendsResponse</a>, <a href="game/GenericActionMessage$.html" class="extype" name="net.psforever.packet.game.GenericActionMessage">GenericActionMessage</a>, <a href="game/GenericCollisionMsg$.html" class="extype" name="net.psforever.packet.game.GenericCollisionMsg">GenericCollisionMsg</a>, <a href="game/GenericObjectActionMessage$.html" class="extype" name="net.psforever.packet.game.GenericObjectActionMessage">GenericObjectActionMessage</a>, <a href="game/GenericObjectStateMsg$.html" class="extype" name="net.psforever.packet.game.GenericObjectStateMsg">GenericObjectStateMsg</a>, <a href="game/HackMessage$.html" class="extype" name="net.psforever.packet.game.HackMessage">HackMessage</a>, <a href="game/objectcreate/HandheldData$.html" class="extype" name="net.psforever.packet.game.objectcreate.HandheldData">HandheldData</a>, <a href="control/HandleGamePacket$.html" class="extype" name="net.psforever.packet.control.HandleGamePacket">HandleGamePacket</a>, <a href="game/HitHint$.html" class="extype" name="net.psforever.packet.game.HitHint">HitHint</a>, <a href="game/HitMessage$.html" class="extype" name="net.psforever.packet.game.HitMessage">HitMessage</a>, <a href="game/HotSpotInfo$.html" class="extype" name="net.psforever.packet.game.HotSpotInfo">HotSpotInfo</a>, <a href="game/HotSpotUpdateMessage$.html" class="extype" name="net.psforever.packet.game.HotSpotUpdateMessage">HotSpotUpdateMessage</a>, <a href="game/InventoryStateMessage$.html" class="extype" name="net.psforever.packet.game.InventoryStateMessage">InventoryStateMessage</a>, <a href="game/ItemTransactionMessage$.html" class="extype" name="net.psforever.packet.game.ItemTransactionMessage">ItemTransactionMessage</a>, <a href="game/ItemTransactionResultMessage$.html" class="extype" name="net.psforever.packet.game.ItemTransactionResultMessage">ItemTransactionResultMessage</a>, <a href="game/KeepAliveMessage$.html" class="extype" name="net.psforever.packet.game.KeepAliveMessage">KeepAliveMessage</a>, <a href="game/objectcreate/LargeDeployableData$.html" class="extype" name="net.psforever.packet.game.objectcreate.LargeDeployableData">LargeDeployableData</a>, <a href="game/LashMessage$.html" class="extype" name="net.psforever.packet.game.LashMessage">LashMessage</a>, <a href="game/LoadMapMessage$.html" class="extype" name="net.psforever.packet.game.LoadMapMessage">LoadMapMessage</a>, <a href="game/objectcreate/LockerContainerData$.html" class="extype" name="net.psforever.packet.game.objectcreate.LockerContainerData">LockerContainerData</a>, <a href="game/LoginMessage$.html" class="extype" name="net.psforever.packet.game.LoginMessage">LoginMessage</a>, <a href="game/LoginRespMessage$.html" class="extype" name="net.psforever.packet.game.LoginRespMessage">LoginRespMessage</a>, <a href="game/LootItemMessage$.html" class="extype" name="net.psforever.packet.game.LootItemMessage">LootItemMessage</a>, <a href="game/MailMessage$.html" class="extype" name="net.psforever.packet.game.MailMessage">MailMessage</a>, <a href="game/MountVehicleCargoMsg$.html" class="extype" name="net.psforever.packet.game.MountVehicleCargoMsg">MountVehicleCargoMsg</a>, <a href="game/MountVehicleMsg$.html" class="extype" name="net.psforever.packet.game.MountVehicleMsg">MountVehicleMsg</a>, <a href="game/MoveItemMessage$.html" class="extype" name="net.psforever.packet.game.MoveItemMessage">MoveItemMessage</a>, <a href="control/MultiPacket$.html" class="extype" name="net.psforever.packet.control.MultiPacket">MultiPacket</a>, <a href="control/MultiPacketEx$.html" class="extype" name="net.psforever.packet.control.MultiPacketEx">MultiPacketEx</a>, <a href="game/ObjectAttachMessage$.html" class="extype" name="net.psforever.packet.game.ObjectAttachMessage">ObjectAttachMessage</a>, <a href="game/ObjectCreateDetailedMessage$.html" class="extype" name="net.psforever.packet.game.ObjectCreateDetailedMessage">ObjectCreateDetailedMessage</a>, <a href="game/ObjectCreateMessage$.html" class="extype" name="net.psforever.packet.game.ObjectCreateMessage">ObjectCreateMessage</a>, <a href="game/ObjectDeleteMessage$.html" class="extype" name="net.psforever.packet.game.ObjectDeleteMessage">ObjectDeleteMessage</a>, <a href="game/ObjectDeployedMessage$.html" class="extype" name="net.psforever.packet.game.ObjectDeployedMessage">ObjectDeployedMessage</a>, <a href="game/ObjectDetachMessage$.html" class="extype" name="net.psforever.packet.game.ObjectDetachMessage">ObjectDetachMessage</a>, <a href="game/ObjectDetectedMessage$.html" class="extype" name="net.psforever.packet.game.ObjectDetectedMessage">ObjectDetectedMessage</a>, <a href="game/ObjectHeldMessage$.html" class="extype" name="net.psforever.packet.game.ObjectHeldMessage">ObjectHeldMessage</a>, <a href="game/objectcreate/OneMannedFieldTurretData$.html" class="extype" name="net.psforever.packet.game.objectcreate.OneMannedFieldTurretData">OneMannedFieldTurretData</a>, <a href="game/objectcreate/OrbitalShuttleData$.html" class="extype" name="net.psforever.packet.game.objectcreate.OrbitalShuttleData">OrbitalShuttleData</a>, <a href="game/OrbitalStrikeWaypointMessage$.html" class="extype" name="net.psforever.packet.game.OrbitalStrikeWaypointMessage">OrbitalStrikeWaypointMessage</a>, <a href="game/OxygenStateMessage$.html" class="extype" name="net.psforever.packet.game.OxygenStateMessage">OxygenStateMessage</a>, <a href="game/PickupItemMessage$.html" class="extype" name="net.psforever.packet.game.PickupItemMessage">PickupItemMessage</a>, <a href="game/PingMsg$.html" class="extype" name="net.psforever.packet.game.PingMsg">PingMsg</a>, <a href="game/objectcreate/PlacementData$.html" class="extype" name="net.psforever.packet.game.objectcreate.PlacementData">PlacementData</a>, <a href="PlanetSidePacketFlags$.html" class="extype" name="net.psforever.packet.PlanetSidePacketFlags">PlanetSidePacketFlags</a>, <a href="game/PlanetsideAttributeMessage$.html" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>, <a href="game/PlanetsideStringAttributeMessage$.html" class="extype" name="net.psforever.packet.game.PlanetsideStringAttributeMessage">PlanetsideStringAttributeMessage</a>, <a href="game/objectcreate/PlayerData$.html" class="extype" name="net.psforever.packet.game.objectcreate.PlayerData">PlayerData</a>, <a href="game/PlayerStasisMessage$.html" class="extype" name="net.psforever.packet.game.PlayerStasisMessage">PlayerStasisMessage</a>, <a href="game/PlayerStateMessage$.html" class="extype" name="net.psforever.packet.game.PlayerStateMessage">PlayerStateMessage</a>, <a href="game/PlayerStateMessageUpstream$.html" class="extype" name="net.psforever.packet.game.PlayerStateMessageUpstream">PlayerStateMessageUpstream</a>, <a href="game/PlayerStateShiftMessage$.html" class="extype" name="net.psforever.packet.game.PlayerStateShiftMessage">PlayerStateShiftMessage</a>, <a href="game/ProjectileStateMessage$.html" class="extype" name="net.psforever.packet.game.ProjectileStateMessage">ProjectileStateMessage</a>, <a href="game/PropertyOverrideMessage$.html" class="extype" name="net.psforever.packet.game.PropertyOverrideMessage">PropertyOverrideMessage</a>, <a href="game/ProximityTerminalUseMessage$.html" class="extype" name="net.psforever.packet.game.ProximityTerminalUseMessage">ProximityTerminalUseMessage</a>, <a href="game/QuantityDeltaUpdateMessage$.html" class="extype" name="net.psforever.packet.game.QuantityDeltaUpdateMessage">QuantityDeltaUpdateMessage</a>, <a href="game/QuantityUpdateMessage$.html" class="extype" name="net.psforever.packet.game.QuantityUpdateMessage">QuantityUpdateMessage</a>, <a href="game/objectcreate/REKData$.html" class="extype" name="net.psforever.packet.game.objectcreate.REKData">REKData</a>, <a href="control/RelatedA$.html" class="extype" name="net.psforever.packet.control.RelatedA">RelatedA</a>, <a href="control/RelatedB$.html" class="extype" name="net.psforever.packet.control.RelatedB">RelatedB</a>, <a href="game/ReleaseAvatarRequestMessage$.html" class="extype" name="net.psforever.packet.game.ReleaseAvatarRequestMessage">ReleaseAvatarRequestMessage</a>, <a href="game/ReloadMessage$.html" class="extype" name="net.psforever.packet.game.ReloadMessage">ReloadMessage</a>, <a href="game/RepairMessage$.html" class="extype" name="net.psforever.packet.game.RepairMessage">RepairMessage</a>, <a href="game/ReplicationStreamMessage$.html" class="extype" name="net.psforever.packet.game.ReplicationStreamMessage">ReplicationStreamMessage</a>, <a href="game/RequestDestroyMessage$.html" class="extype" name="net.psforever.packet.game.RequestDestroyMessage">RequestDestroyMessage</a>, <a href="game/RespawnAMSInfoMessage$.html" class="extype" name="net.psforever.packet.game.RespawnAMSInfoMessage">RespawnAMSInfoMessage</a>, <a href="game/objectcreate/RibbonBars$.html" class="extype" name="net.psforever.packet.game.objectcreate.RibbonBars">RibbonBars</a>, <a href="crypto/ServerChallengeXchg$.html" class="extype" name="net.psforever.packet.crypto.ServerChallengeXchg">ServerChallengeXchg</a>, <a href="crypto/ServerFinished$.html" class="extype" name="net.psforever.packet.crypto.ServerFinished">ServerFinished</a>, <a href="control/ServerStart$.html" class="extype" name="net.psforever.packet.control.ServerStart">ServerStart</a>, <a href="game/ServerVehicleOverrideMsg$.html" class="extype" name="net.psforever.packet.game.ServerVehicleOverrideMsg">ServerVehicleOverrideMsg</a>, <a href="game/SetChatFilterMessage$.html" class="extype" name="net.psforever.packet.game.SetChatFilterMessage">SetChatFilterMessage</a>, <a href="game/SetCurrentAvatarMessage$.html" class="extype" name="net.psforever.packet.game.SetCurrentAvatarMessage">SetCurrentAvatarMessage</a>, <a href="game/SetEmpireMessage$.html" class="extype" name="net.psforever.packet.game.SetEmpireMessage">SetEmpireMessage</a>, <a href="game/Shortcut$.html" class="extype" name="net.psforever.packet.game.Shortcut">Shortcut</a>, <a href="control/SlottedMetaPacket$.html" class="extype" name="net.psforever.packet.control.SlottedMetaPacket">SlottedMetaPacket</a>, <a href="game/objectcreate/SmallTurretData$.html" class="extype" name="net.psforever.packet.game.objectcreate.SmallTurretData">SmallTurretData</a>, <a href="game/SpawnRequestMessage$.html" class="extype" name="net.psforever.packet.game.SpawnRequestMessage">SpawnRequestMessage</a>, <a href="game/SplashHitMessage$.html" class="extype" name="net.psforever.packet.game.SplashHitMessage">SplashHitMessage</a>, <a href="game/SplashedTarget$.html" class="extype" name="net.psforever.packet.game.SplashedTarget">SplashedTarget</a>, <a href="game/SquadDefinitionActionMessage$.html" class="extype" name="net.psforever.packet.game.SquadDefinitionActionMessage">SquadDefinitionActionMessage</a>, <a href="game/SquadWaypointEvent$.html" class="extype" name="net.psforever.packet.game.SquadWaypointEvent">SquadWaypointEvent</a>, <a href="game/objectcreate/TRAPData$.html" class="extype" name="net.psforever.packet.game.objectcreate.TRAPData">TRAPData</a>, <a href="game/TargetingImplantRequest$.html" class="extype" name="net.psforever.packet.game.TargetingImplantRequest">TargetingImplantRequest</a>, <a href="game/TargetingInfoMessage$.html" class="extype" name="net.psforever.packet.game.TargetingInfoMessage">TargetingInfoMessage</a>, <a href="control/TeardownConnection$.html" class="extype" name="net.psforever.packet.control.TeardownConnection">TeardownConnection</a>, <a href="game/objectcreate/TelepadDeployableData$.html" class="extype" name="net.psforever.packet.game.objectcreate.TelepadDeployableData">TelepadDeployableData</a>, <a href="game/TimeOfDayMessage$.html" class="extype" name="net.psforever.packet.game.TimeOfDayMessage">TimeOfDayMessage</a>, <a href="game/objectcreate/TrackedProjectileData$.html" class="extype" name="net.psforever.packet.game.objectcreate.TrackedProjectileData">TrackedProjectileData</a>, <a href="game/TrainingZoneMessage$.html" class="extype" name="net.psforever.packet.game.TrainingZoneMessage">TrainingZoneMessage</a>, <a href="game/TriggerEffectMessage$.html" class="extype" name="net.psforever.packet.game.TriggerEffectMessage">TriggerEffectMessage</a>, <a href="game/TriggerEnvironmentalDamageMessage$.html" class="extype" name="net.psforever.packet.game.TriggerEnvironmentalDamageMessage">TriggerEnvironmentalDamageMessage</a>, <a href="game/TriggerSoundMessage$.html" class="extype" name="net.psforever.packet.game.TriggerSoundMessage">TriggerSoundMessage</a>, <a href="game/UnuseItemMessage$.html" class="extype" name="net.psforever.packet.game.UnuseItemMessage">UnuseItemMessage</a>, <a href="game/UseItemMessage$.html" class="extype" name="net.psforever.packet.game.UseItemMessage">UseItemMessage</a>, <a href="game/VNLWorldStatusMessage$.html" class="extype" name="net.psforever.packet.game.VNLWorldStatusMessage">VNLWorldStatusMessage</a>, <a href="game/objectcreate/VehicleData$.html" class="extype" name="net.psforever.packet.game.objectcreate.VehicleData">VehicleData</a>, <a href="game/VehicleStateMessage$.html" class="extype" name="net.psforever.packet.game.VehicleStateMessage">VehicleStateMessage</a>, <a href="game/VehicleSubStateMessage$.html" class="extype" name="net.psforever.packet.game.VehicleSubStateMessage">VehicleSubStateMessage</a>, <a href="game/VoiceHostInfo$.html" class="extype" name="net.psforever.packet.game.VoiceHostInfo">VoiceHostInfo</a>, <a href="game/VoiceHostKill$.html" class="extype" name="net.psforever.packet.game.VoiceHostKill">VoiceHostKill</a>, <a href="game/VoiceHostRequest$.html" class="extype" name="net.psforever.packet.game.VoiceHostRequest">VoiceHostRequest</a>, <a href="game/WarpgateRequest$.html" class="extype" name="net.psforever.packet.game.WarpgateRequest">WarpgateRequest</a>, <a href="game/objectcreate/WeaponData$.html" class="extype" name="net.psforever.packet.game.objectcreate.WeaponData">WeaponData</a>, <a href="game/WeaponDelayFireMessage$.html" class="extype" name="net.psforever.packet.game.WeaponDelayFireMessage">WeaponDelayFireMessage</a>, <a href="game/WeaponDryFireMessage$.html" class="extype" name="net.psforever.packet.game.WeaponDryFireMessage">WeaponDryFireMessage</a>, <a href="game/WeaponFireMessage$.html" class="extype" name="net.psforever.packet.game.WeaponFireMessage">WeaponFireMessage</a>, <a href="game/WeaponJammedMessage$.html" class="extype" name="net.psforever.packet.game.WeaponJammedMessage">WeaponJammedMessage</a>, <a href="game/WeaponLazeTargetPositionMessage$.html" class="extype" name="net.psforever.packet.game.WeaponLazeTargetPositionMessage">WeaponLazeTargetPositionMessage</a>, <a href="game/WeatherMessage$.html" class="extype" name="net.psforever.packet.game.WeatherMessage">WeatherMessage</a>, <a href="game/ZipLineMessage$.html" class="extype" name="net.psforever.packet.game.ZipLineMessage">ZipLineMessage</a>, <a href="game/ZoneForcedCavernConnectionsMessage$.html" class="extype" name="net.psforever.packet.game.ZoneForcedCavernConnectionsMessage">ZoneForcedCavernConnectionsMessage</a>, <a href="game/ZoneInfoMessage$.html" class="extype" name="net.psforever.packet.game.ZoneInfoMessage">ZoneInfoMessage</a>, <a href="game/ZoneLockInfoMessage$.html" class="extype" name="net.psforever.packet.game.ZoneLockInfoMessage">ZoneLockInfoMessage</a>, <a href="game/ZonePopulationUpdateMessage$.html" class="extype" name="net.psforever.packet.game.ZonePopulationUpdateMessage">ZonePopulationUpdateMessage</a></div>
+          </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="net.psforever.packet.Marshallable"><span>Marshallable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        <div id="values" class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="net.psforever.packet.Marshallable#codec" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="codec:scodec.Codec[T]"></a>
+      <a id="codec:Codec[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">codec</span><span class="result">: <span class="extype" name="scodec.Codec">Codec</span>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@codec:scodec.Codec[T]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        <div id="values" class="values members">
+              <h3>Concrete Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@##():Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@+(other:String):String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>] to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(Marshallable[T],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>], <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@-&gt;[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@clone():Object" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="net.psforever.packet.Marshallable#decode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="decode(a:scodec.bits.BitVector):scodec.Attempt[scodec.DecodeResult[T]]"></a>
+      <a id="decode(BitVector):Attempt[DecodeResult[T]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">decode</span><span class="params">(<span name="a">a: <span class="extype" name="scodec.bits.BitVector">BitVector</span></span>)</span><span class="result">: <span class="extype" name="scodec.Attempt">Attempt</span>[<span class="extype" name="scodec.DecodeResult">DecodeResult</span>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@decode(a:scodec.bits.BitVector):scodec.Attempt[scodec.DecodeResult[T]]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.packet.Marshallable#encode" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="encode(a:T):scodec.Attempt[scodec.bits.BitVector]"></a>
+      <a id="encode(T):Attempt[BitVector]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">encode</span><span class="params">(<span name="a">a: <span class="extype" name="net.psforever.packet.Marshallable.T">T</span></span>)</span><span class="result">: <span class="extype" name="scodec.Attempt">Attempt</span>[<span class="extype" name="scodec.bits.BitVector">BitVector</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@encode(a:T):scodec.Attempt[scodec.bits.BitVector]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((Marshallable[T])⇒Boolean,⇒Any):Marshallable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((Marshallable[T])⇒Boolean):Marshallable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@ensuring(cond:A=&gt;Boolean):A" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):Marshallable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):Marshallable[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@ensuring(cond:Boolean):A" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>] to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@formatted(fmtstr:String):String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>] to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@toString():String" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(Marshallable[T],B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>], <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.packet.Marshallable@→[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>] to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>] to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>] to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>] to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>] to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="net.psforever.packet.Marshallable">Marshallable</a>[<span class="extype" name="net.psforever.packet.Marshallable.T">T</span>]]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

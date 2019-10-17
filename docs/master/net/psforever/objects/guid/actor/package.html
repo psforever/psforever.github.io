@@ -1,0 +1,279 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>actor - PSF-LoginServer -  master - net.psforever.objects.guid.actor</title>
+          <meta name="description" content="actor - PSF - LoginServer - master - net.psforever.objects.guid.actor" />
+          <meta name="keywords" content="actor PSF LoginServer master net.psforever.objects.guid.actor" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'net.psforever.objects.guid.actor.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../package.html" class="extype" name="net">net</a>.<a href="../../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../../package.html" class="extype" name="net.psforever.objects">objects</a>.<a href="../package.html" class="extype" name="net.psforever.objects.guid">guid</a></p>
+        <h1>actor</h1><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.actor.package" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">actor</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.guid.actor.NumberPoolActor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="NumberPoolActorextendsActor"></a>
+      <a id="NumberPoolActor:NumberPoolActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="NumberPoolActor.html"><span class="name">NumberPoolActor</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.actor.package@NumberPoolActorextendsActor" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Actor</code> that wraps around a <code>NumberPool</code> and regulates access to it.<br>
+<br>
+Wrapping around the pool like this forces a FIFO order to requests for numbers from the pool.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Actor</code> that wraps around a <code>NumberPool</code> and regulates access to it.<br>
+<br>
+Wrapping around the pool like this forces a FIFO order to requests for numbers from the pool.
+This synchronization only lasts as long as this <code>Actor</code> is the only one for the given pool.
+In the distribution of globaly unique identifiers, this is extremely important.
+<code>NumberPool</code>s are used as the primary determination of whether a number is available at any given moment.
+The categorization of the pool is also important, though for a contextually-sensitive reason.</p></div></div>
+    </li><li name="net.psforever.objects.guid.actor.Register" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="RegisterextendsProductwithSerializable"></a>
+      <a id="Register:Register"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Register.html"><span class="name">Register</span></a><span class="params">(<span name="obj">obj: <a href="../../entity/IdentifiableEntity.html" class="extype" name="net.psforever.objects.entity.IdentifiableEntity">IdentifiableEntity</a></span>, <span name="name">name: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="number">number: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="callback">callback: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="akka.actor.ActorRef">ActorRef</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.actor.package@RegisterextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A message for accepting object-number registration requests.<br>
+<br>
+The callback is actually an <code>ActorRef</code> to which a <code>RegisterSuccess</code> message or a <code>RegisterFailure</code> message is sent.</p><div class="fullcomment"><div class="comment cmt"><p>A message for accepting object-number registration requests.<br>
+<br>
+The callback is actually an <code>ActorRef</code> to which a <code>RegisterSuccess</code> message or a <code>RegisterFailure</code> message is sent.
+This is as opposed to what a &quot;callback&quot; is normally - a function.</p></div><dl class="paramcmts block"><dt class="param">obj</dt><dd class="cmt"><p>the mandatory object</p></dd><dt class="param">name</dt><dd class="cmt"><p>the optional name of the number pool to which this object is registered</p></dd><dt class="param">number</dt><dd class="cmt"><p>the optional number pre-selected for registering this object</p></dd><dt class="param">callback</dt><dd class="cmt"><p>the optional custom callback for the messages from the success or failure conditions</p></dd></dl></div>
+    </li><li name="net.psforever.objects.guid.actor.UniqueNumberSystem" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="UniqueNumberSystemextendsActor"></a>
+      <a id="UniqueNumberSystem:UniqueNumberSystem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="UniqueNumberSystem.html"><span class="name">UniqueNumberSystem</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.actor.package@UniqueNumberSystemextendsActor" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Actor</code> that wraps around converted <code>NumberPool</code>s and synchronizes a portion of the number registration process.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Actor</code> that wraps around converted <code>NumberPool</code>s and synchronizes a portion of the number registration process.
+The ultimate goal is to manage a coherent group of unique identifiers for a given &quot;region&quot; (<code>Zone</code>).
+Both parts of the UID system sit atop the <code>Zone</code> for easy external access.
+The plain part - the <code>NumberPoolHub</code> here - is used for low-priority requests such as checking for existing associations.
+This <code>Actor</code> is the involved portion that paces registration and unregistration.<br>
+<br>
+A four part process is used for object registration tasks.
+First, the requested <code>NumberPool</code> is located among the list of known <code>NumberPool</code>s.
+Second, an asynchronous request is sent to that pool to retrieve a number.
+(Only any number.  Only a failing case allows for selection of a specific number.)
+Third, the asynchronous request returns and the original information about the request is recovered.
+Fourth, both sides of the contract are completed by the object being assigned the number and
+the underlying &quot;number source&quot; is made to remember an association between the object and the number.
+Short circuits and recoveries as available on all steps though reporting is split between logging and callbacks.
+The process of removing the association between a number and object (unregistering) is a similar four part process.<br>
+<br>
+The important relationship between this <code>Actor</code> and the <code>Map</code> of <code>NumberPoolActors</code> is an &quot;gate.&quot;
+A single <code>Map</code> is constructed and shared between multiple entry points to the UID system where requests are messaged.
+Multiple entry points send messages to the same <code>NumberPool</code>.
+That <code>NumberPool</code> deals with the messages one at a time and sends reply to each entry point that communicated with it.
+This process is almost as fast as the process of the <code>NumberPool</code> selecting a number.
+(At least, both should be fast.)</p></div></div>
+    </li><li name="net.psforever.objects.guid.actor.Unregister" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="UnregisterextendsProductwithSerializable"></a>
+      <a id="Unregister:Unregister"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Unregister.html"><span class="name">Unregister</span></a><span class="params">(<span name="obj">obj: <a href="../../entity/IdentifiableEntity.html" class="extype" name="net.psforever.objects.entity.IdentifiableEntity">IdentifiableEntity</a></span>, <span name="callback">callback: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="akka.actor.ActorRef">ActorRef</span>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.actor.package@UnregisterextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A message for accepting object-number unregistration requests.</p><div class="fullcomment"><div class="comment cmt"><p>A message for accepting object-number unregistration requests.
+When given to a number pool (<code>NumberPoolAccessorActor</code>), that <code>Actor</code> assumes itself to have the object.
+When given to a hub object (<code>NumberPoolHubActor</code>), it will attempt to determine which pool currently has the object.<br>
+<br>
+The callback is actually an <code>ActorRef</code> to which a <code>RegisterSuccess</code> message or a <code>RegisterFailure</code> message is sent.
+This is as opposed to what a &quot;callback&quot; is normally - a function.</p></div><dl class="paramcmts block"><dt class="param">obj</dt><dd class="cmt"><p>the mandatory object</p></dd><dt class="param">callback</dt><dd class="cmt"><p>the optional custom callback for the messages from the success or failure conditions</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.objects.guid.actor.NumberPoolActor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="NumberPoolActor"></a>
+      <a id="NumberPoolActor:NumberPoolActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="NumberPoolActor$.html"><span class="name">NumberPoolActor</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.actor.package@NumberPoolActor" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.guid.actor.Register" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Register"></a>
+      <a id="Register:Register"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Register$.html"><span class="name">Register</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.actor.package@Register" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.guid.actor.UniqueNumberSystem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UniqueNumberSystem"></a>
+      <a id="UniqueNumberSystem:UniqueNumberSystem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="UniqueNumberSystem$.html"><span class="name">UniqueNumberSystem</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.actor.package@UniqueNumberSystem" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.guid.actor.Unregister" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Unregister"></a>
+      <a id="Unregister:Unregister"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Unregister$.html"><span class="name">Unregister</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.actor.package@Unregister" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

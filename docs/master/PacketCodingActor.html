@@ -1,0 +1,1314 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>PacketCodingActor - PSF-LoginServer -  master - PacketCodingActor</title>
+          <meta name="description" content="PacketCodingActor - PSF - LoginServer - master - PacketCodingActor" />
+          <meta name="keywords" content="PacketCodingActor PSF LoginServer master PacketCodingActor" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="lib/template.js"></script>
+      <script type="text/javascript" src="lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = 'index.html';
+            var hash = 'PacketCodingActor';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <a href="PacketCodingActor$.html" title="See companion object"><img alt="Class/Object" src="lib/class_to_object_big.png" /></a>
+        
+        <h1><a href="PacketCodingActor$.html" title="See companion object">PacketCodingActor</a></h1><h3><span class="morelinks"><div>
+            Related Docs:
+            <a href="PacketCodingActor$.html" title="See companion object">object PacketCodingActor</a>
+            | <a href="package.html" class="extype" name="_root_">package root</a>
+          </div></span></h3><span class="permalink">
+      <a href="index.html#PacketCodingActor" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PacketCodingActor</span><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span> with <a href="akka/actor/MDCContextAware.html" class="extype" name="akka.actor.MDCContextAware">MDCContextAware</a></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>In between the network side and the higher functioning side of the simulation:
+accept packets and transform them into a sequence of data (encoding), and
+accept a sequence of data and transform it into s packet (decoding).<br>
+<br>
+Following the standardization of the <code>SessionRouter</code> pipeline, the throughput of this <code>Actor</code> has directionality.
+The &quot;network,&quot; where the encoded data comes and goes, is assumed to be <code>leftRef</code>.
+The &quot;simulation&quot;, where the decoded packets come and go, is assumed to be <code>rightRef</code>.
+<code>rightRef</code> can accept a sequence that looks like encoded data but it will merely pass out the same sequence.
+Likewise, <code>leftRef</code> accepts decoded packets but merely ejects the same packets without doing any work on them.
+The former functionality is anticipated.
+The latter functionality is deprecated.<br>
+<br>
+Encoded data leaving the <code>Actor</code> (<code>leftRef</code>) is limited by an upper bound capacity.
+Sequences can not be larger than that bound or else they will be dropped.
+This maximum transmission unit (MTU) is used to divide the encoded sequence into chunks of encoded data,
+re-packaged into nested <code>ControlPacket</code> units, and each unit encoded.
+The outer packaging is numerically consistent with a <code>subslot</code> that starts counting once the simulation starts.
+The client is very specific about the <code>subslot</code> number and will reject out-of-order packets.
+It resets to 0 each time this <code>Actor</code> starts up and the client reflects this functionality.
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/psforever/PSF-LoginServer/blob/master//pslogin/src/main/scala/PacketCodingActor.scala" target="_blank">PacketCodingActor.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="akka/actor/MDCContextAware.html" class="extype" name="akka.actor.MDCContextAware">MDCContextAware</a>, <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span>, <span class="extype" name="akka.actor.Actor">Actor</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="PacketCodingActor"><span>PacketCodingActor</span></li><li class="in" name="akka.actor.MDCContextAware"><span>MDCContextAware</span></li><li class="in" name="akka.actor.ActorLogging"><span>ActorLogging</span></li><li class="in" name="akka.actor.Actor"><span>Actor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="PacketCodingActor#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():PacketCodingActor"></a>
+      <a id="&lt;init&gt;:PacketCodingActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PacketCodingActor</span><span class="params">()</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@&lt;init&gt;():PacketCodingActor" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="akka.actor.Actor.Receive" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Receive=akka.actor.Actor.Receive"></a>
+      <a id="Receive:Receive"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Receive</span><span class="result"> = <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="scala.Any">Any</span>, <span class="extype" name="scala.Unit">Unit</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@Receive=akka.actor.Actor.Receive" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@##():Int" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@+(other:String):String" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(PacketCodingActor,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@-&gt;[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="PacketCodingActor#AddSlottedPacketToLog" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="AddSlottedPacketToLog(subslot:Int,packet:scodec.bits.ByteVector):Unit"></a>
+      <a id="AddSlottedPacketToLog(Int,ByteVector):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AddSlottedPacketToLog</span><span class="params">(<span name="subslot">subslot: <span class="extype" name="scala.Int">Int</span></span>, <span name="packet">packet: <span class="extype" name="scodec.bits.ByteVector">ByteVector</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@AddSlottedPacketToLog(subslot:Int,packet:scodec.bits.ByteVector):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="PacketCodingActor#Established" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Established:PacketCodingActor.this.Receive"></a>
+      <a id="Established:Receive"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Established</span><span class="result">: <a href="#Receive=akka.actor.Actor.Receive" class="extmbr" name="PacketCodingActor.Receive">Receive</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@Established:PacketCodingActor.this.Receive" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="PacketCodingActor#Initializing" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Initializing:PacketCodingActor.this.Receive"></a>
+      <a id="Initializing:Receive"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Initializing</span><span class="result">: <a href="#Receive=akka.actor.Actor.Receive" class="extmbr" name="PacketCodingActor.Receive">Receive</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@Initializing:PacketCodingActor.this.Receive" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="PacketCodingActor#Subslot" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Subslot:Int"></a>
+      <a id="Subslot:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Subslot</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@Subslot:Int" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Retrieve the current subslot number.</p><div class="fullcomment"><div class="comment cmt"><p>Retrieve the current subslot number.
+Increment the <code>subslot</code> for the next time it is needed.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a <code>16u</code> number starting at 0</p></dd></dl></div>
+    </li><li name="PacketCodingActor#UnmarshalInnerPacket" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="UnmarshalInnerPacket(data:scodec.bits.ByteVector,description:String):Unit"></a>
+      <a id="UnmarshalInnerPacket(ByteVector,String):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">UnmarshalInnerPacket</span><span class="params">(<span name="data">data: <span class="extype" name="scodec.bits.ByteVector">ByteVector</span></span>, <span name="description">description: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@UnmarshalInnerPacket(data:scodec.bits.ByteVector,description:String):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Transform data into a container packet and re-submit that container to the process that handles the packet.</p><div class="fullcomment"><div class="comment cmt"><p>Transform data into a container packet and re-submit that container to the process that handles the packet.</p></div><dl class="paramcmts block"><dt class="param">data</dt><dd class="cmt"><p>the packet data</p></dd><dt class="param">description</dt><dd class="cmt"><p>an explanation of the input <code>data</code></p></dd></dl></div>
+    </li><li name="akka.actor.Actor#aroundPostRestart" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aroundPostRestart(reason:Throwable):Unit"></a>
+      <a id="aroundPostRestart(Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">aroundPostRestart</span><span class="params">(<span name="reason">reason: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@aroundPostRestart(reason:Throwable):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="akka/package.html" class="extype" name="akka">akka</a>] </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li name="akka.actor.Actor#aroundPostStop" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aroundPostStop():Unit"></a>
+      <a id="aroundPostStop():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">aroundPostStop</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@aroundPostStop():Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="akka/package.html" class="extype" name="akka">akka</a>] </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li name="akka.actor.Actor#aroundPreRestart" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aroundPreRestart(reason:Throwable,message:Option[Any]):Unit"></a>
+      <a id="aroundPreRestart(Throwable,Option[Any]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">aroundPreRestart</span><span class="params">(<span name="reason">reason: <span class="extype" name="scala.Throwable">Throwable</span></span>, <span name="message">message: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@aroundPreRestart(reason:Throwable,message:Option[Any]):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="akka/package.html" class="extype" name="akka">akka</a>] </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li name="akka.actor.Actor#aroundPreStart" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aroundPreStart():Unit"></a>
+      <a id="aroundPreStart():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">aroundPreStart</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@aroundPreStart():Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="akka/package.html" class="extype" name="akka">akka</a>] </dd><dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li name="akka.actor.MDCContextAware#aroundReceive" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aroundReceive(receive:akka.actor.Actor.Receive,msg:Any):Unit"></a>
+      <a id="aroundReceive(akka.actor.Actor.Receive,Any):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">aroundReceive</span><span class="params">(<span name="receive">receive: <span class="extype" name="akka.actor.Actor.Receive">akka.actor.Actor.Receive</span></span>, <span name="msg">msg: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@aroundReceive(receive:akka.actor.Actor.Receive,msg:Any):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="akka/package.html" class="extype" name="akka">akka</a>] </dd><dt>Definition Classes</dt><dd><a href="akka/actor/MDCContextAware.html" class="extype" name="akka.actor.MDCContextAware">MDCContextAware</a> → Actor</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@clone():Object" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.actor.Actor#context" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="context:akka.actor.ActorContext"></a>
+      <a id="context:ActorContext"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">context</span><span class="result">: <span class="extype" name="akka.actor.ActorContext">ActorContext</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@context:akka.actor.ActorContext" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((PacketCodingActor)⇒Boolean,⇒Any):PacketCodingActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((PacketCodingActor)⇒Boolean):PacketCodingActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@ensuring(cond:A=&gt;Boolean):A" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):PacketCodingActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):PacketCodingActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@ensuring(cond:Boolean):A" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@finalize():Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@formatted(fmtstr:String):String" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="PacketCodingActor#handleBundlePacket" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="handleBundlePacket(data:scodec.bits.ByteVector):Unit"></a>
+      <a id="handleBundlePacket(ByteVector):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handleBundlePacket</span><span class="params">(<span name="data">data: <span class="extype" name="scodec.bits.ByteVector">ByteVector</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@handleBundlePacket(data:scodec.bits.ByteVector):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Accept <code>ByteVector</code> data and package it into a <code>SlottedMetaPacket</code>.</p><div class="fullcomment"><div class="comment cmt"><p>Accept <code>ByteVector</code> data and package it into a <code>SlottedMetaPacket</code>.
+Send it (towards the network) upon successful encoding.</p></div><dl class="paramcmts block"><dt class="param">data</dt><dd class="cmt"><p>an encoded packet</p></dd></dl></div>
+    </li><li name="PacketCodingActor#handleBundlePacket" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="handleBundlePacket(vec:Vector[scodec.bits.ByteVector]):Unit"></a>
+      <a id="handleBundlePacket(Vector[ByteVector]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handleBundlePacket</span><span class="params">(<span name="vec">vec: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="scodec.bits.ByteVector">ByteVector</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@handleBundlePacket(vec:Vector[scodec.bits.ByteVector]):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Accept a <code>Vector</code> of encoded packets and re-package them.</p><div class="fullcomment"><div class="comment cmt"><p>Accept a <code>Vector</code> of encoded packets and re-package them.
+The normal order is to package the elements of the vector into a <code>MultiPacketEx</code>.
+If the vector only has one element, it will get packaged by itself in a <code>SlottedMetaPacket</code>.
+If that one element risks being too big for the MTU, however, it will be handled off to be split.
+Splitting should preserve <code>Subslot</code> ordering with the rest of the bundling.</p></div><dl class="paramcmts block"><dt class="param">vec</dt><dd class="cmt"><p>a specific number of byte streams</p></dd></dl></div>
+    </li><li name="PacketCodingActor#handleBundlePacket" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="handleBundlePacket(bundle:List[net.psforever.packet.PlanetSidePacket]):Unit"></a>
+      <a id="handleBundlePacket(List[PlanetSidePacket]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handleBundlePacket</span><span class="params">(<span name="bundle">bundle: <span class="extype" name="scala.List">List</span>[<a href="net/psforever/packet/PlanetSidePacket.html" class="extype" name="net.psforever.packet.PlanetSidePacket">PlanetSidePacket</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@handleBundlePacket(bundle:List[net.psforever.packet.PlanetSidePacket]):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Accept a <code>List</code> of packets and sequentially re-package the elements from the list into multiple container packets.<br>
+<br>
+The original packets are encoded then paired with their encoding lengths plus extra space to prefix the length.</p><div class="fullcomment"><div class="comment cmt"><p>Accept a <code>List</code> of packets and sequentially re-package the elements from the list into multiple container packets.<br>
+<br>
+The original packets are encoded then paired with their encoding lengths plus extra space to prefix the length.
+Encodings from these pairs are drawn from the list until into buckets that fit a maximum byte stream length.
+The size limitation on any bucket is the MTU limit.
+less by the base sizes of <code>MultiPacketEx</code> (2) and of <code>SlottedMetaPacket</code> (4).</p></div><dl class="paramcmts block"><dt class="param">bundle</dt><dd class="cmt"><p>the packets to be bundled</p></dd></dl></div>
+    </li><li name="PacketCodingActor#handleControlPacket" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="handleControlPacket(container:net.psforever.packet.PlanetSidePacketContainer,packet:net.psforever.packet.PlanetSideControlPacket):Unit"></a>
+      <a id="handleControlPacket(PlanetSidePacketContainer,PlanetSideControlPacket):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handleControlPacket</span><span class="params">(<span name="container">container: <a href="net/psforever/packet/PlanetSidePacketContainer.html" class="extype" name="net.psforever.packet.PlanetSidePacketContainer">PlanetSidePacketContainer</a></span>, <span name="packet">packet: <a href="net/psforever/packet/PlanetSideControlPacket.html" class="extype" name="net.psforever.packet.PlanetSideControlPacket">PlanetSideControlPacket</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@handleControlPacket(container:net.psforever.packet.PlanetSidePacketContainer,packet:net.psforever.packet.PlanetSideControlPacket):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Process a control packet or determine that it does not need to be processed at this level.</p><div class="fullcomment"><div class="comment cmt"><p>Process a control packet or determine that it does not need to be processed at this level.
+Primarily, if the packet is of a type that contains another packet that needs be be unmarshalled,
+that/those packet must be unwound.<br>
+<br>
+The subslot information is used to identify these nested packets after arriving at their destination,
+to establish order for sequential packets and relation between divided packets.</p></div><dl class="paramcmts block"><dt class="param">container</dt><dd class="cmt"><p>the original container packet</p></dd><dt class="param">packet</dt><dd class="cmt"><p>the packet that was extracted from the container</p></dd></dl></div>
+    </li><li name="PacketCodingActor#handlePacketContainer" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="handlePacketContainer(container:net.psforever.packet.PlanetSidePacketContainer):Unit"></a>
+      <a id="handlePacketContainer(PlanetSidePacketContainer):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handlePacketContainer</span><span class="params">(<span name="container">container: <a href="net/psforever/packet/PlanetSidePacketContainer.html" class="extype" name="net.psforever.packet.PlanetSidePacketContainer">PlanetSidePacketContainer</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@handlePacketContainer(container:net.psforever.packet.PlanetSidePacketContainer):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"> Sort and redirect a container packet bound for the server by type of contents.</p><div class="fullcomment"><div class="comment cmt"><p> Sort and redirect a container packet bound for the server by type of contents.
+ <code>GamePacket</code> objects can just onwards without issue.
+ <code>ControlPacket</code> objects may need to be dequeued.
+ All other container types are invalid.</p></div><dl class="paramcmts block"><dt class="param">container</dt><dd class="cmt"><p>the container packet</p></dd></dl></div>
+    </li><li name="PacketCodingActor#handleSplitPacket" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="handleSplitPacket(data:scodec.bits.ByteVector):Unit"></a>
+      <a id="handleSplitPacket(ByteVector):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handleSplitPacket</span><span class="params">(<span name="data">data: <span class="extype" name="scodec.bits.ByteVector">ByteVector</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@handleSplitPacket(data:scodec.bits.ByteVector):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Accept <code>ByteVector</code> data, representing a <code>ControlPacket</code>, and split it into chunks.</p><div class="fullcomment"><div class="comment cmt"><p>Accept <code>ByteVector</code> data, representing a <code>ControlPacket</code>, and split it into chunks.
+The chunks should not be blocked by the MTU.
+Send each chunk (towards the network) as it is converted.</p></div><dl class="paramcmts block"><dt class="param">data</dt><dd class="cmt"><p><code>ByteVector</code> data to be split</p></dd></dl></div>
+    </li><li name="PacketCodingActor#handleSplitPacket" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="handleSplitPacket(cont:net.psforever.packet.ControlPacket):Unit"></a>
+      <a id="handleSplitPacket(ControlPacket):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handleSplitPacket</span><span class="params">(<span name="cont">cont: <a href="net/psforever/packet/ControlPacket.html" class="extype" name="net.psforever.packet.ControlPacket">ControlPacket</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@handleSplitPacket(cont:net.psforever.packet.ControlPacket):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Transform a <code>ControlPacket</code> into <code>ByteVector</code> data for splitting.</p><div class="fullcomment"><div class="comment cmt"><p>Transform a <code>ControlPacket</code> into <code>ByteVector</code> data for splitting.</p></div><dl class="paramcmts block"><dt class="param">cont</dt><dd class="cmt"><p>the original <code>ControlPacket</code></p></dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@hashCode():Int" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="akka.actor.ActorLogging#log" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="log:akka.event.LoggingAdapter"></a>
+      <a id="log:LoggingAdapter"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">log</span><span class="result">: <span class="extype" name="akka.event.LoggingAdapter">LoggingAdapter</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@log:akka.event.LoggingAdapter" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>ActorLogging</dd></dl></div>
+    </li><li name="PacketCodingActor#mtuLimit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="mtuLimit(msg:scodec.bits.ByteVector):Unit"></a>
+      <a id="mtuLimit(ByteVector):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mtuLimit</span><span class="params">(<span name="msg">msg: <span class="extype" name="scodec.bits.ByteVector">ByteVector</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@mtuLimit(msg:scodec.bits.ByteVector):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Check that an outbound packet is not too big to get stuck by the MTU.</p><div class="fullcomment"><div class="comment cmt"><p>Check that an outbound packet is not too big to get stuck by the MTU.
+If it is larger than the MTU, divide it up and re-package the sections.
+Otherwise, send the data out like normal.</p></div><dl class="paramcmts block"><dt class="param">msg</dt><dd class="cmt"><p>the encoded packet data</p></dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@notify():Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="akka.actor.Actor#postRestart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="postRestart(reason:Throwable):Unit"></a>
+      <a id="postRestart(Throwable):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">postRestart</span><span class="params">(<span name="reason">reason: <span class="extype" name="scala.Throwable">Throwable</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@postRestart(reason:Throwable):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="PacketCodingActor#postStop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="postStop():Unit"></a>
+      <a id="postStop():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">postStop</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@postStop():Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a> → Actor</dd></dl></div>
+    </li><li name="akka.actor.Actor#preRestart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="preRestart(reason:Throwable,message:Option[Any]):Unit"></a>
+      <a id="preRestart(Throwable,Option[Any]):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">preRestart</span><span class="params">(<span name="reason">reason: <span class="extype" name="scala.Throwable">Throwable</span></span>, <span name="message">message: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@preRestart(reason:Throwable,message:Option[Any]):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="akka.actor.Actor#preStart" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="preStart():Unit"></a>
+      <a id="preStart():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">preStart</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@preStart():Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Exception]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="PacketCodingActor#receive" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="receive:PacketCodingActor.this.Receive"></a>
+      <a id="receive:Receive"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">receive</span><span class="result">: <a href="#Receive=akka.actor.Actor.Receive" class="extmbr" name="PacketCodingActor.Receive">Receive</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@receive:PacketCodingActor.this.Receive" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a> → Actor</dd></dl></div>
+    </li><li name="akka.actor.Actor#self" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="self:akka.actor.ActorRef"></a>
+      <a id="self:ActorRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit final </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">self</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@self:akka.actor.ActorRef" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li name="PacketCodingActor#sendResponseLeft" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sendResponseLeft(cont:scodec.bits.ByteVector):Unit"></a>
+      <a id="sendResponseLeft(ByteVector):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendResponseLeft</span><span class="params">(<span name="cont">cont: <span class="extype" name="scodec.bits.ByteVector">ByteVector</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@sendResponseLeft(cont:scodec.bits.ByteVector):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Encoded sequence of data going towards the network.</p><div class="fullcomment"><div class="comment cmt"><p>Encoded sequence of data going towards the network.</p></div><dl class="paramcmts block"><dt class="param">cont</dt><dd class="cmt"><p>the data</p></dd></dl></div>
+    </li><li name="PacketCodingActor#sendResponseRight" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sendResponseRight(cont:net.psforever.packet.PlanetSidePacketContainer):Unit"></a>
+      <a id="sendResponseRight(PlanetSidePacketContainer):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sendResponseRight</span><span class="params">(<span name="cont">cont: <a href="net/psforever/packet/PlanetSidePacketContainer.html" class="extype" name="net.psforever.packet.PlanetSidePacketContainer">PlanetSidePacketContainer</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@sendResponseRight(cont:net.psforever.packet.PlanetSidePacketContainer):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Decoded packet going towards the simulation.</p><div class="fullcomment"><div class="comment cmt"><p>Decoded packet going towards the simulation.</p></div><dl class="paramcmts block"><dt class="param">cont</dt><dd class="cmt"><p>the packet</p></dd></dl></div>
+    </li><li name="akka.actor.Actor#sender" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="sender():akka.actor.ActorRef"></a>
+      <a id="sender():ActorRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sender</span><span class="params">()</span><span class="result">: <span class="extype" name="akka.actor.ActorRef">ActorRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@sender():akka.actor.ActorRef" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li name="akka.actor.Actor#supervisorStrategy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="supervisorStrategy:akka.actor.SupervisorStrategy"></a>
+      <a id="supervisorStrategy:SupervisorStrategy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">supervisorStrategy</span><span class="result">: <span class="extype" name="akka.actor.SupervisorStrategy">SupervisorStrategy</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@supervisorStrategy:akka.actor.SupervisorStrategy" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@toString():String" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="akka.actor.Actor#unhandled" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unhandled(message:Any):Unit"></a>
+      <a id="unhandled(Any):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">unhandled</span><span class="params">(<span name="message">message: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@unhandled(message:Any):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Actor</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@wait():Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(PacketCodingActor,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="index.html#PacketCodingActor@→[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="akka.actor.MDCContextAware">
+              <h3>Inherited from <a href="akka/actor/MDCContextAware.html" class="extype" name="akka.actor.MDCContextAware">MDCContextAware</a></h3>
+            </div><div class="parent" name="akka.actor.ActorLogging">
+              <h3>Inherited from <span class="extype" name="akka.actor.ActorLogging">ActorLogging</span></h3>
+            </div><div class="parent" name="akka.actor.Actor">
+              <h3>Inherited from <span class="extype" name="akka.actor.Actor">Actor</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="PacketCodingActor">PacketCodingActor</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

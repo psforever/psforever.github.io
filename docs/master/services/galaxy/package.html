@@ -1,0 +1,189 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>galaxy - PSF-LoginServer -  master - services.galaxy</title>
+          <meta name="description" content="galaxy - PSF - LoginServer - master - services.galaxy" />
+          <meta name="keywords" content="galaxy PSF LoginServer master services.galaxy" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'services.galaxy.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="services">services</a></p>
+        <h1>galaxy</h1><span class="permalink">
+      <a href="../../index.html#services.galaxy.package" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">galaxy</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="services.galaxy.GalaxyService" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GalaxyServiceextendsActor"></a>
+      <a id="GalaxyService:GalaxyService"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="GalaxyService.html"><span class="name">GalaxyService</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#services.galaxy.package@GalaxyServiceextendsActor" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.galaxy.GalaxyServiceMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GalaxyServiceMessageextendsProductwithSerializable"></a>
+      <a id="GalaxyServiceMessage:GalaxyServiceMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="GalaxyServiceMessage.html"><span class="name">GalaxyServiceMessage</span></a><span class="params">(<span name="actionMessage">actionMessage: <a href="GalaxyAction$$Action.html" class="extype" name="services.galaxy.GalaxyAction.Action">Action</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#services.galaxy.package@GalaxyServiceMessageextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.galaxy.GalaxyServiceResponse" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GalaxyServiceResponseextendsGenericEventBusMsgwithProductwithSerializable"></a>
+      <a id="GalaxyServiceResponse:GalaxyServiceResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="GalaxyServiceResponse.html"><span class="name">GalaxyServiceResponse</span></a><span class="params">(<span name="toChannel">toChannel: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="replyMessage">replyMessage: <a href="GalaxyResponse$$Response.html" class="extype" name="services.galaxy.GalaxyResponse.Response">Response</a></span>)</span><span class="result"> extends <a href="../GenericEventBusMsg.html" class="extype" name="services.GenericEventBusMsg">GenericEventBusMsg</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#services.galaxy.package@GalaxyServiceResponseextendsGenericEventBusMsgwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="services.galaxy.GalaxyAction" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GalaxyAction"></a>
+      <a id="GalaxyAction:GalaxyAction"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GalaxyAction$.html"><span class="name">GalaxyAction</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#services.galaxy.package@GalaxyAction" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.galaxy.GalaxyResponse" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GalaxyResponse"></a>
+      <a id="GalaxyResponse:GalaxyResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GalaxyResponse$.html"><span class="name">GalaxyResponse</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#services.galaxy.package@GalaxyResponse" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

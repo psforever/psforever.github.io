@@ -1,0 +1,303 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>structures - PSF-LoginServer -  master - net.psforever.objects.serverobject.structures</title>
+          <meta name="description" content="structures - PSF - LoginServer - master - net.psforever.objects.serverobject.structures" />
+          <meta name="keywords" content="structures PSF LoginServer master net.psforever.objects.serverobject.structures" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'net.psforever.objects.serverobject.structures.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../package.html" class="extype" name="net">net</a>.<a href="../../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../../package.html" class="extype" name="net.psforever.objects">objects</a>.<a href="../package.html" class="extype" name="net.psforever.objects.serverobject">serverobject</a></p>
+        <h1>structures</h1><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.structures.package" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">structures</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.serverobject.structures.Amenity" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="AmenityextendsPlanetSideServerObject"></a>
+      <a id="Amenity:Amenity"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Amenity.html"><span class="name">Amenity</span></a><span class="result"> extends <a href="../PlanetSideServerObject.html" class="extype" name="net.psforever.objects.serverobject.PlanetSideServerObject">PlanetSideServerObject</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.structures.package@AmenityextendsPlanetSideServerObject" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Amenities are elements of the game that belong to other elements of the game.<br>
+<br>
+Normal <code>PlanetSideServerObject</code> entities (server objects) tend to have properties that are completely internalized.</p><div class="fullcomment"><div class="comment cmt"><p>Amenities are elements of the game that belong to other elements of the game.<br>
+<br>
+Normal <code>PlanetSideServerObject</code> entities (server objects) tend to have properties that are completely internalized.
+An <code>Amenity</code> is a server object that maintains a fixed association with another server object.
+This association strips away at the internalization and redirects a reference to some properties somewhere else.
+An <code>Amenity</code> object belongs to its <code>Owner</code> object;
+the <code>Amenity</code> objects looks to its <code>Owner</code> object for some of its properties.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>FactionAffinity</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.structures.Building" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BuildingextendsPlanetSideServerObject"></a>
+      <a id="Building:Building"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Building.html"><span class="name">Building</span></a><span class="result"> extends <a href="../PlanetSideServerObject.html" class="extype" name="net.psforever.objects.serverobject.PlanetSideServerObject">PlanetSideServerObject</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.structures.package@BuildingextendsPlanetSideServerObject" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.serverobject.structures.BuildingControl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BuildingControlextendsActorwithFactionAffinityBehavior.Check"></a>
+      <a id="BuildingControl:BuildingControl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="BuildingControl.html"><span class="name">BuildingControl</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span> with <a href="../affinity/FactionAffinityBehavior$$Check.html" class="extype" name="net.psforever.objects.serverobject.affinity.FactionAffinityBehavior.Check">Check</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.structures.package@BuildingControlextendsActorwithFactionAffinityBehavior.Check" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.serverobject.structures.FoundationBuilder" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FoundationBuilderextendsAnyRef"></a>
+      <a id="FoundationBuilder:FoundationBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FoundationBuilder.html"><span class="name">FoundationBuilder</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.structures.package@FoundationBuilderextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Defer establishment of a <code>Building</code> object until the location for the object is correct (in the correct zone)
+and a <code>context</code> in the proper <code>Actor</code> hierarchy of that zone exists in scope.</p><div class="fullcomment"><div class="comment cmt"><p>Defer establishment of a <code>Building</code> object until the location for the object is correct (in the correct zone)
+and a <code>context</code> in the proper <code>Actor</code> hierarchy of that zone exists in scope.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>Building</code></p></span><span class="cmt"><p><code>ServerObjectBuilder</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.structures.SphereOfInfluence" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SphereOfInfluenceextendsAnyRef"></a>
+      <a id="SphereOfInfluence:SphereOfInfluence"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="SphereOfInfluence.html"><span class="name">SphereOfInfluence</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.structures.package@SphereOfInfluenceextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.serverobject.structures.WarpGate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WarpGateextendsBuildingwithSpawnPoint"></a>
+      <a id="WarpGate:WarpGate"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="WarpGate.html"><span class="name">WarpGate</span></a><span class="result"> extends <a href="Building.html" class="extype" name="net.psforever.objects.serverobject.structures.Building">Building</a> with <a href="../../SpawnPoint.html" class="extype" name="net.psforever.objects.SpawnPoint">SpawnPoint</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.structures.package@WarpGateextendsBuildingwithSpawnPoint" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.objects.serverobject.structures.Amenity" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Amenity"></a>
+      <a id="Amenity:Amenity"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Amenity$.html"><span class="name">Amenity</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.structures.package@Amenity" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.serverobject.structures.Building" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Building"></a>
+      <a id="Building:Building"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Building$.html"><span class="name">Building</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.structures.package@Building" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.serverobject.structures.FoundationBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FoundationBuilder"></a>
+      <a id="FoundationBuilder:FoundationBuilder"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FoundationBuilder$.html"><span class="name">FoundationBuilder</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.structures.package@FoundationBuilder" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.serverobject.structures.StructureType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="StructureType"></a>
+      <a id="StructureType:StructureType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="StructureType$.html"><span class="name">StructureType</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.structures.package@StructureType" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Enumeration</code> of the kinds of building structures found in the game.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Enumeration</code> of the kinds of building structures found in the game.
+This is merely a kludge for more a future, more complicated internal object that handles base operations.
+</p></div></div>
+    </li><li name="net.psforever.objects.serverobject.structures.WarpGate" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="WarpGate"></a>
+      <a id="WarpGate:WarpGate"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="WarpGate$.html"><span class="name">WarpGate</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.serverobject.structures.package@WarpGate" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

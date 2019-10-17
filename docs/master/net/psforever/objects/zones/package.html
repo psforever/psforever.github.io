@@ -1,0 +1,568 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>zones - PSF-LoginServer -  master - net.psforever.objects.zones</title>
+          <meta name="description" content="zones - PSF - LoginServer - master - net.psforever.objects.zones" />
+          <meta name="keywords" content="zones PSF LoginServer master net.psforever.objects.zones" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'net.psforever.objects.zones.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="net">net</a>.<a href="../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../package.html" class="extype" name="net.psforever.objects">objects</a></p>
+        <h1>zones</h1><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">zones</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.zones.ActivityReport" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ActivityReportextendsAnyRef"></a>
+      <a id="ActivityReport:ActivityReport"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ActivityReport.html"><span class="name">ActivityReport</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ActivityReportextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Information about interactions in respect to a given denomination in the game world.</p><div class="fullcomment"><div class="comment cmt"><p>Information about interactions in respect to a given denomination in the game world.
+In terms of hotspots, the &quot;denomination&quot; are the factions.
+While a given report of activity will only be valid from the time or arrival for a given amount of time,
+subsequent activity reporting before this duration concludes will cause the lifespan to artificially increase.
+</p></div></div>
+    </li><li name="net.psforever.objects.zones.HotSpotInfo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="HotSpotInfoextendsAnyRef"></a>
+      <a id="HotSpotInfo:HotSpotInfo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="HotSpotInfo.html"><span class="name">HotSpotInfo</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@HotSpotInfoextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Information necessary to determine if a hotspot should be displayed.</p><div class="fullcomment"><div class="comment cmt"><p>Information necessary to determine if a hotspot should be displayed.
+Hotspots are used on the zone maps to indicate activity.
+Each of the factions will view different hotspot configurations
+but one faction may encounter hotspots in the same places as another faction
+with information referring to the same encounter.</p></div></div>
+    </li><li name="net.psforever.objects.zones.InterstellarCluster" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InterstellarClusterextendsActor"></a>
+      <a id="InterstellarCluster:InterstellarCluster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="InterstellarCluster.html"><span class="name">InterstellarCluster</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@InterstellarClusterextendsActor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The root of the universe of one-continent planets, codified by the game's &quot;Interstellar Map.&quot;
+Constructs each zone and thus instigates the construction of every server object in the game world.</p><div class="fullcomment"><div class="comment cmt"><p>The root of the universe of one-continent planets, codified by the game's &quot;Interstellar Map.&quot;
+Constructs each zone and thus instigates the construction of every server object in the game world.
+The nanite flow connecting all of these <code>Zone</code>s is called the &quot;Intercontinental Lattice.&quot;<br>
+<br>
+The process of &quot;construction&quot; and &quot;initialization&quot; and &quot;configuration&quot; are referenced at this level.
+These concepts are not the same thing;
+the distinction is important.
+&quot;Construction&quot; and &quot;instantiation&quot; of the cluster merely produces the &quot;facade&quot; of the different <code>Zone</code> entities.
+In such a <code>List</code>, every built <code>Zone</code> is capable of being a destination on the &quot;Intercontinental lattice.&quot;
+&quot;Initialization&quot; and &quot;configuration&quot; of the cluster refers to the act of completing the &quot;Intercontinental Lattice&quot;
+by connecting different terminus warp gates together.
+Other activities involve event management and managing wide-reaching and factional attributes.</p></div></div>
+    </li><li name="net.psforever.objects.zones.MapScale" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MapScaleextendsProductwithSerializable"></a>
+      <a id="MapScale:MapScale"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MapScale.html"><span class="name">MapScale</span></a><span class="params">(<span name="width">width: <span class="extype" name="scala.Float">Float</span></span>, <span name="height">height: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@MapScaleextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An object representing the dimensions of the zone map as its maximum coordinates.</p><div class="fullcomment"><div class="comment cmt"><p>An object representing the dimensions of the zone map as its maximum coordinates.</p></div><dl class="paramcmts block"><dt class="param">width</dt><dd class="cmt"><p>the longitudinal span of the map</p></dd><dt class="param">height</dt><dd class="cmt"><p>the latitudinal span of the map</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>InventoryTile</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.zones.SphereOfInfluenceActor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SphereOfInfluenceActorextendsActor"></a>
+      <a id="SphereOfInfluenceActor:SphereOfInfluenceActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="SphereOfInfluenceActor.html"><span class="name">SphereOfInfluenceActor</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@SphereOfInfluenceActorextendsActor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.zones.Zone" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ZoneextendsAnyRef"></a>
+      <a id="Zone:Zone"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Zone.html"><span class="name">Zone</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ZoneextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A server object representing the one-landmass planets as well as the individual subterranean caverns.<br>
+<br>
+The concept of a &quot;zone&quot; is synonymous to the common vernacular &quot;continent,&quot;
+commonly referred by names such as Hossin or Ishundar and internally identified as c2 and c7, respectively.</p><div class="fullcomment"><div class="comment cmt"><p>A server object representing the one-landmass planets as well as the individual subterranean caverns.<br>
+<br>
+The concept of a &quot;zone&quot; is synonymous to the common vernacular &quot;continent,&quot;
+commonly referred by names such as Hossin or Ishundar and internally identified as c2 and c7, respectively.
+A <code>Zone</code> is composed of the abstracted concept of all the information pertinent for the simulation of the environment.
+That is, &quot;everything about the continent.&quot;
+Physically, server objects and dynamic game objects are maintained through a local unique identifier system.
+Static server objects originate from the <code>ZoneMap</code>.
+Dynamic game objects originate from player characters.
+(Write more later.)</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>ZoneMap</code><br>
+     <code>LoadMapMessage</code><br>
+     <code>LivePlayerList</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.zones.ZoneActor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZoneActorextendsActor"></a>
+      <a id="ZoneActor:ZoneActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ZoneActor.html"><span class="name">ZoneActor</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ZoneActorextendsActor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">na</p>
+    </li><li name="net.psforever.objects.zones.ZoneAware" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ZoneAwareextendsAnyRef"></a>
+      <a id="ZoneAware:ZoneAware"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ZoneAware.html"><span class="name">ZoneAware</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ZoneAwareextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The object must be able to recall on which of the defined game worlds (zones) that it exists on command.</p><div class="fullcomment"><div class="comment cmt"><p>The object must be able to recall on which of the defined game worlds (zones) that it exists on command.
+The game world identifier string produced should be equivalent to a <code>Zone.Id</code> string for some equivalent <code>Zone</code> object.
+The identifier &quot;nowhere&quot; is recommended as the default invalid location.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>Zone</code></p></span><span class="cmt"><p><code>WorldEntity</code></p></span><span class="cmt"><p><code>InterstellarCluster</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.zones.ZoneDeployableActor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZoneDeployableActorextendsActor"></a>
+      <a id="ZoneDeployableActor:ZoneDeployableActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ZoneDeployableActor.html"><span class="name">ZoneDeployableActor</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ZoneDeployableActorextendsActor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">na</p>
+    </li><li name="net.psforever.objects.zones.ZoneGroundActor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZoneGroundActorextendsActor"></a>
+      <a id="ZoneGroundActor:ZoneGroundActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ZoneGroundActor.html"><span class="name">ZoneGroundActor</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ZoneGroundActorextendsActor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">na</p>
+    </li><li name="net.psforever.objects.zones.ZoneHotSpotProjector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZoneHotSpotProjectorextendsActor"></a>
+      <a id="ZoneHotSpotProjector:ZoneHotSpotProjector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ZoneHotSpotProjector.html"><span class="name">ZoneHotSpotProjector</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ZoneHotSpotProjectorextendsActor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Manage hotspot information for a given zone,
+keeping track of aggressive faction interactions,
+and maintaining the visibility state of the hotspots that alert of the location of that activity.</p>
+    </li><li name="net.psforever.objects.zones.ZoneMap" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ZoneMapextendsAnyRef"></a>
+      <a id="ZoneMap:ZoneMap"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ZoneMap.html"><span class="name">ZoneMap</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ZoneMapextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The fixed instantiation and relation of a series of server objects.<br>
+<br>
+Asides from a <code>List</code> of server objects to be built, the operation between any server objects
+and the connected functionality emerging from more complex data structures is codified by this object.</p><div class="fullcomment"><div class="comment cmt"><p>The fixed instantiation and relation of a series of server objects.<br>
+<br>
+Asides from a <code>List</code> of server objects to be built, the operation between any server objects
+and the connected functionality emerging from more complex data structures is codified by this object.
+In the former case, all <code>Terminal</code> server objects for a <code>Zone</code> are to be defined herein.
+In the latter case, the arrangement of server objects into groups called facilities is also to be defined herein.
+Much like a <code>BasicDefinition</code> to an object, <code>ZoneMap</code> should not maintain mutable information for the companion <code>Zone</code>.
+Use it as a blueprint.<br>
+<br>
+The &quot;training zones&quot; are the best example of the difference between a <code>ZoneMap</code> and a <code>Zone.</code>
+(&quot;Course&quot; will be used as an unofficial location and layout descriptor.)
+<code>tzdrtr</code> is the Terran Republic driving course.
+<code>tzdrvs</code> is the Vanu Sovereignty driving course.
+While each course can have different objects and object states, i.e., a <code>Zone</code>,
+both of these courses utilize the same basic server object layout because they are built from the same blueprint, i.e., a <code>ZoneMap</code>.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>ServerObjectBuilder</code><br>
+     <code>LoadMapMessage</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.zones.ZonePopulationActor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ZonePopulationActorextendsActor"></a>
+      <a id="ZonePopulationActor:ZonePopulationActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ZonePopulationActor.html"><span class="name">ZonePopulationActor</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ZonePopulationActorextendsActor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A support <code>Actor</code> that sequences adding and removing <code>Avatar</code> and <code>Player</code> objects to mappings and lists.</p><div class="fullcomment"><div class="comment cmt"><p>A support <code>Actor</code> that sequences adding and removing <code>Avatar</code> and <code>Player</code> objects to mappings and lists.
+The former mapping is considered to represent every user connect to the <code>zone</code> (<code>as Avatar</code> objects)
+and their current representation (as <code>Player</code> objects).
+The latter list keeps track of a group of former user representations.</p></div></div>
+    </li><li name="net.psforever.objects.zones.ZoneVehicleActor" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ZoneVehicleActorextendsActor"></a>
+      <a id="ZoneVehicleActor:ZoneVehicleActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ZoneVehicleActor.html"><span class="name">ZoneVehicleActor</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ZoneVehicleActorextendsActor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Provide a context for a <code>Vehicle</code> <code>Actor</code> - the <code>VehicleControl</code>.<br>
+<br>
+A vehicle can be passed between different zones and, therefore, does not belong to the zone.</p><div class="fullcomment"><div class="comment cmt"><p>Provide a context for a <code>Vehicle</code> <code>Actor</code> - the <code>VehicleControl</code>.<br>
+<br>
+A vehicle can be passed between different zones and, therefore, does not belong to the zone.
+A vehicle cna be given to different players and can persist and change though players have gone.
+Therefore, also does not belong to <code>WorldSessionActor</code>.
+A vehicle must anchored to something that exists outside of the <code>InterstellarCluster</code> and its agents.<br>
+<br>
+The only purpose of this <code>Actor</code> is to allow vehicles to borrow a context for the purpose of <code>Actor</code> creation.
+It is also be allowed to be responsible for cleaning up that context.
+(In reality, it can be cleaned up anywhere a <code>PoisonPill</code> can be sent.)<br>
+<br>
+This <code>Actor</code> is intended to sit on top of the event system that handles broadcast messaging.
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.objects.zones.InterstellarCluster" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InterstellarCluster"></a>
+      <a id="InterstellarCluster:InterstellarCluster"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="InterstellarCluster$.html"><span class="name">InterstellarCluster</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@InterstellarCluster" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.zones.MapScale" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MapScale"></a>
+      <a id="MapScale:MapScale"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MapScale$.html"><span class="name">MapScale</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@MapScale" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.zones.SOI" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SOI"></a>
+      <a id="SOI:SOI"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SOI$.html"><span class="name">SOI</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@SOI" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.zones.Zone" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Zone"></a>
+      <a id="Zone:Zone"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Zone$.html"><span class="name">Zone</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@Zone" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.zones.ZoneActor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZoneActor"></a>
+      <a id="ZoneActor:ZoneActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ZoneActor$.html"><span class="name">ZoneActor</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ZoneActor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.zones.ZoneDeployableActor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZoneDeployableActor"></a>
+      <a id="ZoneDeployableActor:ZoneDeployableActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ZoneDeployableActor$.html"><span class="name">ZoneDeployableActor</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ZoneDeployableActor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.zones.ZoneHotSpotProjector" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZoneHotSpotProjector"></a>
+      <a id="ZoneHotSpotProjector:ZoneHotSpotProjector"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ZoneHotSpotProjector$.html"><span class="name">ZoneHotSpotProjector</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ZoneHotSpotProjector" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.zones.ZonePopulationActor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZonePopulationActor"></a>
+      <a id="ZonePopulationActor:ZonePopulationActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ZonePopulationActor$.html"><span class="name">ZonePopulationActor</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ZonePopulationActor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.zones.ZoneVehicleActor" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZoneVehicleActor"></a>
+      <a id="ZoneVehicleActor:ZoneVehicleActor"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ZoneVehicleActor$.html"><span class="name">ZoneVehicleActor</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.zones.package@ZoneVehicleActor" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

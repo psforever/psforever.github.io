@@ -1,0 +1,207 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>resistance - PSF-LoginServer -  master - net.psforever.objects.vital.resistance</title>
+          <meta name="description" content="resistance - PSF - LoginServer - master - net.psforever.objects.vital.resistance" />
+          <meta name="keywords" content="resistance PSF LoginServer master net.psforever.objects.vital.resistance" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'net.psforever.objects.vital.resistance.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../package.html" class="extype" name="net">net</a>.<a href="../../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../../package.html" class="extype" name="net.psforever.objects">objects</a>.<a href="../package.html" class="extype" name="net.psforever.objects.vital">vital</a></p>
+        <h1>resistance</h1><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.vital.resistance.package" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">resistance</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.vital.resistance.ResistanceCalculations" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ResistanceCalculations[TargetType]extendsProjectileCalculations"></a>
+      <a id="ResistanceCalculations[TargetType]:ResistanceCalculations[TargetType]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="ResistanceCalculations.html"><span class="name">ResistanceCalculations</span></a><span class="tparams">[<span name="TargetType">TargetType</span>]</span><span class="result"> extends <a href="../projectile/ProjectileCalculations.html" class="extype" name="net.psforever.objects.vital.projectile.ProjectileCalculations">ProjectileCalculations</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.vital.resistance.package@ResistanceCalculations[TargetType]extendsProjectileCalculations" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The base class for function literal description related to calculating resistance information.<br>
+<br>
+Implementing functionality of the children is the product of two user-defined processes
+and information for the calculation is extracted from the to-be-provided weapon discharge information.</p><div class="fullcomment"><div class="comment cmt"><p>The base class for function literal description related to calculating resistance information.<br>
+<br>
+Implementing functionality of the children is the product of two user-defined processes
+and information for the calculation is extracted from the to-be-provided weapon discharge information.
+Specifically, the information is found as the <code>target</code> object which is a member of the said information.
+The specific functions passed into this object typically operate simultaneously normally
+and are related to the target and the kind of interaction the weapon discharge had with the target.</p></div><dl class="paramcmts block"><dt class="tparam">TargetType</dt><dd class="cmt"><p>an internal type that converts between <code>validate</code>'s output and <code>extractor</code>'s input;
+                   in essence, should match the type of object container to which these resistances belong;
+                   never has to be defined explicitly, but will be checked upon object definition</p></dd></dl></div>
+    </li><li name="net.psforever.objects.vital.resistance.ResistanceProfile" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ResistanceProfileextendsAnyRef"></a>
+      <a id="ResistanceProfile:ResistanceProfile"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ResistanceProfile.html"><span class="name">ResistanceProfile</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.vital.resistance.package@ResistanceProfileextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The different values for four common methods of modifying incoming damage.</p><div class="fullcomment"><div class="comment cmt"><p>The different values for four common methods of modifying incoming damage.
+Two of the four resistances are directly paired with forms of incoming damage.
+This is for defining pure accessor functions.
+</p></div></div>
+    </li><li name="net.psforever.objects.vital.resistance.ResistanceProfileMutators" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ResistanceProfileMutatorsextendsResistanceProfile"></a>
+      <a id="ResistanceProfileMutators:ResistanceProfileMutators"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ResistanceProfileMutators.html"><span class="name">ResistanceProfileMutators</span></a><span class="result"> extends <a href="ResistanceProfile.html" class="extype" name="net.psforever.objects.vital.resistance.ResistanceProfile">ResistanceProfile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.vital.resistance.package@ResistanceProfileMutatorsextendsResistanceProfile" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The different values for four common methods of modifying incoming damage.</p><div class="fullcomment"><div class="comment cmt"><p>The different values for four common methods of modifying incoming damage.
+Two of the four resistances are directly paired with forms of incoming damage.
+This is for defining both accessor and mutator functions.
+</p></div></div>
+    </li><li name="net.psforever.objects.vital.resistance.ResistanceSelection" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ResistanceSelectionextendsAnyRef"></a>
+      <a id="ResistanceSelection:ResistanceSelection"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="ResistanceSelection.html"><span class="name">ResistanceSelection</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.vital.resistance.package@ResistanceSelectionextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Maintain information about four primary forms of resistance calculation
+and a means to test which calculation is valid in a given situation.</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.objects.vital.resistance.ResistanceCalculations" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ResistanceCalculations"></a>
+      <a id="ResistanceCalculations:ResistanceCalculations"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ResistanceCalculations$.html"><span class="name">ResistanceCalculations</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.vital.resistance.package@ResistanceCalculations" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

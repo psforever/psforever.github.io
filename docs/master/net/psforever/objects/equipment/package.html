@@ -1,0 +1,374 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>equipment - PSF-LoginServer -  master - net.psforever.objects.equipment</title>
+          <meta name="description" content="equipment - PSF - LoginServer - master - net.psforever.objects.equipment" />
+          <meta name="keywords" content="equipment PSF LoginServer master net.psforever.objects.equipment" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'net.psforever.objects.equipment.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../package.html" class="extype" name="net">net</a>.<a href="../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../package.html" class="extype" name="net.psforever.objects">objects</a></p>
+        <h1>equipment</h1><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equipment</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.equipment.DamageModifiers" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DamageModifiersextendsDamageProfile"></a>
+      <a id="DamageModifiers:DamageModifiers"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="DamageModifiers.html"><span class="name">DamageModifiers</span></a><span class="result"> extends <a href="../vital/damage/DamageProfile.html" class="extype" name="net.psforever.objects.vital.damage.DamageProfile">DamageProfile</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@DamageModifiersextendsDamageProfile" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.equipment.Equipment" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="EquipmentextendsPlanetSideGameObjectwithFactionAffinity"></a>
+      <a id="Equipment:Equipment"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Equipment.html"><span class="name">Equipment</span></a><span class="result"> extends <a href="../PlanetSideGameObject.html" class="extype" name="net.psforever.objects.PlanetSideGameObject">PlanetSideGameObject</a> with <a href="../serverobject/affinity/FactionAffinity.html" class="extype" name="net.psforever.objects.serverobject.affinity.FactionAffinity">FactionAffinity</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@EquipmentextendsPlanetSideGameObjectwithFactionAffinity" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"><code>Equipment</code> is anything that can be:
+placed into a slot of a certain &quot;size&quot;;
+and, placed into an inventory system;
+and, special carried (like a lattice logic unit);
+and, dropped on the ground in the game world and render where it was deposited.</p>
+    </li><li name="net.psforever.objects.equipment.EquipmentSlot" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="EquipmentSlotextendsAnyRef"></a>
+      <a id="EquipmentSlot:EquipmentSlot"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="EquipmentSlot.html"><span class="name">EquipmentSlot</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@EquipmentSlotextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A size-checked unit of storage (or mounting) for <code>Equipment</code>.</p><div class="fullcomment"><div class="comment cmt"><p>A size-checked unit of storage (or mounting) for <code>Equipment</code>.
+Unlike inventory space, anything placed in &quot;slot&quot; space is expected to be visible to the game world in some fashion.
+</p></div></div>
+    </li><li name="net.psforever.objects.equipment.FireModeDefinition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FireModeDefinitionextendsAnyRef"></a>
+      <a id="FireModeDefinition:FireModeDefinition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="FireModeDefinition.html"><span class="name">FireModeDefinition</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@FireModeDefinitionextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.equipment.FireModeSwitch" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="FireModeSwitch[Mode]extendsAnyRef"></a>
+      <a id="FireModeSwitch[Mode]:FireModeSwitch[Mode]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="FireModeSwitch.html"><span class="name">FireModeSwitch</span></a><span class="tparams">[<span name="Mode">Mode</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@FireModeSwitch[Mode]extendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Fire mode is a non-complex method of representing variance in <code>Equipment</code> output.<br>
+<br>
+All weapons and some support items have fire modes, though most only have one.</p><div class="fullcomment"><div class="comment cmt"><p>Fire mode is a non-complex method of representing variance in <code>Equipment</code> output.<br>
+<br>
+All weapons and some support items have fire modes, though most only have one.
+The number of fire modes is visually indicated by the bubbles next to the icon of the <code>Equipment</code> in a holster slot.
+The specifics of how a fire mode affects the output is left to implementation and execution.
+Contrast how <code>Tool</code>s deal with multiple types of ammunition.</p></div><dl class="paramcmts block"><dt class="tparam">Mode</dt><dd class="cmt"><p>the type parameter representing the fire mode</p></dd></dl></div>
+    </li><li name="net.psforever.objects.equipment.InfiniteFireModeDefinition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InfiniteFireModeDefinitionextendsFireModeDefinition"></a>
+      <a id="InfiniteFireModeDefinition:InfiniteFireModeDefinition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="InfiniteFireModeDefinition.html"><span class="name">InfiniteFireModeDefinition</span></a><span class="result"> extends <a href="FireModeDefinition.html" class="extype" name="net.psforever.objects.equipment.FireModeDefinition">FireModeDefinition</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@InfiniteFireModeDefinitionextendsFireModeDefinition" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.equipment.PelletFireModeDefinition" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PelletFireModeDefinitionextendsFireModeDefinition"></a>
+      <a id="PelletFireModeDefinition:PelletFireModeDefinition"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="PelletFireModeDefinition.html"><span class="name">PelletFireModeDefinition</span></a><span class="result"> extends <a href="FireModeDefinition.html" class="extype" name="net.psforever.objects.equipment.FireModeDefinition">FireModeDefinition</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@PelletFireModeDefinitionextendsFireModeDefinition" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.equipment.RemoteUnit" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="RemoteUnitextendsAnyRef"></a>
+      <a id="RemoteUnit:RemoteUnit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="RemoteUnit.html"><span class="name">RemoteUnit</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@RemoteUnitextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.objects.equipment.Ammo" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Ammo"></a>
+      <a id="Ammo:Ammo"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Ammo$.html"><span class="name">Ammo</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@Ammo" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Enumeration</code> of all the ammunition types in the game, paired with their object id as the <code>Value</code>.</p>
+    </li><li name="net.psforever.objects.equipment.CItem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CItem"></a>
+      <a id="CItem:CItem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CItem$.html"><span class="name">CItem</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@CItem" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Enumeration</code> of all the construction tool objects in the game, paired with their object id as the <code>Value</code>.</p>
+    </li><li name="net.psforever.objects.equipment.Equipment" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Equipment"></a>
+      <a id="Equipment:Equipment"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Equipment$.html"><span class="name">Equipment</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@Equipment" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.equipment.EquipmentSize" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="EquipmentSize"></a>
+      <a id="EquipmentSize:EquipmentSize"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="EquipmentSize$.html"><span class="name">EquipmentSize</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@EquipmentSize" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Enumeration</code> of common equipment sizes in the game.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Enumeration</code> of common equipment sizes in the game.
+Check the comments for originating use.
+</p></div></div>
+    </li><li name="net.psforever.objects.equipment.EquipmentSlot" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EquipmentSlot"></a>
+      <a id="EquipmentSlot:EquipmentSlot"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="EquipmentSlot$.html"><span class="name">EquipmentSlot</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@EquipmentSlot" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.objects.equipment.Kits" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Kits"></a>
+      <a id="Kits:Kits"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Kits$.html"><span class="name">Kits</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@Kits" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Enumeration</code> of the kit types in the game, paired with their object id as the <code>Value</code>.</p>
+    </li><li name="net.psforever.objects.equipment.SItem" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SItem"></a>
+      <a id="SItem:SItem"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SItem$.html"><span class="name">SItem</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.objects.equipment.package@SItem" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Enumeration</code> of some activation-type <code>Equipment</code> in the game, paired with their object id as the <code>Value</code>.</p>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

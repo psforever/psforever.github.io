@@ -1,0 +1,212 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>csr - PSF-LoginServer -  master - csr</title>
+          <meta name="description" content="csr - PSF - LoginServer - master - csr" />
+          <meta name="keywords" content="csr PSF LoginServer master csr" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../lib/template.js"></script>
+      <script type="text/javascript" src="../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../index.html';
+            var hash = 'csr.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../lib/package_big.png" />
+        
+        <h1>csr</h1><span class="permalink">
+      <a href="../index.html#csr.package" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">csr</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="csr.CSRZoneImpl" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CSRZoneImplextendsAnyRef"></a>
+      <a id="CSRZoneImpl:CSRZoneImpl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="CSRZoneImpl.html"><span class="name">CSRZoneImpl</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#csr.package@CSRZoneImplextendsAnyRef" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A crude representation of the information needed to describe a continent (hitherto, a &quot;zone&quot;).</p><div class="fullcomment"><div class="comment cmt"><p>A crude representation of the information needed to describe a continent (hitherto, a &quot;zone&quot;).
+The information is mainly catered to the simulation of the CSR commands <code>/zone</code> and <code>/warp</code>.
+(The exception is <code>alias</code> which is maintained for cosmetic purposes and clarification.)</p></div></div>
+    </li><li name="csr.Traveler" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TravelerextendsAnyRef"></a>
+      <a id="Traveler:Traveler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Traveler.html"><span class="name">Traveler</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#csr.package@TravelerextendsAnyRef" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The traveler is synonymous with the player.</p><div class="fullcomment"><div class="comment cmt"><p>The traveler is synonymous with the player.
+The primary purpose of the object is to keep track of but not expose the player's session so that packets may be relayed back to him.
+csr.Traveler also keeps track of which zone the player currently occupies.</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="csr.CSRWarp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CSRWarp"></a>
+      <a id="CSRWarp:CSRWarp"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CSRWarp$.html"><span class="name">CSRWarp</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#csr.package@CSRWarp" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An implementation of the CSR command <code>/warp</code>, highly modified to serve the purposes of the testing phases of the server.</p><div class="fullcomment"><div class="comment cmt"><p>An implementation of the CSR command <code>/warp</code>, highly modified to serve the purposes of the testing phases of the server.
+See <code>help()</code> for details.
+</p></div></div>
+    </li><li name="csr.CSRZone" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CSRZone"></a>
+      <a id="CSRZone:CSRZone"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CSRZone$.html"><span class="name">CSRZone</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#csr.package@CSRZone" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An implementation of the CSR command <code>/zone</code>, slightly modified to serve the purposes of the testing phases of the server.</p>
+    </li><li name="csr.CSRZoneImpl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CSRZoneImpl"></a>
+      <a id="CSRZoneImpl:CSRZoneImpl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CSRZoneImpl$.html"><span class="name">CSRZoneImpl</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#csr.package@CSRZoneImpl" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="csr.Traveler" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Traveler"></a>
+      <a id="Traveler:Traveler"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Traveler$.html"><span class="name">Traveler</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../index.html#csr.package@Traveler" title="Permalink" target="_top">
+        <img src="../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>types - PSF-LoginServer -  master - net.psforever.types</title>
+          <meta name="description" content="types - PSF - LoginServer - master - net.psforever.types" />
+          <meta name="keywords" content="types PSF LoginServer master net.psforever.types" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'net.psforever.types.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../lib/package_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="net">net</a>.<a href="../package.html" class="extype" name="net.psforever">psforever</a></p>
+        <h1>types</h1><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">types</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.types.Vector3" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Vector3extendsProductwithSerializable"></a>
+      <a id="Vector3:Vector3"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Vector3.html"><span class="name">Vector3</span></a><span class="params">(<span name="x">x: <span class="extype" name="scala.Float">Float</span></span>, <span name="y">y: <span class="extype" name="scala.Float">Float</span></span>, <span name="z">z: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@Vector3extendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.types.Angular" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Angular"></a>
+      <a id="Angular:Angular"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Angular$.html"><span class="name">Angular</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@Angular" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A series of <code>Codec</code>s designed to work with convert between 8-bit angle values in the packets and <code>Float</code> numbers.</p><div class="fullcomment"><div class="comment cmt"><p>A series of <code>Codec</code>s designed to work with convert between 8-bit angle values in the packets and <code>Float</code> numbers.
+As far as the data is concerned, the first bit appears to be ignored when it comes to the actual angle measurement.
+The latter seven bits map between 0 to 360 perfectly (according to the game).
+</p></div></div>
+    </li><li name="net.psforever.types.BailType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BailType"></a>
+      <a id="BailType:BailType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BailType$.html"><span class="name">BailType</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@BailType" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.types.CargoStatus" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CargoStatus"></a>
+      <a id="CargoStatus:CargoStatus"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CargoStatus$.html"><span class="name">CargoStatus</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@CargoStatus" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.types.CertificationType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CertificationType"></a>
+      <a id="CertificationType:CertificationType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CertificationType$.html"><span class="name">CertificationType</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@CertificationType" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Enumeration</code> of the available certifications.<br>
+<br>
+As indicated, the following certifications are always enqueued on an avatar's permissions:
+<code>StandardAssault</code>, <code>StandardExoSuit</code>, <code>AgileExoSuit</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Enumeration</code> of the available certifications.<br>
+<br>
+As indicated, the following certifications are always enqueued on an avatar's permissions:
+<code>StandardAssault</code>, <code>StandardExoSuit</code>, <code>AgileExoSuit</code>.
+They must still be included in any formal lists of permitted equipment for a user.
+The other noted certifications require all prerequisite certifications listed or they themselves will not be listed:
+<code>ElectronicsExpert</code> and <code>AdvancedEngineering</code>.
+No other certification requires its prerequisites explicitly listed to be listed itself.
+Any certification that contains multiple other certifications overrides those individual certifications in the list.
+There is no certification for the Advanced Nanite Transport.<br>
+<br>
+In terms of pricing, <code>StandardAssault</code>, <code>StandardExoSuit</code>, and <code>AgileExoSuit</code> are costless.
+A certification that contains multiple other certifications acts as the overriding cost.
+(Taking <code>UniMAX</code> while owning <code>AAMAX</code> will refund the <code>AAMAX</code> cost and replace it with the <code>UniMAX</code> cost.)
+</p></div></div>
+    </li><li name="net.psforever.types.CharacterGender" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CharacterGender"></a>
+      <a id="CharacterGender:CharacterGender"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CharacterGender$.html"><span class="name">CharacterGender</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@CharacterGender" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Values for two genders, Male and Female, starting at 1 = Male.</p>
+    </li><li name="net.psforever.types.CharacterVoice" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CharacterVoice"></a>
+      <a id="CharacterVoice:CharacterVoice"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CharacterVoice$.html"><span class="name">CharacterVoice</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@CharacterVoice" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The voice used by the player character, from a selection of ten divided between five male voices and five female voices.</p><div class="fullcomment"><div class="comment cmt"><p>The voice used by the player character, from a selection of ten divided between five male voices and five female voices.
+The first entry (0) is no voice.
+While it is technically not valid to have a wrong-gendered voice,
+unlisted sixth and seventh entries would give a male character a female voice;
+a female character with either entry would become mute, however.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>CharacterGender</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.types.ChatMessageType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ChatMessageType"></a>
+      <a id="ChatMessageType:ChatMessageType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ChatMessageType$.html"><span class="name">ChatMessageType</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@ChatMessageType" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">ChatMessageTypes were reversed by:
+Checking the type in the packet upon receipt by server while using slash commands
+Replaying the ChatMsg packet back to the sender after modifying the messagetype value
+Shaql magic
+english.str references to the type names</p><div class="fullcomment"><div class="comment cmt"><p>ChatMessageTypes were reversed by:
+Checking the type in the packet upon receipt by server while using slash commands
+Replaying the ChatMsg packet back to the sender after modifying the messagetype value
+Shaql magic
+english.str references to the type names</p><p>Message type names that are not based on actual names are prefixed with U_
+Message type names that are completely unknown are named UNK_#</p><p>Some un-assigned names (probably not all of them):
+CMT_METAGAME, CMT_SPEEDHACK, CMT_DUMPBUILDINGTREE, CMT_CLIENT_BATCH
+CMT_COMMAND_ZONE96, CMT_COMMAND_ZONE97, CMT_COMMAND_ZONE98, CMT_COMMAND_ZONE99
+</p></div></div>
+    </li><li name="net.psforever.types.DriveState" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DriveState"></a>
+      <a id="DriveState:DriveState"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DriveState$.html"><span class="name">DriveState</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@DriveState" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Enumeration</code> of the mobility states of vehicles.<br>
+<br>
+In general, two important mobility states exist - <code>Mobile</code> and <code>Deployed</code>.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Enumeration</code> of the mobility states of vehicles.<br>
+<br>
+In general, two important mobility states exist - <code>Mobile</code> and <code>Deployed</code>.
+There are stages of a formal deployment.
+For any deployment state other than the defined ones, the vehicle assumes it is in one of the transitional states.
+If the target vehicle has no deployment behavior, a non-<code>Mobile</code> value will not affect it.
+</p></div></div>
+    </li><li name="net.psforever.types.EmoteType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EmoteType"></a>
+      <a id="EmoteType:EmoteType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="EmoteType$.html"><span class="name">EmoteType</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@EmoteType" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.types.ExoSuitType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExoSuitType"></a>
+      <a id="ExoSuitType:ExoSuitType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ExoSuitType$.html"><span class="name">ExoSuitType</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@ExoSuitType" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Values for the the different types of exo-suits that players can wear.</p>
+    </li><li name="net.psforever.types.GrenadeState" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GrenadeState"></a>
+      <a id="GrenadeState:GrenadeState"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="GrenadeState$.html"><span class="name">GrenadeState</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@GrenadeState" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Enumeration</code> of the kinds of states applicable to the grenade animation.</p>
+    </li><li name="net.psforever.types.ImplantType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ImplantType"></a>
+      <a id="ImplantType:ImplantType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ImplantType$.html"><span class="name">ImplantType</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@ImplantType" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Enumeration</code> of the available implants.<br>
+<br>
+Implant:<br>
+<code>
+0 - Regeneration (advanced_regen)<br>
+1 - Enhanced Targeting (targeting)<br>
+2 - Audio Amplifier (audio_amplifier)<br>
+3 - Darklight Vision (darklight_vision)<br>
+4 - Melee Booster (melee_booster)<br>
+5 - Personal Shield (personal_shield)<br>
+6 - Range Magnifier (range_magnifier)<br>
+7 - Second Wind </code>(na)<code><br>
+8 - Sensor Shield (silent_run)<br>
+9 - Surge (surge)
+<code>
+</code></code></p>
+    </li><li name="net.psforever.types.LoadoutType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LoadoutType"></a>
+      <a id="LoadoutType:LoadoutType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LoadoutType$.html"><span class="name">LoadoutType</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@LoadoutType" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.types.MeritCommendation" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MeritCommendation"></a>
+      <a id="MeritCommendation:MeritCommendation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MeritCommendation$.html"><span class="name">MeritCommendation</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@MeritCommendation" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An <code>Enumeration</code> of all merit commendation award categories organized into associated ribbons.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Enumeration</code> of all merit commendation award categories organized into associated ribbons.
+By astonishing coincidence, with exception of the first ten special awards, the rest of list is in alphabetical order.
+</p></div></div>
+    </li><li name="net.psforever.types.PlanetSideEmpire" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PlanetSideEmpire"></a>
+      <a id="PlanetSideEmpire:PlanetSideEmpire"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="PlanetSideEmpire$.html"><span class="name">PlanetSideEmpire</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@PlanetSideEmpire" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Values for the three empires and the neutral/Black Ops group.</p>
+    </li><li name="net.psforever.types.SpawnGroup" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="SpawnGroup"></a>
+      <a id="SpawnGroup:SpawnGroup"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="SpawnGroup$.html"><span class="name">SpawnGroup</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@SpawnGroup" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The spawn group.<br>
+<br>
+The groups <code>Sanctuary</code>, <code>Tower</code>, and ,<code>Facility</code> are typically hard-defined by the client.</p><div class="fullcomment"><div class="comment cmt"><p>The spawn group.<br>
+<br>
+The groups <code>Sanctuary</code>, <code>Tower</code>, and ,<code>Facility</code> are typically hard-defined by the client.
+The groups <code>AMS</code> and the <code>Bound*</code> spawns can only be displayed on the deployment map
+by sending a manual <code>BindPlayerMessage</code> packet to the client,
+and the designated spawn group identifier is returned to the server if the spawn point that is created is selected.
+The sanctuary spawn is also used as a fallback for an unknown spawn point
+as going back to one's own sanctuary counts as a &quot;safe spawn.&quot;<br>
+<br>
+The <code>Sanctuary</code> spawn is commonly accessible on a smaller map (of the sanctuary continent)
+off to one side of the greater deployment map.
+It does not generate an icon when manually set.
+The icons produced by the normal and the bound tower and facility groups are not detailed.
+The ones that are not designated as &quot;bound&quot; also do not display icons when manually set.
+The AMS spawn group icons have an overhead AMS glyph and are smaller in radius, identical otherwise.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>BindPlayerMessage</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.types.TransactionType" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TransactionType"></a>
+      <a id="TransactionType:TransactionType"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="TransactionType$.html"><span class="name">TransactionType</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@TransactionType" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="net.psforever.types.Vector3" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Vector3"></a>
+      <a id="Vector3:Vector3"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Vector3$.html"><span class="name">Vector3</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#net.psforever.types.package@Vector3" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>source - PSF-LoginServer -  master - net.psforever.objects.guid.source</title>
+          <meta name="description" content="source - PSF - LoginServer - master - net.psforever.objects.guid.source" />
+          <meta name="keywords" content="source PSF LoginServer master net.psforever.objects.guid.source" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../index.html';
+            var hash = 'net.psforever.objects.guid.source.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../../../lib/package_big.png" />
+        <p id="owner"><a href="../../../../package.html" class="extype" name="net">net</a>.<a href="../../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../../package.html" class="extype" name="net.psforever.objects">objects</a>.<a href="../package.html" class="extype" name="net.psforever.objects.guid">guid</a></p>
+        <h1>source</h1><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.source.package" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">source</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.guid.source.LimitedNumberSource" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LimitedNumberSourceextendsNumberSource"></a>
+      <a id="LimitedNumberSource:LimitedNumberSource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LimitedNumberSource.html"><span class="name">LimitedNumberSource</span></a><span class="result"> extends <a href="NumberSource.html" class="extype" name="net.psforever.objects.guid.source.NumberSource">NumberSource</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.source.package@LimitedNumberSourceextendsNumberSource" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A <code>NumberSource</code> is considered a master &quot;pool&quot; of numbers from which all numbers are available to be drawn.</p><div class="fullcomment"><div class="comment cmt"><p>A <code>NumberSource</code> is considered a master &quot;pool&quot; of numbers from which all numbers are available to be drawn.
+The numbers are considered to be exclusive.<br>
+<br>
+Produce a series of numbers from 0 to a maximum number (inclusive) to be used as globally unique identifiers (GUIDs).</p></div><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><span class="extype" name="IllegalArgumentException"><code>IllegalArgumentException</code></span> if <code>max</code> is less than zero (therefore the count of generated numbers is at most zero)</p></span><span class="cmt"><p><span class="extype" name="java.lang.NegativeArraySizeException"><code>java.lang.NegativeArraySizeException</code></span> if the count of numbers generated due to max is negative</p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.guid.source.NumberSource" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="NumberSourceextendsAnyRef"></a>
+      <a id="NumberSource:NumberSource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="NumberSource.html"><span class="name">NumberSource</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.source.package@NumberSourceextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A <code>NumberSource</code> is considered a master &quot;pool&quot; of numbers from which all numbers are available to be drawn.</p><div class="fullcomment"><div class="comment cmt"><p>A <code>NumberSource</code> is considered a master &quot;pool&quot; of numbers from which all numbers are available to be drawn.
+The numbers are considered to be exclusive.<br>
+<br>
+The following are guidelines for implementing classes.
+The numbers allocated to this source are from zero up through positive integers.
+When a number is drawn from the pool, it is flagged internally and can not be selected for drawing again until the flag is removed.
+Some flagging states are allowed to restrict that number for the whole lifespan of the source.
+This internal flagging is maintained by a &quot;monitor&quot; that should not directly get exposed.
+Use the provided indirect referencing containers - <code>SecureKey</code> and <code>LoanedKey</code>.<br>
+<br>
+The purpose of a <code>NumberSource</code> is to help facilitate globally unique identifiers (GUID, pl. GUIDs).
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="net.psforever.objects.guid.source.LimitedNumberSource" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LimitedNumberSource"></a>
+      <a id="LimitedNumberSource:LimitedNumberSource"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LimitedNumberSource$.html"><span class="name">LimitedNumberSource</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../index.html#net.psforever.objects.guid.source.package@LimitedNumberSource" title="Permalink" target="_top">
+        <img src="../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

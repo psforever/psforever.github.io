@@ -1,0 +1,895 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>AutoDriveControls - PSF-LoginServer -  master - net.psforever.objects.serverobject.pad.process.AutoDriveControls</title>
+          <meta name="description" content="AutoDriveControls - PSF - LoginServer - master - net.psforever.objects.serverobject.pad.process.AutoDriveControls" />
+          <meta name="keywords" content="AutoDriveControls PSF LoginServer master net.psforever.objects.serverobject.pad.process.AutoDriveControls" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../../../index.html';
+            var hash = 'net.psforever.objects.serverobject.pad.process.AutoDriveControls$';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Object" src="../../../../../../lib/object_big.png" />
+        <p id="owner"><a href="../../../../../package.html" class="extype" name="net">net</a>.<a href="../../../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../../../package.html" class="extype" name="net.psforever.objects">objects</a>.<a href="../../package.html" class="extype" name="net.psforever.objects.serverobject">serverobject</a>.<a href="../package.html" class="extype" name="net.psforever.objects.serverobject.pad">pad</a>.<a href="package.html" class="extype" name="net.psforever.objects.serverobject.pad.process">process</a></p>
+        <h1>AutoDriveControls</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="net.psforever.objects.serverobject.pad.process">package process</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <span class="name">AutoDriveControls</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Instructions to be processed by <code>VehicleSpawnControlGuided</code>.
+These instructions coordinate basic vehicle manipulations such as driving, turning, and stopping.
+If defined, they will operate on a newly formed vehicle after it is released from its spawn pad lifting platform
+and after it has been issued at least one <code>ServerVehicleOverrideMsg</code> packet.
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/psforever/PSF-LoginServer/blob/master//common/src/main/scala/net/psforever/objects/serverobject/pad/process/AutoDriveControls.scala" target="_blank">AutoDriveControls.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls"><span>AutoDriveControls</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.AutoDrive" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AutoDriveextendsAutoDriveControls.SettingwithProductwithSerializable"></a>
+      <a id="AutoDrive:AutoDrive"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$AutoDrive.html"><span class="name">AutoDrive</span></a><span class="params">(<span name="speed">speed: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="AutoDriveControls$$Setting.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Setting">Setting</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@AutoDriveextendsAutoDriveControls.SettingwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.AutoDriveCancelEarly" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AutoDriveCancelEarlyextendsAutoDriveControls.SettingwithProductwithSerializable"></a>
+      <a id="AutoDriveCancelEarly:AutoDriveCancelEarly"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$AutoDriveCancelEarly.html"><span class="name">AutoDriveCancelEarly</span></a><span class="params">(<span name="test">test: (<a href="../../../Vehicle.html" class="extype" name="net.psforever.objects.Vehicle">Vehicle</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <a href="AutoDriveControls$$Setting.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Setting">Setting</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@AutoDriveCancelEarlyextendsAutoDriveControls.SettingwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.AutoDriveClimb" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AutoDriveClimbextendsAutoDriveControls.SettingwithProductwithSerializable"></a>
+      <a id="AutoDriveClimb:AutoDriveClimb"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$AutoDriveClimb.html"><span class="name">AutoDriveClimb</span></a><span class="params">(<span name="altitude">altitude: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result"> extends <a href="AutoDriveControls$$Setting.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Setting">Setting</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@AutoDriveClimbextendsAutoDriveControls.SettingwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.AutoDriveDistance" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AutoDriveDistanceextendsAutoDriveControls.SettingwithProductwithSerializable"></a>
+      <a id="AutoDriveDistance:AutoDriveDistance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$AutoDriveDistance.html"><span class="name">AutoDriveDistance</span></a><span class="params">(<span name="start">start: <a href="../../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a></span>, <span name="sqDistance">sqDistance: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result"> extends <a href="AutoDriveControls$$Setting.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Setting">Setting</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@AutoDriveDistanceextendsAutoDriveControls.SettingwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.AutoDriveDistanceFromHere" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AutoDriveDistanceFromHereextendsAutoDriveControls.SettingwithProductwithSerializable"></a>
+      <a id="AutoDriveDistanceFromHere:AutoDriveDistanceFromHere"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$AutoDriveDistanceFromHere.html"><span class="name">AutoDriveDistanceFromHere</span></a><span class="params">(<span name="sqDistance">sqDistance: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result"> extends <a href="AutoDriveControls$$Setting.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Setting">Setting</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@AutoDriveDistanceFromHereextendsAutoDriveControls.SettingwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.AutoDriveFirstGear" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AutoDriveFirstGearextendsAutoDriveControls.SettingwithProductwithSerializable"></a>
+      <a id="AutoDriveFirstGear:AutoDriveFirstGear"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$AutoDriveFirstGear.html"><span class="name">AutoDriveFirstGear</span></a><span class="params">()</span><span class="result"> extends <a href="AutoDriveControls$$Setting.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Setting">Setting</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@AutoDriveFirstGearextendsAutoDriveControls.SettingwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.AutoDriveForTime" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AutoDriveForTimeextendsAutoDriveControls.SettingwithProductwithSerializable"></a>
+      <a id="AutoDriveForTime:AutoDriveForTime"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$AutoDriveForTime.html"><span class="name">AutoDriveForTime</span></a><span class="params">(<span name="length">length: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <a href="AutoDriveControls$$Setting.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Setting">Setting</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@AutoDriveForTimeextendsAutoDriveControls.SettingwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.AutoDriveSecondGear" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AutoDriveSecondGearextendsAutoDriveControls.SettingwithProductwithSerializable"></a>
+      <a id="AutoDriveSecondGear:AutoDriveSecondGear"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$AutoDriveSecondGear.html"><span class="name">AutoDriveSecondGear</span></a><span class="params">()</span><span class="result"> extends <a href="AutoDriveControls$$Setting.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Setting">Setting</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@AutoDriveSecondGearextendsAutoDriveControls.SettingwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.AutoDriveStop" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AutoDriveStopextendsAutoDriveControls.SettingwithProductwithSerializable"></a>
+      <a id="AutoDriveStop:AutoDriveStop"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$AutoDriveStop.html"><span class="name">AutoDriveStop</span></a><span class="params">()</span><span class="result"> extends <a href="AutoDriveControls$$Setting.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Setting">Setting</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@AutoDriveStopextendsAutoDriveControls.SettingwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.AutoDriveTurnBy" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AutoDriveTurnByextendsAutoDriveControls.SettingwithProductwithSerializable"></a>
+      <a id="AutoDriveTurnBy:AutoDriveTurnBy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$AutoDriveTurnBy.html"><span class="name">AutoDriveTurnBy</span></a><span class="params">(<span name="angle">angle: <span class="extype" name="scala.Float">Float</span></span>, <span name="direction">direction: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="AutoDriveControls$$Setting.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Setting">Setting</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@AutoDriveTurnByextendsAutoDriveControls.SettingwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.CancelEarly" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CancelEarlyextendsAutoDriveControls.ConfigurationwithProductwithSerializable"></a>
+      <a id="CancelEarly:CancelEarly"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$CancelEarly.html"><span class="name">CancelEarly</span></a><span class="params">(<span name="test">test: (<a href="../../../Vehicle.html" class="extype" name="net.psforever.objects.Vehicle">Vehicle</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <a href="AutoDriveControls$$Configuration.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Configuration">Configuration</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@CancelEarlyextendsAutoDriveControls.ConfigurationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Use a validation test to determine if the remainder of the instructions should be processed.</p><div class="fullcomment"><div class="comment cmt"><p>Use a validation test to determine if the remainder of the instructions should be processed.</p></div><dl class="paramcmts block"><dt class="param">test</dt><dd class="cmt"><p>the custom valid conditions of the vehicle for continuing</p></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Climb" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ClimbextendsAutoDriveControls.ConfigurationwithProductwithSerializable"></a>
+      <a id="Climb:Climb"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$Climb.html"><span class="name">Climb</span></a><span class="params">(<span name="altitude">altitude: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result"> extends <a href="AutoDriveControls$$Configuration.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Configuration">Configuration</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@ClimbextendsAutoDriveControls.ConfigurationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Gain altitude with a flying vehicle.</p><div class="fullcomment"><div class="comment cmt"><p>Gain altitude with a flying vehicle.
+The climb speed is fixed.</p></div><dl class="paramcmts block"><dt class="param">altitude</dt><dd class="cmt"><p>the vertical distance to ascend</p></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Configuration" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ConfigurationextendsAnyRef"></a>
+      <a id="Configuration:Configuration"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$Configuration.html"><span class="name">Configuration</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@ConfigurationextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">A container that translates to a new <code>Setting</code> instruction.</p><div class="fullcomment"><div class="comment cmt"><p>A container that translates to a new <code>Setting</code> instruction.
+Instructions are maintained in this form until they will be used due to the nature of the <code>Setting</code> object.
+The least that this object needs to do is accept parameters that matches the specific <code>Setting</code> that it outputs.
+</p></div></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Distance" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DistanceextendsAutoDriveControls.ConfigurationwithProductwithSerializable"></a>
+      <a id="Distance:Distance"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$Distance.html"><span class="name">Distance</span></a><span class="params">(<span name="start">start: <a href="../../../../types/Vector3.html" class="extype" name="net.psforever.types.Vector3">Vector3</a></span>, <span name="distance">distance: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result"> extends <a href="AutoDriveControls$$Configuration.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Configuration">Configuration</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@DistanceextendsAutoDriveControls.ConfigurationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Drive a certain distance from somewhere.</p><div class="fullcomment"><div class="comment cmt"><p>Drive a certain distance from somewhere.</p></div><dl class="paramcmts block"><dt class="param">start</dt><dd class="cmt"><p>the fixed coordinates of the origin point</p></dd><dt class="param">distance</dt><dd class="cmt"><p>how far from the origin point the vehicle should travel</p></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.DistanceFromHere" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DistanceFromHereextendsAutoDriveControls.ConfigurationwithProductwithSerializable"></a>
+      <a id="DistanceFromHere:DistanceFromHere"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$DistanceFromHere.html"><span class="name">DistanceFromHere</span></a><span class="params">(<span name="distance">distance: <span class="extype" name="scala.Float">Float</span></span>)</span><span class="result"> extends <a href="AutoDriveControls$$Configuration.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Configuration">Configuration</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@DistanceFromHereextendsAutoDriveControls.ConfigurationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Drive a certain distance from where the vehicle is at the time that the instruction is called.</p><div class="fullcomment"><div class="comment cmt"><p>Drive a certain distance from where the vehicle is at the time that the instruction is called.
+The starting position is the current position of the vehicle.</p></div><dl class="paramcmts block"><dt class="param">distance</dt><dd class="cmt"><p>how far from the origin point the vehicle should travel</p></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Drive" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DriveextendsAutoDriveControls.ConfigurationwithProductwithSerializable"></a>
+      <a id="Drive:Drive"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$Drive.html"><span class="name">Drive</span></a><span class="params">(<span name="speed">speed: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="AutoDriveControls$$Configuration.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Configuration">Configuration</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@DriveextendsAutoDriveControls.ConfigurationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Basic drive forward instruction.</p><div class="fullcomment"><div class="comment cmt"><p>Basic drive forward instruction.</p></div><dl class="paramcmts block"><dt class="param">speed</dt><dd class="cmt"><p>the speed that the vehicle accelerates to;
+             scaled in a curious way</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>ServerVehicleOverrideMsg.forward_speed</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.FirstGear" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FirstGearextendsAutoDriveControls.ConfigurationwithProductwithSerializable"></a>
+      <a id="FirstGear:FirstGear"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$FirstGear.html"><span class="name">FirstGear</span></a><span class="params">()</span><span class="result"> extends <a href="AutoDriveControls$$Configuration.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Configuration">Configuration</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@FirstGearextendsAutoDriveControls.ConfigurationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Special drive forward instruction.</p><div class="fullcomment"><div class="comment cmt"><p>Special drive forward instruction.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>VehicleDefinition.AutoPilotSpeed1</code></p></span><span class="cmt"><p><code>ServerVehicleOverrideMsg.forward_speed</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.ForTime" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ForTimeextendsAutoDriveControls.ConfigurationwithProductwithSerializable"></a>
+      <a id="ForTime:ForTime"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$ForTime.html"><span class="name">ForTime</span></a><span class="params">(<span name="time">time: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <a href="AutoDriveControls$$Configuration.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Configuration">Configuration</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@ForTimeextendsAutoDriveControls.ConfigurationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Drive or idle for a certain duration.</p><div class="fullcomment"><div class="comment cmt"><p>Drive or idle for a certain duration.
+The starting position is the current position of the vehicle.</p></div><dl class="paramcmts block"><dt class="param">time</dt><dd class="cmt"><p>how long to contiue driving under the current conditions</p></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.SecondGear" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="SecondGearextendsAutoDriveControls.ConfigurationwithProductwithSerializable"></a>
+      <a id="SecondGear:SecondGear"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$SecondGear.html"><span class="name">SecondGear</span></a><span class="params">()</span><span class="result"> extends <a href="AutoDriveControls$$Configuration.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Configuration">Configuration</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@SecondGearextendsAutoDriveControls.ConfigurationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Special drive forward instruction.</p><div class="fullcomment"><div class="comment cmt"><p>Special drive forward instruction.</p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>VehicleDefinition.AutoPilotSpeed2</code></p></span><span class="cmt"><p><code>ServerVehicleOverrideMsg.forward_speed</code></p></span></dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Setting" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SettingextendsAnyRef"></a>
+      <a id="Setting:Setting"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$Setting.html"><span class="name">Setting</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@SettingextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">An instruction to be consumed by the cyclic operation of <code>VehicleSpawnControlGuided</code>
+and are created by a <code>Configuration</code> object.</p><div class="fullcomment"><div class="comment cmt"><p>An instruction to be consumed by the cyclic operation of <code>VehicleSpawnControlGuided</code>
+and are created by a <code>Configuration</code> object.
+They are considered semi-immutable <code>case class</code> objects.
+Externally, they are immutable by proper Scala standards.
+Internally, they will be permitted <code>private</code> fields that can be modified the first time the object is used.
+</p></div></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Stop" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="StopextendsAutoDriveControls.ConfigurationwithProductwithSerializable"></a>
+      <a id="Stop:Stop"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$Stop.html"><span class="name">Stop</span></a><span class="params">()</span><span class="result"> extends <a href="AutoDriveControls$$Configuration.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Configuration">Configuration</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@StopextendsAutoDriveControls.ConfigurationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Stop driving (but do not cancel the server override state).</p>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.TurnBy" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TurnByextendsAutoDriveControls.ConfigurationwithProductwithSerializable"></a>
+      <a id="TurnBy:TurnBy"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$TurnBy.html"><span class="name">TurnBy</span></a><span class="params">(<span name="angle">angle: <span class="extype" name="scala.Float">Float</span></span>, <span name="direction">direction: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <a href="AutoDriveControls$$Configuration.html" class="extype" name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.Configuration">Configuration</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@TurnByextendsAutoDriveControls.ConfigurationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Cause the vehicle to turn a certain amount.</p><div class="fullcomment"><div class="comment cmt"><p>Cause the vehicle to turn a certain amount.</p></div><dl class="paramcmts block"><dt class="param">angle</dt><dd class="cmt"><p>the angle by which to turn the vehicle</p></dd><dt class="param">direction</dt><dd class="cmt"><p>the wheel direction of the vehicle</p></dd></dl><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><code>VehicleMessage.wheel_direction</code></p></span></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@##():Int" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="net.psforever.objects.serverobject.pad.process.AutoDriveControls.State" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="State"></a>
+      <a id="State:State"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoDriveControls$$State$.html"><span class="name">State</span></a><span class="result"> extends <span class="extype" name="scala.Enumeration">Enumeration</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@State" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">The nature of the action being performed.</p><div class="fullcomment"><div class="comment cmt"><p>The nature of the action being performed.
+Different actions can be divided into types.
+</p></div></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@clone():Object" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@toString():String" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../../../index.html#net.psforever.objects.serverobject.pad.process.AutoDriveControls$@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

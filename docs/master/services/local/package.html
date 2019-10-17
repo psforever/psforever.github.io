@@ -1,0 +1,223 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>local - PSF-LoginServer -  master - services.local</title>
+          <meta name="description" content="local - PSF - LoginServer - master - services.local" />
+          <meta name="keywords" content="local PSF LoginServer master services.local" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'services.local.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="services">services</a></p>
+        <h1>local</h1><span class="permalink">
+      <a href="../../index.html#services.local.package" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">local</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="services.local.LocalService" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LocalServiceextendsActor"></a>
+      <a id="LocalService:LocalService"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="LocalService.html"><span class="name">LocalService</span></a><span class="result"> extends <span class="extype" name="akka.actor.Actor">Actor</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#services.local.package@LocalServiceextendsActor" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.local.LocalServiceMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LocalServiceMessageextendsProductwithSerializable"></a>
+      <a id="LocalServiceMessage:LocalServiceMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LocalServiceMessage.html"><span class="name">LocalServiceMessage</span></a><span class="params">(<span name="forChannel">forChannel: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="actionMessage">actionMessage: <a href="LocalAction$$Action.html" class="extype" name="services.local.LocalAction.Action">Action</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#services.local.package@LocalServiceMessageextendsProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.local.LocalServiceResponse" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LocalServiceResponseextendsGenericEventBusMsgwithProductwithSerializable"></a>
+      <a id="LocalServiceResponse:LocalServiceResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LocalServiceResponse.html"><span class="name">LocalServiceResponse</span></a><span class="params">(<span name="toChannel">toChannel: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="avatar_guid">avatar_guid: <a href="../../net/psforever/packet/game/PlanetSideGUID.html" class="extype" name="net.psforever.packet.game.PlanetSideGUID">PlanetSideGUID</a></span>, <span name="replyMessage">replyMessage: <a href="LocalResponse$$Response.html" class="extype" name="services.local.LocalResponse.Response">Response</a></span>)</span><span class="result"> extends <a href="../GenericEventBusMsg.html" class="extype" name="services.GenericEventBusMsg">GenericEventBusMsg</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#services.local.package@LocalServiceResponseextendsGenericEventBusMsgwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="services.local.LocalAction" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LocalAction"></a>
+      <a id="LocalAction:LocalAction"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LocalAction$.html"><span class="name">LocalAction</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#services.local.package@LocalAction" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.local.LocalResponse" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LocalResponse"></a>
+      <a id="LocalResponse:LocalResponse"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LocalResponse$.html"><span class="name">LocalResponse</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#services.local.package@LocalResponse" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.local.LocalServiceMessage" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LocalServiceMessage"></a>
+      <a id="LocalServiceMessage:LocalServiceMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LocalServiceMessage$.html"><span class="name">LocalServiceMessage</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#services.local.package@LocalServiceMessage" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li><li name="services.local.support" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="support"></a>
+      <a id="support:support"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="support/package.html"><span class="name">support</span></a>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#services.local.package@support" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>

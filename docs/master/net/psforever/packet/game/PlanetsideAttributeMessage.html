@@ -1,0 +1,913 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>PlanetsideAttributeMessage - PSF-LoginServer -  master - net.psforever.packet.game.PlanetsideAttributeMessage</title>
+          <meta name="description" content="PlanetsideAttributeMessage - PSF - LoginServer - master - net.psforever.packet.game.PlanetsideAttributeMessage" />
+          <meta name="keywords" content="PlanetsideAttributeMessage PSF LoginServer master net.psforever.packet.game.PlanetsideAttributeMessage" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../../lib/tools.tooltip.js"></script>
+      
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../../index.html';
+            var hash = 'net.psforever.packet.game.PlanetsideAttributeMessage';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="type">
+      <div id="definition">
+        <a href="PlanetsideAttributeMessage$.html" title="See companion object"><img alt="Class/Object" src="../../../../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="../../../package.html" class="extype" name="net">net</a>.<a href="../../package.html" class="extype" name="net.psforever">psforever</a>.<a href="../package.html" class="extype" name="net.psforever.packet">packet</a>.<a href="package.html" class="extype" name="net.psforever.packet.game">game</a></p>
+        <h1><a href="PlanetsideAttributeMessage$.html" title="See companion object">PlanetsideAttributeMessage</a></h1><h3><span class="morelinks"><div>
+            Related Docs:
+            <a href="PlanetsideAttributeMessage$.html" title="See companion object">object PlanetsideAttributeMessage</a>
+            | <a href="package.html" class="extype" name="net.psforever.packet.game">package game</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PlanetsideAttributeMessage</span><span class="params">(<span name="guid">guid: <a href="PlanetSideGUID.html" class="extype" name="net.psforever.packet.game.PlanetSideGUID">PlanetSideGUID</a></span>, <span name="attribute_type">attribute_type: <span class="extype" name="scala.Int">Int</span></span>, <span name="attribute_value">attribute_value: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result"> extends <a href="../PlanetSideGamePacket.html" class="extype" name="net.psforever.packet.PlanetSideGamePacket">PlanetSideGamePacket</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>na<br>
+Global:<br>
+<code>50 - Common Initialization?</code><br>
+<code>51 - Common Initialization?</code><br>
+<code>67 - ???</code><br>
+<br>
+Global (GUID=0)<br>
+<code>75 - Russian client region check</code> (value checks with bitmask <code>&amp; 8</code>)<br>
+<code>82 - ???</code><br>
+<code>83 - max boomers</code><br>
+<code>84 - max he mines</code><br>
+<code>85 - max disruptor mines</code><br>
+<code>86 - max spitfire turrets</code><br>
+<code>87 - max motion sensors</code><br>
+<code>88 - max shadow turrets</code><br>
+<code>89 - max cerebus turrets</code><br>
+<code>90 - max Aegis shield generators</code><br>
+<code>91 - max TRAPs</code><br>
+<code>92 - max OMFTs</code><br>
+<code>93 - max sensor disruptors</code><br>
+<code>94 - boomers</code><br>
+<code>95 - he mines</code><br>
+<code>96 - disruptor mines</code><br>
+<code>97 - spitfire turrets</code><br>
+<code>98 - motion sensors</code><br>
+<code>99 - shadow turrets</code><br>
+<code>100 - cerebus turrets</code><br>
+<code>101 - Aegis shield generators</code><br>
+<code>102 - TRAPSs</code><br>
+<code>103 - OMFTs</code><br>
+<code>104 - sensor disruptors</code><br>
+<code>112 - enable/disable festive backpacks</code><br>
+<br>
+Players/General:<br>
+Server to client : <br>
+<code>0 - health (setting to zero on vehicles/terminals will destroy them)</code><br>
+<code>1 - healthMax</code><br>
+<code>2 - stamina</code><br>
+<code>3 - staminaMax</code><br>
+<code>4 - armor</code><br>
+<code>5 - armorMax</code><br>
+<code>6 - PA_RELEASED - transform the (other) avatar in backpack on ground</code><br>
+<code>7 - Sets charge level for MAX capacitor</code><br>
+<code>8 - Enables empire specific max capacitor function - NC Shield, TR Overdrive, VS Jumpjets</code>
+<code>9 - Possibly unused now - PA_SHIELDSTRENGTH in beta client</code>
+<code>14 - Something with grief</code><br>
+<code>15 - Weapon Lock. Value exemple : 600 to have 1 min lock. Max possible is 30min lock</code><br>
+<code>16 - PA_DECONSTRUCTING in beta client</code><br>
+<code>17 - BEP. Value seems to be the same as BattleExperienceMessage</code><br>
+<code>18 - CEP.</code><br>
+<code>19 - Anchors. Value is 0 to disengage, 1 to engage.</code><br>
+<code>20 - Control console hacking. &quot;The FactionName has hacked into BaseName</code> - also sets timer on CC and yellow base warning lights on<br></p><ul><li>65535 segments per faction in deciseconds (seconds * 10)</li><li>0-65535 = Neutral 0 seconds to 1h 49m 14s</li><li>65536 - 131071 - TR</li><li>131072 - 196607 - NC</li><li>196608 - 262143 - VS</li><li>17039360 - CC Resecured</li></ul><p>  <br>These values seem to correspond to the following data structure: Time left - 2 bytes, faction - 1 byte (1-4), isResecured - 1 byte (0-1)<br>
+<code>24 - Learn certifications with value :</code><br>
+        01 : Medium Assault<br>
+        02 : Heavy Assault<br>
+        03 : Special Assault<br>
+        04 : Anti-Vehicular<br>
+        05 : Sniping<br>
+        06 : Elite Assault<br>
+        07 : Air Cavalry, Scout<br>
+        08 : Air Cavalry, Interceptor<br>
+        09 : Air Cavalry, Assault<br>
+        10 : Air Support<br>
+        11 : ATV<br>
+        12 : Light Scout<br>
+        13 : Assault Buggy<br>
+        14 : Armored Assault 1<br>
+        15 : Armored Assault 2<br>
+        16 : Ground Transport<br>
+        17 : Ground Support<br>
+        18 : BattleFrame Robotics<br>
+        19 : Flail<br>
+        20 : Switchblade<br>
+        21 : Harasser<br>
+        22 : Phantasm<br>
+        23 : Galaxy Gunship<br>
+        24 : BFR Anti Aircraft<br>
+        25 : BFR Anti Infantry<br>
+        26 : ?! Removed Cert ?<br>
+        27 : ?! Removed Cert ?<br>
+        28 : Reinforced ExoSuitDefinition<br>
+        29 : Infiltration Suit<br>
+        30 : MAX (Burster)<br>
+        31 : MAX (Dual-Cycler)<br>
+        32 : MAX (Pounder)<br>
+        33 : Uni-MAX<br>
+        34 : Medical<br>
+        35 : Advanced Medical<br>
+        36 : Hacking<br>
+        37 : Advanced Hacking<br>
+        38 : Expert Hacking<br>
+        39 : Data Corruption<br>
+        40 : Electronics Expert (= Expert Hacking + Data Corruption) Must have Advanced Hacking<br>
+        41 : Engineering<br>
+        42 : Combat Engineering<br>
+        43 : Fortification Engineering<br>
+        44 : Assault Engineering<br>
+        45 : Advanced Engineering (= Fortification Engineering + Assault Engineering) Must have Combat Engineering<br>
+<code>25 - Forget certifications (same order as 24)</code><br>
+<code>26 - Certification reset timer (in seconds)</code>
+<code>27 - PA_JAMMED - plays jammed buzzing sound</code><br>
+<code>28 - PA_IMPLANT_ACTIVE - Plays implant sounds. Valid values seem to be up to 20.</code><br>
+<code>29 - PA_VAPORIZED - Visible ?! That's not the cloaked effect, Maybe for spectator mode ?. Value is 0 to visible, 1 to invisible.</code><br>
+<code>31 - Info under avatar name : 0 = LFS, 1 = Looking For Squad Members</code><br>
+<code>32 - Info under avatar name : 0 = Looking For Squad Members, 1 = LFS</code><br>
+<code>35 - BR. Value is the BR</code><br>
+<code>36 - CR. Value is the CR</code><br>
+<code>43 - Info on avatar name : 0 = Nothing, 1 = &quot;(LD)&quot; message</code><br>
+<code>45 - NTU charge bar 0-10, 5 = 50% full. Seems to apply to both ANT and NTU Silo (possibly siphons?)</code><br>
+<code>46 - Sends &quot;Generator damage is at a critical level!&quot; message</code>
+<code>47 - Sets base NTU level to CRITICAL. MUST use base modelId not base GUID</code><br>
+<code>48 - Set to 1 to send base power loss message &amp; turns on red warning lights throughout base. MUST use base modelId not base GUID</code><br>
+<code>49 - Vehicle texture effects state? (&gt;0 turns on ANT panel glow or ntu silo panel glow + orbs) (bit?)</code><br>
+<code>52 - Vehicle particle effects? (&gt;0 turns on orbs going towards ANT. Doesn't affect silo) (bit?)</code><br>
+<code>53 - LFS. Value is 1 to flag LFS</code><br>
+<code>54 - Player &quot;Aura&quot;. Values can be expressed in the first byte's lower nibble:</code><br>
+- 0 is nothing<br>
+- 1 is plasma<br>
+- 2 is ancient<br>
+- 4 is LLU (?)<br>
+- 8 is fire<br>
+-- e.g., 13 = 8 + 4 + 1 = fire and LLU and plasma<br>
+<code>55 - &quot;Someone is attempting to Heal you&quot;. Value is 1</code><br>
+<code>56 - &quot;Someone is attempting to Repair you&quot;. Value is 1</code><br>
+<code>67 - Enables base shields (from cavern module/lock). MUST use base modelId not GUID</code><br>
+<code>73 - &quot;You are locked into the Core Beam. Charging your Module now.&quot;. Value is 1 to active</code><br>
+<code>77 - Cavern Facility Captures. Value is the number of captures</code><br>
+<code>78 - Cavern Kills. Value is the number of kills</code><br>
+<code>106 - Custom Head</code><br>
+<code>116 - Apply colour to REK beam and REK icon above players (0 = yellow, 1 = red, 2 = purple, 3 = blue)</code><br>
+Client to Server : <br>
+<code>106 - Custom Head</code><br>
+<code>224 - Player/vehicle joins black ops</code><br>
+<code>228 - Player/vehicle leaves black ops</code><br>
+<br>
+<code>Vehicles:</code><br>
+<code>10 - Driver seat permissions (0 = Locked, 1 = Group, 3 = Empire)</code><br>
+<code>11 - Gunner seat(s) permissions (same)</code><br>
+<code>12 - Passenger seat(s) permissions (same)</code><br>
+<code>13 - Trunk permissions (same)</code><br>
+<code>21 - Declare a player the vehicle's owner, by globally unique identifier</code><br>
+<code>22 - Toggles gunner and passenger mount points (1 = hides, 0 = reveals; this also locks their permissions)</code><br>
+<code>54 -  Vehicle EMP? Plays sound as if vehicle had been hit by EMP</code><br>
+<code>68 - Vehicle shield health</code><br>
+<code>79 - ???</code><br>
+<code>80 - Damage vehicle (unknown value)</code><br>
+<code>81 - ???</code><br>
+<code>113 - Vehicle capacitor - e.g. Leviathan EMP charge</code>
+</p></div><dl class="paramcmts block"><dt class="param">guid</dt><dd class="cmt"><p>the object</p></dd><dt class="param">attribute_type</dt><dd class="cmt"><p>the field</p></dd><dt class="param">attribute_value</dt><dd class="cmt"><p>the value</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/psforever/PSF-LoginServer/blob/master//common/src/main/scala/net/psforever/packet/game/PlanetsideAttributeMessage.scala" target="_blank">PlanetsideAttributeMessage.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <a href="../PlanetSideGamePacket.html" class="extype" name="net.psforever.packet.PlanetSideGamePacket">PlanetSideGamePacket</a>, <a href="../PlanetSidePacket.html" class="extype" name="net.psforever.packet.PlanetSidePacket">PlanetSidePacket</a>, <span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
+              <ol>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
+              </ol>
+            </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="net.psforever.packet.game.PlanetsideAttributeMessage"><span>PlanetsideAttributeMessage</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="net.psforever.packet.PlanetSideGamePacket"><span>PlanetSideGamePacket</span></li><li class="in" name="net.psforever.packet.PlanetSidePacket"><span>PlanetSidePacket</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+                <span class="filtertype">Implicitly<br />
+                </span>
+                <ol id="implicits"> <li class="in" name="scala.Predef.any2stringadd" data-hidden="true"><span>by any2stringadd</span></li><li class="in" name="scala.Predef.StringFormat" data-hidden="true"><span>by StringFormat</span></li><li class="in" name="scala.Predef.Ensuring" data-hidden="true"><span>by Ensuring</span></li><li class="in" name="scala.Predef.ArrowAssoc" data-hidden="true"><span>by ArrowAssoc</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="net.psforever.packet.game.PlanetsideAttributeMessage#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(guid:net.psforever.packet.game.PlanetSideGUID,attribute_type:Int,attribute_value:Long):net.psforever.packet.game.PlanetsideAttributeMessage"></a>
+      <a id="&lt;init&gt;:PlanetsideAttributeMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">new</span>
+      </span>
+      <span class="symbol">
+        <span class="name">PlanetsideAttributeMessage</span><span class="params">(<span name="guid">guid: <a href="PlanetSideGUID.html" class="extype" name="net.psforever.packet.game.PlanetSideGUID">PlanetSideGUID</a></span>, <span name="attribute_type">attribute_type: <span class="extype" name="scala.Int">Int</span></span>, <span name="attribute_value">attribute_value: <span class="extype" name="scala.Long">Long</span></span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@&lt;init&gt;(guid:net.psforever.packet.game.PlanetSideGUID,attribute_type:Int,attribute_value:Long):net.psforever.packet.game.PlanetsideAttributeMessage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">guid</dt><dd class="cmt"><p>the object</p></dd><dt class="param">attribute_type</dt><dd class="cmt"><p>the field</p></dd><dt class="param">attribute_value</dt><dd class="cmt"><p>the value</p></dd></dl></div>
+    </li></ol>
+            </div>
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="net.psforever.packet.game.PlanetsideAttributeMessage.Packet" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Packet=net.psforever.packet.game.PlanetsideAttributeMessage"></a>
+      <a id="Packet:Packet"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">Packet</span><span class="result"> = <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@Packet=net.psforever.packet.game.PlanetsideAttributeMessage" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <a id="##():Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@##():Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Predef.any2stringadd#+" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="+(other:String):String"></a>
+      <a id="+(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $plus" class="implicit">+</span><span class="params">(<span name="other">other: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@+(other:String):String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a> to
+            <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>] performed by method any2stringadd in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>any2stringadd</dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#-&gt;" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="-&gt;[B](y:B):(A,B)"></a>
+      <a id="-&gt;[B](B):(PlanetsideAttributeMessage,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $minus$greater" class="implicit">-&gt;</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>, <span class="extype" name="scala.Predef.ArrowAssoc.-&gt;.B">B</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@-&gt;[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="net.psforever.packet.game.PlanetsideAttributeMessage#attribute_type" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="attribute_type:Int"></a>
+      <a id="attribute_type:Int"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">attribute_type</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@attribute_type:Int" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the field</p>
+    </li><li name="net.psforever.packet.game.PlanetsideAttributeMessage#attribute_value" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="attribute_value:Long"></a>
+      <a id="attribute_value:Long"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">attribute_value</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@attribute_value:Long" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the value</p>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@clone():Object" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="net.psforever.packet.game.PlanetsideAttributeMessage#encode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="encode:scodec.Attempt[scodec.bits.BitVector]"></a>
+      <a id="encode:Attempt[BitVector]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">encode</span><span class="result">: <span class="extype" name="scodec.Attempt">Attempt</span>[<span class="extype" name="scodec.bits.BitVector">BitVector</span>]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@encode:scodec.Attempt[scodec.bits.BitVector]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a> → <a href="../PlanetSidePacket.html" class="extype" name="net.psforever.packet.PlanetSidePacket">PlanetSidePacket</a></dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring((PlanetsideAttributeMessage)⇒Boolean,⇒Any):PlanetsideAttributeMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@ensuring(cond:A=&gt;Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:A=&gt;Boolean):A"></a>
+      <a id="ensuring((PlanetsideAttributeMessage)⇒Boolean):PlanetsideAttributeMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: (<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>) ⇒ <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@ensuring(cond:A=&gt;Boolean):A" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean,msg:=&gt;Any):A"></a>
+      <a id="ensuring(Boolean,⇒Any):PlanetsideAttributeMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Any">Any</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@ensuring(cond:Boolean,msg:=&gt;Any):A" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.Predef.Ensuring#ensuring" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ensuring(cond:Boolean):A"></a>
+      <a id="ensuring(Boolean):PlanetsideAttributeMessage"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">ensuring</span><span class="params">(<span name="cond">cond: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result">: <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@ensuring(cond:Boolean):A" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a> to
+            <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>] performed by method Ensuring in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>Ensuring</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.StringFormat#formatted" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formatted(fmtstr:String):String"></a>
+      <a id="formatted(String):String"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="implicit">formatted</span><span class="params">(<span name="fmtstr">fmtstr: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@formatted(fmtstr:String):String" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a> to
+            <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>] performed by method StringFormat in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>StringFormat</dd><dt>Annotations</dt><dd>
+                <span class="name">@inline</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="net.psforever.packet.game.PlanetsideAttributeMessage#guid" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="guid:net.psforever.packet.game.PlanetSideGUID"></a>
+      <a id="guid:PlanetSideGUID"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">guid</span><span class="result">: <a href="PlanetSideGUID.html" class="extype" name="net.psforever.packet.game.PlanetSideGUID">PlanetSideGUID</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@guid:net.psforever.packet.game.PlanetSideGUID" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">the object</p>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.AnyRef">AnyRef</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@notify():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="net.psforever.packet.game.PlanetsideAttributeMessage#opcode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="opcode:net.psforever.packet.GamePacketOpcode.Value"></a>
+      <a id="opcode:GamePacketOpcode.Value"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">opcode</span><span class="result">: <a href="../GamePacketOpcode$.html#ValueextendsOrdered[Enumeration.this.Value]withSerializable" class="extmbr" name="net.psforever.packet.GamePacketOpcode.Value">GamePacketOpcode.Value</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@opcode:net.psforever.packet.GamePacketOpcode.Value" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a> → <a href="../PlanetSideGamePacket.html" class="extype" name="net.psforever.packet.PlanetSideGamePacket">PlanetSideGamePacket</a> → <a href="../PlanetSidePacket.html" class="extype" name="net.psforever.packet.PlanetSidePacket">PlanetSidePacket</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@wait():Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>, <span name="arg1">arg1: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.Predef.ArrowAssoc#→" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="→[B](y:B):(A,B)"></a>
+      <a id="→[B](B):(PlanetsideAttributeMessage,B)"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $u2192" class="implicit">→</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="y">y: <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span></span>)</span><span class="result">: (<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>, <span class="extype" name="scala.Predef.ArrowAssoc.→.B">B</span>)</span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../../index.html#net.psforever.packet.game.PlanetsideAttributeMessage@→[B](y:B):(A,B)" title="Permalink" target="_top">
+        <img src="../../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt class="implicit">Implicit information</dt><dd>
+            This member is added by an implicit conversion from <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a> to
+            <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>] performed by method ArrowAssoc in scala.Predef.
+            
+          </dd><dt>Definition Classes</dt><dd>ArrowAssoc</dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.Product">
+              <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="net.psforever.packet.PlanetSideGamePacket">
+              <h3>Inherited from <a href="../PlanetSideGamePacket.html" class="extype" name="net.psforever.packet.PlanetSideGamePacket">PlanetSideGamePacket</a></h3>
+            </div><div class="parent" name="net.psforever.packet.PlanetSidePacket">
+              <h3>Inherited from <a href="../PlanetSidePacket.html" class="extype" name="net.psforever.packet.PlanetSidePacket">PlanetSidePacket</a></h3>
+            </div><div class="parent" name="scala.Serializable">
+              <h3>Inherited from <span class="extype" name="scala.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
+            </div>
+        <div class="conversion" name="scala.Predef.any2stringadd">
+              <h3>Inherited by implicit conversion any2stringadd from
+                <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a> to <span class="extype" name="scala.Predef.any2stringadd">any2stringadd</span>[<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.StringFormat">
+              <h3>Inherited by implicit conversion StringFormat from
+                <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a> to <span class="extype" name="scala.Predef.StringFormat">StringFormat</span>[<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.Ensuring">
+              <h3>Inherited by implicit conversion Ensuring from
+                <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a> to <span class="extype" name="scala.Predef.Ensuring">Ensuring</span>[<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>]
+              </h3>
+            </div><div class="conversion" name="scala.Predef.ArrowAssoc">
+              <h3>Inherited by implicit conversion ArrowAssoc from
+                <a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a> to <span class="extype" name="scala.Predef.ArrowAssoc">ArrowAssoc</span>[<a href="" class="extype" name="net.psforever.packet.game.PlanetsideAttributeMessage">PlanetsideAttributeMessage</a>]
+              </h3>
+            </div>
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer"> Copyright PSForever </div>
+
+
+    </body>
+      </html>
